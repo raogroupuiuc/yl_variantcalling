@@ -1,1 +1,37 @@
-Test
+8 samples from DNA sequencing, paried reads, 150 nt length
+
+Sample	Description			Read Depth
+PO1f	Base strain			369
+16EV	Evolved from PO1f		386
+1EV	Evolved from PO1f		349
+2EV	Evolved from PO1f		343
+41EV	Evolved from PO1f		319
+X123 	PO1f + Integrated plasmid	337
+XEV	Evolved from X123		367
+GEV	Evolved from XEV		369
+
+File name explanations: 
+1) strains: PO1f, 16EV, 1EV, 2EV, 41EV (total 5) 
+   - the genome for these samples was downloaded from NCBI (  ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/372/015/GCA_009372015.1_YarliW29/* )
+2) plasmid: X123, XEV, GEV (total 3) 
+   - the genome for these samples was the plasmid files added to the NCBI files
+
+
+Bash script			Explanation
+01-qc_trim.sh 			All samples
+02-bwa_index.sh			Genome index
+03-align_plasmid.sh		Alignment for 3 samples
+03-align_strains.sh		Alignment for 5 samples
+04-remove_dups.sh		All samples
+05-sortBAM.sh			All samples
+06-addreadgroups.sh		All samples
+07-validateSAM.sh		All samples
+08a-haplotypecaller_plasmid.sh	3 samples (without GVCF)
+08a-haplotypecaller_strains.sh	5 samples (without GVCF)
+08b-haplotypecaller_plasmid.sh	3 samples (with GVCF)
+08b-haplotypecaller_strains.sh	5 samples (with GVCF)
+08c-merge_GVCF.sh		merge GVCF in 2 files - strains.vcf and plasmid.vcf
+09a-hardfilter_plasmid.sh	filter on individual vcf files - 3
+09a-hardfilter_strains.sh	filter on individual vcf files - 5
+09b-hardfilter.sh*		filter on combined vcf files from GVCF
+
