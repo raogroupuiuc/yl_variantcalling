@@ -1,0 +1,822 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=FSFilter,Description="FS > 60.0">
+##FILTER=<ID=HaplotypeScoreFilter,Description="HaplotypeScore > 13.0">
+##FILTER=<ID=LowQual,Description="Low quality">
+##FILTER=<ID=MQFilter,Description="MQ < 40.0">
+##FILTER=<ID=MQRankSumFilter,Description="MQRankSum < -12.5">
+##FILTER=<ID=QDFilter,Description="QD < 2.0">
+##FILTER=<ID=ReadPosRankSumFilter,Description="ReadPosRankSum < -8.0">
+##FILTER=<ID=SORfilter,Description="SOR > 3.0">
+##FILTER=<ID=SnpCluster,Description="SNPs found in clusters">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths for the ref and alt alleles in the order listed">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth (reads with MQ=255 or with bad mates are filtered)">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+##GATKCommandLine=<ID=HaplotypeCaller,CommandLine="HaplotypeCaller  --sample-ploidy 1 --output PO1f_TATCGCAC-ACACTAAG.vcf --input PO1f_TATCGCAC-ACACTAAG_aligned.marked_dup.sort.RG.bam --reference ../../genome/GCA_009372015.1_YarliW29_genomic.fna  --use-new-qual-calculator true --annotate-with-num-discovered-alleles false --heterozygosity 0.001 --indel-heterozygosity 1.25E-4 --heterozygosity-stdev 0.01 --standard-min-confidence-threshold-for-calling 30.0 --max-alternate-alleles 6 --max-genotype-count 1024 --num-reference-samples-if-no-call 0 --contamination-fraction-to-filter 0.0 --output-mode EMIT_VARIANTS_ONLY --all-site-pls false --gvcf-gq-bands 1 --gvcf-gq-bands 2 --gvcf-gq-bands 3 --gvcf-gq-bands 4 --gvcf-gq-bands 5 --gvcf-gq-bands 6 --gvcf-gq-bands 7 --gvcf-gq-bands 8 --gvcf-gq-bands 9 --gvcf-gq-bands 10 --gvcf-gq-bands 11 --gvcf-gq-bands 12 --gvcf-gq-bands 13 --gvcf-gq-bands 14 --gvcf-gq-bands 15 --gvcf-gq-bands 16 --gvcf-gq-bands 17 --gvcf-gq-bands 18 --gvcf-gq-bands 19 --gvcf-gq-bands 20 --gvcf-gq-bands 21 --gvcf-gq-bands 22 --gvcf-gq-bands 23 --gvcf-gq-bands 24 --gvcf-gq-bands 25 --gvcf-gq-bands 26 --gvcf-gq-bands 27 --gvcf-gq-bands 28 --gvcf-gq-bands 29 --gvcf-gq-bands 30 --gvcf-gq-bands 31 --gvcf-gq-bands 32 --gvcf-gq-bands 33 --gvcf-gq-bands 34 --gvcf-gq-bands 35 --gvcf-gq-bands 36 --gvcf-gq-bands 37 --gvcf-gq-bands 38 --gvcf-gq-bands 39 --gvcf-gq-bands 40 --gvcf-gq-bands 41 --gvcf-gq-bands 42 --gvcf-gq-bands 43 --gvcf-gq-bands 44 --gvcf-gq-bands 45 --gvcf-gq-bands 46 --gvcf-gq-bands 47 --gvcf-gq-bands 48 --gvcf-gq-bands 49 --gvcf-gq-bands 50 --gvcf-gq-bands 51 --gvcf-gq-bands 52 --gvcf-gq-bands 53 --gvcf-gq-bands 54 --gvcf-gq-bands 55 --gvcf-gq-bands 56 --gvcf-gq-bands 57 --gvcf-gq-bands 58 --gvcf-gq-bands 59 --gvcf-gq-bands 60 --gvcf-gq-bands 70 --gvcf-gq-bands 80 --gvcf-gq-bands 90 --gvcf-gq-bands 99 --floor-blocks false --indel-size-to-eliminate-in-ref-model 10 --disable-optimizations false --just-determine-active-regions false --dont-genotype false --do-not-run-physical-phasing false --use-filtered-reads-for-annotations false --correct-overlapping-quality false --adaptive-pruning false --do-not-recover-dangling-branches false --recover-dangling-heads false --dont-trim-active-regions false --max-extension 25 --padding-around-indels 150 --padding-around-snps 20 --kmer-size 10 --kmer-size 25 --dont-increase-kmer-sizes-for-cycles false --allow-non-unique-kmers-in-ref false --num-pruning-samples 1 --min-dangling-branch-length 4 --recover-all-dangling-branches false --max-num-haplotypes-in-population 128 --min-pruning 2 --adaptive-pruning-initial-error-rate 0.001 --pruning-lod-threshold 2.302585092994046 --max-unpruned-variants 100 --debug-assembly false --debug-graph-transformations false --capture-assembly-failure-bam false --error-correct-reads false --kmer-length-for-read-error-correction 25 --min-observations-for-kmer-to-be-solid 20 --likelihood-calculation-engine PairHMM --base-quality-score-threshold 18 --pair-hmm-gap-continuation-penalty 10 --pair-hmm-implementation FASTEST_AVAILABLE --pcr-indel-model CONSERVATIVE --phred-scaled-global-read-mismapping-rate 45 --native-pair-hmm-threads 4 --native-pair-hmm-use-double-precision false --bam-writer-type CALLED_HAPLOTYPES --dont-use-soft-clipped-bases false --min-base-quality-score 10 --smith-waterman JAVA --emit-ref-confidence NONE --max-mnp-distance 0 --force-call-filtered-alleles false --min-assembly-region-size 50 --max-assembly-region-size 300 --assembly-region-padding 100 --max-reads-per-alignment-start 50 --active-probability-threshold 0.002 --max-prob-propagation-distance 50 --force-active false --interval-set-rule UNION --interval-padding 0 --interval-exclusion-padding 0 --interval-merging-rule ALL --read-validation-stringency SILENT --seconds-between-progress-updates 10.0 --disable-sequence-dictionary-validation false --create-output-bam-index true --create-output-bam-md5 false --create-output-variant-index true --create-output-variant-md5 false --lenient false --add-output-sam-program-record true --add-output-vcf-command-line true --cloud-prefetch-buffer 40 --cloud-index-prefetch-buffer -1 --disable-bam-index-caching false --sites-only-vcf-output false --help false --version false --showHidden false --verbosity INFO --QUIET false --use-jdk-deflater false --use-jdk-inflater false --gcs-max-retries 20 --gcs-project-for-requester-pays  --disable-tool-default-read-filters false --minimum-mapping-quality 20 --disable-tool-default-annotations false --enable-all-annotations false --allow-old-rms-mapping-quality-annotation-data false",Version="4.1.4.0",Date="February 23, 2021 9:28:38 PM CST">
+##GATKCommandLine=<ID=VariantFiltration,CommandLine="VariantFiltration  --output PO1f_TATCGCAC-ACACTAAG.filtered.vcf --filter-expression QD < 2.0 --filter-expression MQ < 40.0 --filter-expression FS > 60.0 --filter-expression SOR > 3.0 --filter-expression HaplotypeScore > 13.0 --filter-expression MQRankSum < -12.5 --filter-expression ReadPosRankSum < -8.0 --filter-name QDFilter --filter-name MQFilter --filter-name FSFilter --filter-name SORfilter --filter-name HaplotypeScoreFilter --filter-name MQRankSumFilter --filter-name ReadPosRankSumFilter --cluster-size 3 --cluster-window-size 10 --variant PO1f_TATCGCAC-ACACTAAG.vcf --reference ../../genome/GCA_009372015.1_YarliW29_genomic.fna  --mask-extension 0 --mask-name Mask --filter-not-in-mask false --missing-values-evaluate-as-failing false --invalidate-previous-filters false --invert-filter-expression false --invert-genotype-filter-expression false --set-filtered-genotype-to-no-call false --interval-set-rule UNION --interval-padding 0 --interval-exclusion-padding 0 --interval-merging-rule ALL --read-validation-stringency SILENT --seconds-between-progress-updates 10.0 --disable-sequence-dictionary-validation false --create-output-bam-index true --create-output-bam-md5 false --create-output-variant-index true --create-output-variant-md5 false --lenient false --add-output-sam-program-record true --add-output-vcf-command-line true --cloud-prefetch-buffer 40 --cloud-index-prefetch-buffer -1 --disable-bam-index-caching false --sites-only-vcf-output false --help false --version false --showHidden false --verbosity INFO --QUIET false --use-jdk-deflater false --use-jdk-inflater false --gcs-max-retries 20 --gcs-project-for-requester-pays  --disable-tool-default-read-filters false",Version="4.1.4.0",Date="February 23, 2021 10:23:34 PM CST">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=BaseQRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt Vs. Ref base qualities">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth; some reads may have been filtered">
+##INFO=<ID=DS,Number=0,Type=Flag,Description="Were any of the samples downsampled?">
+##INFO=<ID=ExcessHet,Number=1,Type=Float,Description="Phred-scaled p-value for exact test of excess heterozygosity">
+##INFO=<ID=FS,Number=1,Type=Float,Description="Phred-scaled p-value using Fisher's exact test to detect strand bias">
+##INFO=<ID=InbreedingCoeff,Number=1,Type=Float,Description="Inbreeding coefficient as estimated from the genotype likelihoods per-sample when compared against the Hardy-Weinberg expectation">
+##INFO=<ID=MLEAC,Number=A,Type=Integer,Description="Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed">
+##INFO=<ID=MLEAF,Number=A,Type=Float,Description="Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed">
+##INFO=<ID=MQ,Number=1,Type=Float,Description="RMS Mapping Quality">
+##INFO=<ID=MQRankSum,Number=1,Type=Float,Description="Z-score From Wilcoxon rank sum test of Alt vs. Ref read mapping qualities">
+##INFO=<ID=QD,Number=1,Type=Float,Description="Variant Confidence/Quality by Depth">
+##INFO=<ID=ReadPosRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt vs. Ref read position bias">
+##INFO=<ID=SOR,Number=1,Type=Float,Description="Symmetric Odds Ratio of 2x2 contingency table to detect strand bias">
+##contig=<ID=ML755977.1,length=780106>
+##contig=<ID=ML755978.1,length=515156>
+##contig=<ID=ML755979.1,length=507099>
+##contig=<ID=ML755980.1,length=467546>
+##contig=<ID=ML755981.1,length=441470>
+##contig=<ID=ML755982.1,length=429136>
+##contig=<ID=ML755983.1,length=399505>
+##contig=<ID=ML755984.1,length=398926>
+##contig=<ID=ML755985.1,length=395522>
+##contig=<ID=ML755986.1,length=368331>
+##contig=<ID=ML755987.1,length=352487>
+##contig=<ID=ML755988.1,length=341488>
+##contig=<ID=ML755989.1,length=334795>
+##contig=<ID=ML755990.1,length=326769>
+##contig=<ID=ML755991.1,length=324482>
+##contig=<ID=ML755992.1,length=290350>
+##contig=<ID=ML755993.1,length=287260>
+##contig=<ID=ML755994.1,length=276205>
+##contig=<ID=ML755995.1,length=266664>
+##contig=<ID=ML755996.1,length=258467>
+##contig=<ID=ML755997.1,length=255844>
+##contig=<ID=ML755998.1,length=250104>
+##contig=<ID=ML755999.1,length=250008>
+##contig=<ID=ML756000.1,length=249057>
+##contig=<ID=ML756001.1,length=248886>
+##contig=<ID=ML756002.1,length=232834>
+##contig=<ID=ML756003.1,length=229755>
+##contig=<ID=ML756004.1,length=222283>
+##contig=<ID=ML756005.1,length=215552>
+##contig=<ID=ML756006.1,length=214942>
+##contig=<ID=ML756007.1,length=210994>
+##contig=<ID=ML756008.1,length=210792>
+##contig=<ID=ML756009.1,length=204042>
+##contig=<ID=ML756010.1,length=201194>
+##contig=<ID=ML756011.1,length=199767>
+##contig=<ID=ML756012.1,length=187336>
+##contig=<ID=ML756013.1,length=186882>
+##contig=<ID=ML756014.1,length=182796>
+##contig=<ID=ML756015.1,length=179135>
+##contig=<ID=ML756016.1,length=176147>
+##contig=<ID=ML756017.1,length=172760>
+##contig=<ID=ML756018.1,length=169565>
+##contig=<ID=ML756019.1,length=165544>
+##contig=<ID=ML756020.1,length=165050>
+##contig=<ID=ML756021.1,length=162367>
+##contig=<ID=ML756022.1,length=159417>
+##contig=<ID=ML756023.1,length=153972>
+##contig=<ID=ML756024.1,length=150039>
+##contig=<ID=ML756025.1,length=149916>
+##contig=<ID=ML756026.1,length=149528>
+##contig=<ID=ML756027.1,length=149017>
+##contig=<ID=ML756028.1,length=147765>
+##contig=<ID=ML756029.1,length=147150>
+##contig=<ID=ML756030.1,length=141076>
+##contig=<ID=ML756031.1,length=139751>
+##contig=<ID=ML756032.1,length=138094>
+##contig=<ID=ML756033.1,length=136119>
+##contig=<ID=ML756034.1,length=133570>
+##contig=<ID=ML756035.1,length=130073>
+##contig=<ID=ML756036.1,length=128215>
+##contig=<ID=ML756037.1,length=123061>
+##contig=<ID=ML756038.1,length=121060>
+##contig=<ID=ML756039.1,length=120670>
+##contig=<ID=ML756040.1,length=116952>
+##contig=<ID=ML756041.1,length=115254>
+##contig=<ID=ML756042.1,length=115214>
+##contig=<ID=ML756043.1,length=108566>
+##contig=<ID=ML756044.1,length=108317>
+##contig=<ID=ML756045.1,length=106784>
+##contig=<ID=ML756046.1,length=106625>
+##contig=<ID=ML756047.1,length=105249>
+##contig=<ID=ML756048.1,length=104464>
+##contig=<ID=ML756049.1,length=99865>
+##contig=<ID=ML756050.1,length=99250>
+##contig=<ID=ML756051.1,length=99031>
+##contig=<ID=ML756052.1,length=95771>
+##contig=<ID=ML756053.1,length=95555>
+##contig=<ID=ML756054.1,length=94562>
+##contig=<ID=ML756055.1,length=91692>
+##contig=<ID=ML756056.1,length=91631>
+##contig=<ID=ML756057.1,length=85987>
+##contig=<ID=ML756058.1,length=83411>
+##contig=<ID=ML756059.1,length=83146>
+##contig=<ID=ML756060.1,length=81556>
+##contig=<ID=ML756061.1,length=80929>
+##contig=<ID=ML756062.1,length=80670>
+##contig=<ID=ML756063.1,length=78693>
+##contig=<ID=ML756064.1,length=78097>
+##contig=<ID=ML756065.1,length=75623>
+##contig=<ID=ML756066.1,length=74761>
+##contig=<ID=ML756067.1,length=74577>
+##contig=<ID=ML756068.1,length=73506>
+##contig=<ID=ML756069.1,length=71545>
+##contig=<ID=ML756070.1,length=70629>
+##contig=<ID=ML756071.1,length=67163>
+##contig=<ID=ML756072.1,length=66165>
+##contig=<ID=ML756073.1,length=65704>
+##contig=<ID=ML756074.1,length=62550>
+##contig=<ID=ML756075.1,length=58899>
+##contig=<ID=ML756076.1,length=55891>
+##contig=<ID=ML756077.1,length=55465>
+##contig=<ID=ML756078.1,length=54627>
+##contig=<ID=ML756079.1,length=53881>
+##contig=<ID=ML756080.1,length=52597>
+##contig=<ID=ML756081.1,length=51472>
+##contig=<ID=ML756082.1,length=51091>
+##contig=<ID=ML756083.1,length=49834>
+##contig=<ID=ML756084.1,length=48455>
+##contig=<ID=ML756085.1,length=48200>
+##contig=<ID=ML756086.1,length=48097>
+##contig=<ID=ML756087.1,length=45717>
+##contig=<ID=ML756088.1,length=44537>
+##contig=<ID=ML756089.1,length=41658>
+##contig=<ID=ML756090.1,length=40736>
+##contig=<ID=ML756091.1,length=39627>
+##contig=<ID=ML756092.1,length=38026>
+##contig=<ID=ML756093.1,length=37608>
+##contig=<ID=ML756094.1,length=35932>
+##contig=<ID=ML756095.1,length=35719>
+##contig=<ID=ML756096.1,length=34266>
+##contig=<ID=ML756097.1,length=34219>
+##contig=<ID=ML756098.1,length=34193>
+##contig=<ID=ML756099.1,length=32013>
+##contig=<ID=ML756100.1,length=31986>
+##contig=<ID=ML756101.1,length=30612>
+##contig=<ID=ML756102.1,length=29808>
+##contig=<ID=ML756103.1,length=27845>
+##contig=<ID=ML756104.1,length=27173>
+##contig=<ID=ML756105.1,length=25648>
+##contig=<ID=ML756106.1,length=24910>
+##contig=<ID=ML756107.1,length=24659>
+##contig=<ID=ML756108.1,length=24632>
+##contig=<ID=ML756109.1,length=22146>
+##contig=<ID=ML756110.1,length=21985>
+##contig=<ID=ML756111.1,length=21838>
+##contig=<ID=ML756112.1,length=21709>
+##contig=<ID=ML756113.1,length=16910>
+##contig=<ID=ML756114.1,length=16753>
+##contig=<ID=ML756115.1,length=16038>
+##contig=<ID=ML756116.1,length=15431>
+##contig=<ID=ML756117.1,length=15090>
+##contig=<ID=ML756118.1,length=14956>
+##contig=<ID=ML756119.1,length=14676>
+##contig=<ID=ML756120.1,length=14411>
+##contig=<ID=ML756121.1,length=11710>
+##contig=<ID=ML756122.1,length=11431>
+##contig=<ID=ML756123.1,length=10999>
+##contig=<ID=ML756124.1,length=10541>
+##contig=<ID=ML756125.1,length=9583>
+##contig=<ID=ML756126.1,length=7333>
+##contig=<ID=ML756127.1,length=5477>
+##contig=<ID=ML756128.1,length=3789>
+##contig=<ID=ML756129.1,length=2976>
+##contig=<ID=ML756130.1,length=2498>
+##contig=<ID=ML756131.1,length=2346>
+##contig=<ID=ML756132.1,length=2013>
+##contig=<ID=ML756133.1,length=1949>
+##contig=<ID=ML756134.1,length=1657>
+##contig=<ID=ML756135.1,length=1635>
+##contig=<ID=ML756136.1,length=1632>
+##contig=<ID=ML756137.1,length=1579>
+##contig=<ID=ML756138.1,length=1447>
+##contig=<ID=ML756139.1,length=1395>
+##contig=<ID=ML756140.1,length=1305>
+##contig=<ID=ML756141.1,length=1284>
+##contig=<ID=ML756142.1,length=1215>
+##contig=<ID=ML756143.1,length=1089>
+##contig=<ID=ML756144.1,length=1085>
+##source=HaplotypeCaller
+##source=VariantFiltration
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	PO1f_TATCGCAC-ACACTAAG
+ML755977.1	177460	.	ACCCCCCCCCCC	A	2305.04	SORfilter	AC=1;AF=1.00;AN=1;DP=80;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.39;QD=30.86;SOR=6.439	GT:AD:DP:GQ:PL	1:0,59:59:99:2315,0
+ML755977.1	237488	.	TAAAAAAAAAAAAA	T	1534.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.666;DP=241;FS=4.112;MLEAC=1;MLEAF=1.00;MQ=59.59;MQRankSum=0.000;QD=10.73;ReadPosRankSum=-1.061;SOR=0.301	GT:AD:DP:GQ:PL	1:41,102:143:99:1544,0
+ML755977.1	351610	.	G	GT	313.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.838;DP=196;FS=2.062;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=5.80;ReadPosRankSum=1.738;SOR=0.223	GT:AD:DP:GQ:PL	1:16,38:54:99:323,0
+ML755977.1	601795	.	T	TC	1082.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.152;DP=124;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.53;MQRankSum=0.000;QD=11.63;ReadPosRankSum=-0.103;SOR=2.194	GT:AD:DP:GQ:PL	1:25,68:93:99:1092,0
+ML755978.1	83	.	GAAAAAAAAAAAAAAAAAA	G	4736.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=4.372;DP=333;FS=24.366;MLEAC=1;MLEAF=1.00;MQ=48.72;MQRankSum=0.364;QD=32.65;ReadPosRankSum=0.911;SOR=6.911	GT:AD:DP:GQ:PL	1:6,116:122:99:4746,0
+ML755978.1	66627	.	AGGGGGGG	A	872.04	SORfilter	AC=1;AF=1.00;AN=1;DP=75;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=30.07;SOR=6.091	GT:AD:DP:GQ:PL	1:0,29:29:99:882,0
+ML755978.1	174098	.	TG	T	229.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.045;DP=57;FS=3.245;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=9.16;ReadPosRankSum=3.640;SOR=1.942	GT:AD:DP:GQ:PL	1:9,16:25:99:239,0
+ML755979.1	19426	.	AGGGGGGG	A	846.04	SORfilter	AC=1;AF=1.00;AN=1;DP=40;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.34;QD=33.84;SOR=3.014	GT:AD:DP:GQ:PL	1:0,25:25:99:856,0
+ML755979.1	299010	.	CTTT	C	2177.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.283;DP=198;FS=3.340;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=27.21;ReadPosRankSum=0.677;SOR=0.540	GT:AD:DP:GQ:PL	1:6,74:80:99:2187,0
+ML755979.1	342477	.	GAAAAAAAAAAAAAAAAAAAAAAA	G	3000.04	SORfilter	AC=1;AF=1.00;AN=1;DP=169;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.86;QD=30.41;SOR=5.387	GT:AD:DP:GQ:PL	1:1,79:80:99:3010,0
+ML755979.1	348481	.	CAAA	C	3957.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.386;DP=183;FS=7.694;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=32.70;SOR=0.824	GT:AD:DP:GQ:PL	1:4,117:121:99:3967,0
+ML755979.1	480084	.	ACCCCCCCCCCC	A	712.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.260;DP=47;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=56.21;MQRankSum=0.000;QD=26.37;SOR=2.948	GT:AD:DP:GQ:PL	1:3,24:27:99:722,0
+ML755980.1	108668	.	CGGGGGGGGG	C	360.01	SORfilter	AC=1;AF=1.00;AN=1;DP=59;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.82;QD=27.69;SOR=4.804	GT:AD:DP:GQ:PL	1:0,13:13:99:370,0
+ML755980.1	222545	.	T	TTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG	1127.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.556;DP=324;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.33;MQRankSum=1.824;QD=30.46;ReadPosRankSum=1.109;SOR=0.693	GT:AD:DP:GQ:PL	1:18,19:37:99:1137,0
+ML755980.1	282964	.	C	A	1933.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.318;DP=157;FS=9.176;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=14.32;ReadPosRankSum=0.793;SOR=2.275	GT:AD:DP:GQ:PL	1:25,110:135:99:1943,0
+ML755980.1	306087	.	A	AAGTGAGTTGAGTGAGTTGAGTGAGTTGAGTGAGTTG	8505.04	PASS	AC=1;AF=1.00;AN=1;DP=439;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.16;QD=28.57;SOR=2.093	GT:AD:DP:GQ:PL	1:0,152:152:99:8515,0
+ML755980.1	331786	.	GTTTTTTTTTTTTTTTTTTTTTTTTTTTAATTTTTTTATTTTTTT	G	6952.04	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.690;DP=347;FS=110.738;MLEAC=1;MLEAF=1.00;MQ=59.05;MQRankSum=3.173;QD=32.04;ReadPosRankSum=2.305;SOR=3.538	GT:AD:DP:GQ:PL	1:24,193:217:99:6962,0
+ML755980.1	361157	.	TAAAAAAAAAAAA	T	931.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.244;DP=129;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.78;MQRankSum=0.000;QD=29.55;ReadPosRankSum=0.660;SOR=3.816	GT:AD:DP:GQ:PL	1:2,24:26:99:941,0
+ML755980.1	403445	.	A	AG	1305.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.212;DP=135;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=14.34;ReadPosRankSum=1.160;SOR=2.513	GT:AD:DP:GQ:PL	1:21,70:91:99:1315,0
+ML755980.1	408210	.	T	TAAATAAAATAAATAAAATAAATAAAATAAATAAAATAAATAAAATAAATAAAATAAAATAAATAAAATAAATAAAATAAAATAAATAAATAAAATAAATAAAATAAATAAAATAAATAAAATA	21765.04	PASS	AC=1;AF=1.00;AN=1;DP=325;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=57.82;QD=32.23;SOR=0.921	GT:AD:DP:GQ:PL	1:0,212:212:99:21775,0
+ML755980.1	418024	.	A	AG	2972.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.014;DP=169;FS=35.462;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=20.78;ReadPosRankSum=0.625;SOR=7.216	GT:AD:DP:GQ:PL	1:19,124:143:99:2982,0
+ML755980.1	458070	.	C	CAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAG	712.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.000;DP=193;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.94;MQRankSum=0.000;QD=31.88;ReadPosRankSum=0.000;SOR=1.022	GT:AD:DP:GQ:PL	1:5,3:8:99:722,0
+ML755980.1	467493	.	A	C	41616.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.839;DP=4221;FS=2.247;MLEAC=1;MLEAF=1.00;MQ=57.59;MQRankSum=-0.032;QD=34.39;ReadPosRankSum=0.905;SOR=1.791	GT:AD:DP:GQ:PL	1:93,1117:1210:99:41626,0
+ML755981.1	23081	.	T	C	9051.01	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=4.052;DP=1053;FS=150.098;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=14.01;ReadPosRankSum=0.186;SOR=2.564	GT:AD:DP:GQ:PL	1:216,430:646:99:9061,0
+ML755981.1	192924	.	T	TGGCCAGCAGGGTCAGGGACAGTAC	10589.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.146;DP=504;FS=3.028;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=28.74;ReadPosRankSum=-1.545;SOR=0.135	GT:AD:DP:GQ:PL	1:2,242:244:99:10599,0
+ML755981.1	254576	.	TAAA	T	3127.04	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=7.114;DP=415;FS=106.419;MLEAC=1;MLEAF=1.00;MQ=58.36;MQRankSum=0.000;QD=12.12;ReadPosRankSum=1.315;SOR=2.161	GT:AD:DP:GQ:PL	1:77,181:258:99:3137,0
+ML755982.1	429003	.	CTTTTTTTTTTTTTTTTTTTTTTT	C	1924.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.183;DP=359;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.14;MQRankSum=6.559;QD=34.36;SOR=4.664	GT:AD:DP:GQ:PL	1:2,54:56:99:1934,0
+ML755983.1	2000	.	A	G	27988.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=5.485;DP=1837;FS=43.205;MLEAC=1;MLEAF=1.00;MQ=47.92;MQRankSum=-17.736;QD=19.52;ReadPosRankSum=2.349;SOR=0.974	GT:AD:DP:GQ:PL	1:386,1048:1434:99:27998,0
+ML755983.1	2204	.	T	C	23499.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=5.192;DP=950;FS=21.842;MLEAC=1;MLEAF=1.00;MQ=44.65;MQRankSum=-4.772;QD=24.89;ReadPosRankSum=-3.134;SOR=0.120	GT:AD:DP:GQ:PL	1:193,751:944:99:23509,0
+ML755983.1	5480	.	G	A	15237.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.216;DP=938;FS=56.821;MLEAC=1;MLEAF=1.00;MQ=59.58;MQRankSum=0.000;QD=28.86;ReadPosRankSum=12.998;SOR=0.003	GT:AD:DP:GQ:PL	1:77,451:528:99:15247,0
+ML755983.1	5677	.	AGC	A	52481.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.743;DP=7356;FS=1.022;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=31.90;ReadPosRankSum=2.298;SOR=0.868	GT:AD:DP:GQ:PL	1:116,1250:1366:99:52491,0
+ML755983.1	72891	.	CAAAAAAAA	C	982.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.326;DP=102;FS=19.131;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=24.55;ReadPosRankSum=0.760;SOR=2.648	GT:AD:DP:GQ:PL	1:9,31:40:99:992,0
+ML755983.1	101591	.	GAAAAAA	G	5978.04	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=4.861;DP=238;FS=66.636;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=28.85;ReadPosRankSum=2.211;SOR=4.664	GT:AD:DP:GQ:PL	1:9,157:166:99:5988,0
+ML755983.1	133836	.	T	TA	7599.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.161;DP=443;FS=7.430;MLEAC=1;MLEAF=1.00;MQ=59.95;MQRankSum=0.000;QD=19.24;ReadPosRankSum=0.605;SOR=0.295	GT:AD:DP:GQ:PL	1:36,359:395:99:7609,0
+ML755983.1	143840	.	A	AGG	4257.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.315;DP=166;FS=17.118;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=31.54;ReadPosRankSum=0.956;SOR=9.250	GT:AD:DP:GQ:PL	1:2,115:117:99:4267,0
+ML755983.1	303375	.	TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	T	1029.01	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.414;DP=254;FS=77.243;MLEAC=1;MLEAF=1.00;MQ=59.13;MQRankSum=1.074;QD=10.61;ReadPosRankSum=-0.076;SOR=1.007	GT:AD:DP:GQ:PL	1:46,51:97:99:1039,0
+ML755983.1	371774	.	CAAAAACAAAAAAAAA	C	3900.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.588;DP=304;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=16.81;ReadPosRankSum=1.260;SOR=0.729	GT:AD:DP:GQ:PL	1:31,201:232:99:3910,0
+ML755984.1	71516	.	T	TGTACTGTTCGTGCTTGG	1940.04	PASS	AC=1;AF=1.00;AN=1;DP=476;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=29.74;SOR=2.584	GT:AD:DP:GQ:PL	1:0,7:7:99:1950,0
+ML755984.1	180246	.	CT	C	2345.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.053;DP=280;FS=5.182;MLEAC=1;MLEAF=1.00;MQ=59.08;MQRankSum=3.307;QD=14.13;ReadPosRankSum=1.354;SOR=0.275	GT:AD:DP:GQ:PL	1:30,136:166:99:2355,0
+ML755984.1	180265	.	T	G	3354.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=1.913;DP=248;FS=13.079;MLEAC=1;MLEAF=1.00;MQ=58.96;MQRankSum=3.971;QD=17.38;ReadPosRankSum=2.778;SOR=2.203	GT:AD:DP:GQ:PL	1:23,170:193:99:3364,0
+ML755984.1	180267	.	T	C	4643.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.485;DP=245;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.95;MQRankSum=4.970;QD=23.33;ReadPosRankSum=0.670;SOR=0.910	GT:AD:DP:GQ:PL	1:18,181:199:99:4653,0
+ML755984.1	180270	.	T	A	5312.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.813;DP=250;FS=1.424;MLEAC=1;MLEAF=1.00;MQ=58.97;MQRankSum=6.480;QD=25.18;ReadPosRankSum=0.277;SOR=0.429	GT:AD:DP:GQ:PL	1:11,200:211:99:5322,0
+ML755984.1	331674	.	CAAAA	C	9428.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.867;DP=427;FS=58.041;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=28.31;ReadPosRankSum=1.719;SOR=0.503	GT:AD:DP:GQ:PL	1:20,313:333:99:9438,0
+ML755984.1	398824	.	G	A	44724.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.205;DP=3770;FS=1.937;MLEAC=1;MLEAF=1.00;MQ=54.18;MQRankSum=-5.277;QD=25.59;ReadPosRankSum=6.397;SOR=1.330	GT:AD:DP:GQ:PL	1:373,1375:1748:99:44734,0
+ML755985.1	21948	.	C	CA	1252.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.008;DP=176;FS=3.068;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=12.40;ReadPosRankSum=-0.279;SOR=0.314	GT:AD:DP:GQ:PL	1:17,84:101:99:1262,0
+ML755985.1	46707	.	C	CTTTT	2267.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.024;DP=158;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=29.44;ReadPosRankSum=-1.370;SOR=1.828	GT:AD:DP:GQ:PL	1:2,75:77:99:2277,0
+ML755985.1	89318	.	T	TTGAGAAGCCTACGCCCGAGAAGCCTACTCCTGAGGTTCC	3827.04	PASS	AC=1;AF=1.00;AN=1;DP=552;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.68;QD=19.73;SOR=0.693	GT:AD:DP:GQ:PL	1:85,109:194:99:3837,0
+ML755985.1	127513	.	CAAAAAAAAAA	C	513.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.435;DP=96;FS=31.634;MLEAC=1;MLEAF=1.00;MQ=59.78;MQRankSum=0.000;QD=12.83;SOR=2.199	GT:AD:DP:GQ:PL	1:14,26:40:99:523,0
+ML755985.1	336970	.	T	TTC	1486.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.597;DP=163;FS=2.601;MLEAC=1;MLEAF=1.00;MQ=59.56;MQRankSum=-0.150;QD=17.90;ReadPosRankSum=-0.361;SOR=1.277	GT:AD:DP:GQ:PL	1:15,68:83:99:1496,0
+ML755985.1	336972	.	T	TTTTTTTTTTTTTTCC	116.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.600;DP=153;FS=2.522;MLEAC=1;MLEAF=1.00;MQ=59.53;MQRankSum=1.739;QD=2.32;ReadPosRankSum=-0.071;SOR=0.793	GT:AD:DP:GQ:PL	1:17,33:50:99:126,0
+ML755985.1	360894	.	T	TTTTTTTG	2550.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.130;DP=216;FS=6.306;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=17.96;ReadPosRankSum=2.489;SOR=1.362	GT:AD:DP:GQ:PL	1:32,110:142:99:2560,0
+ML755985.1	368351	.	G	GGCTCTCTGGTGCTTGACTATGGCTGATCGGACGGGAAGCCGTATTTTCACCAGGATATGGCCGTAACC	2076.04	PASS	AC=1;AF=1.00;AN=1;DP=149;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=56.17;QD=26.70;SOR=0.693	GT:AD:DP:GQ:PL	1:0,3:3:99:2086,0
+ML755986.1	36487	.	ACCCC	A	2728.04	SORfilter	AC=1;AF=1.00;AN=1;DP=90;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=34.10;SOR=7.824	GT:AD:DP:GQ:PL	1:2,78:80:99:2738,0
+ML755986.1	211825	.	G	GA	4517.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.385;DP=326;FS=2.167;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=0.000;QD=17.11;ReadPosRankSum=1.351;SOR=0.412	GT:AD:DP:GQ:PL	1:24,240:264:99:4527,0
+ML755986.1	315239	.	GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAA	G	1429.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.725;DP=251;FS=6.235;MLEAC=1;MLEAF=1.00;MQ=57.53;MQRankSum=1.924;QD=17.86;ReadPosRankSum=2.552;SOR=0.128	GT:AD:DP:GQ:PL	1:26,54:80:99:1439,0
+ML755986.1	355200	.	G	GT	7343.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.960;DP=377;FS=13.235;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=22.73;ReadPosRankSum=0.574;SOR=0.130	GT:AD:DP:GQ:PL	1:18,305:323:99:7353,0
+ML755987.1	61044	.	G	GGT	59.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.366;DP=413;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.86;MQRankSum=0.000;QD=8.43;ReadPosRankSum=-0.712;SOR=0.527	GT:AD:DP:GQ:PL	1:2,5:7:69:69,0
+ML755987.1	153848	.	CTTTTTTTTTTTTTTTTTTTTTTTTTGTTTTTTTTGCAAGGTGGG	C	3707.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.204;DP=314;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.88;MQRankSum=0.000;QD=16.70;ReadPosRankSum=-1.074;SOR=0.792	GT:AD:DP:GQ:PL	1:17,205:222:99:3717,0
+ML755987.1	196851	.	GGTTTTTTTTTTTTTTTTTTTTT	G	3913.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.223;DP=346;FS=1.559;MLEAC=1;MLEAF=1.00;MQ=59.77;MQRankSum=2.398;QD=14.55;ReadPosRankSum=0.630;SOR=0.517	GT:AD:DP:GQ:PL	1:42,227:269:99:3923,0
+ML755987.1	279108	.	GTTTTTTTTTTTTTTTTTTTTTTTTTT	G	2593.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.222;DP=190;FS=15.763;MLEAC=1;MLEAF=1.00;MQ=59.94;MQRankSum=-0.567;QD=25.18;SOR=0.027	GT:AD:DP:GQ:PL	1:15,88:103:99:2603,0
+ML755987.1	293097	.	CAAAAAAAAAAAAAAAAAAAAAGAAGATTGGGGGGGGGGCAA	C	4548.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.768;DP=337;FS=56.499;MLEAC=1;MLEAF=1.00;MQ=59.60;MQRankSum=3.008;QD=19.19;ReadPosRankSum=-1.074;SOR=0.002	GT:AD:DP:GQ:PL	1:40,197:237:99:4558,0
+ML755987.1	299385	.	CA	C	1856.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.223;DP=187;FS=34.406;MLEAC=1;MLEAF=1.00;MQ=59.79;MQRankSum=0.000;QD=14.17;ReadPosRankSum=2.030;SOR=3.317	GT:AD:DP:GQ:PL	1:17,114:131:99:1866,0
+ML755987.1	347841	.	GTTTTTTTTTTTTTTTTTTTTTTT	G	709.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.492;DP=184;FS=33.901;MLEAC=1;MLEAF=1.00;MQ=59.89;MQRankSum=0.000;QD=7.62;ReadPosRankSum=-1.472;SOR=0.874	GT:AD:DP:GQ:PL	1:38,55:93:99:719,0
+ML755988.1	31090	.	CTTTTTTTTTTTTTTTTTTTTT	C	753.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.194;DP=91;FS=21.875;MLEAC=1;MLEAF=1.00;MQ=59.79;MQRankSum=0.000;QD=34.23;ReadPosRankSum=-2.398;SOR=3.585	GT:AD:DP:GQ:PL	1:3,19:22:99:763,0
+ML755988.1	143190	.	A	AACACACAC	1993.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.684;DP=235;FS=2.941;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=27.30;ReadPosRankSum=-1.467;SOR=0.184	GT:AD:DP:GQ:PL	1:5,68:73:99:2003,0
+ML755988.1	165449	.	CAAA	C	11282.04	PASS	AC=1;AF=1.00;AN=1;DP=398;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=29.66;SOR=0.885	GT:AD:DP:GQ:PL	1:6,299:305:99:11292,0
+ML755988.1	238669	.	A	G	979.01	SORfilter	AC=1;AF=1.00;AN=1;DP=23;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=29.94;SOR=4.615	GT:AD:DP:GQ:PL	1:0,23:23:99:989,0
+ML755988.1	238670	.	GAA	G	1004.04	SORfilter	AC=1;AF=1.00;AN=1;DP=23;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=33.09;SOR=4.407	GT:AD:DP:GQ:PL	1:0,23:23:99:1014,0
+ML755988.1	238674	.	T	G	921.01	SORfilter	AC=1;AF=1.00;AN=1;DP=22;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=29.37;SOR=4.407	GT:AD:DP:GQ:PL	1:0,22:22:99:931,0
+ML755988.1	238675	.	GAT	G	966.01	SORfilter	AC=1;AF=1.00;AN=1;DP=22;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=35.43;SOR=4.407	GT:AD:DP:GQ:PL	1:0,22:22:99:976,0
+ML755988.1	238679	.	T	G	1069.01	SORfilter	AC=1;AF=1.00;AN=1;DP=23;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=26.09;SOR=4.804	GT:AD:DP:GQ:PL	1:0,23:23:99:1079,0
+ML755989.1	300633	.	T	A	21503.01	PASS	AC=1;AF=1.00;AN=1;DP=569;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=28.89;SOR=0.785	GT:AD:DP:GQ:PL	1:0,567:567:99:21513,0
+ML755989.1	332845	.	C	CTCTTCTGCTCCTGCTCCCGCTCCCAAGCCCGAG	564.04	PASS	AC=1;AF=1.00;AN=1;DP=283;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.88;QD=26.48;SOR=0.368	GT:AD:DP:GQ:PL	1:15,1:16:99:574,0
+ML755989.1	332947	.	T	TTCTGCCCCTGCTCCTGCTCCCAAGCCCGAGGAG	5770.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.205;DP=315;FS=1.061;MLEAC=1;MLEAF=1.00;MQ=58.78;MQRankSum=-1.236;QD=33.55;ReadPosRankSum=-1.536;SOR=1.002	GT:AD:DP:GQ:PL	1:17,155:172:99:5780,0
+ML755990.1	38108	.	A	AG	2377.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.176;DP=153;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=18.72;ReadPosRankSum=0.784;SOR=3.258	GT:AD:DP:GQ:PL	1:19,108:127:99:2387,0
+ML755990.1	43274	.	ATTT	A	874.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.243;DP=175;FS=6.812;MLEAC=1;MLEAF=1.00;MQ=59.86;MQRankSum=0.000;QD=21.85;ReadPosRankSum=-0.434;SOR=2.788	GT:AD:DP:GQ:PL	1:5,35:40:99:884,0
+ML755990.1	102918	.	G	GTTATATTTATATTTATATTTATATTTATATTTATATTTATATTTATAT	4003.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.259;DP=357;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.46;MQRankSum=2.376;QD=27.20;ReadPosRankSum=1.684;SOR=0.573	GT:AD:DP:GQ:PL	1:1,67:68:99:4013,0
+ML755990.1	196562	.	GTTTTTTTTTTTTTTT	G	4719.04	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.968;DP=240;FS=97.535;MLEAC=1;MLEAF=1.00;MQ=59.95;MQRankSum=0.000;QD=33.71;ReadPosRankSum=1.146;SOR=4.138	GT:AD:DP:GQ:PL	1:12,128:140:99:4729,0
+ML755991.1	155388	.	TGGGGGGG	T	1402.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.910;DP=64;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.98;MQRankSum=0.000;QD=33.52;ReadPosRankSum=1.158;SOR=5.421	GT:AD:DP:GQ:PL	1:2,38:40:99:1412,0
+ML755991.1	162528	.	TGGGGGGGGGGG	T	938.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.577;DP=112;FS=16.675;MLEAC=1;MLEAF=1.00;MQ=59.32;MQRankSum=2.368;QD=19.96;ReadPosRankSum=1.827;SOR=6.019	GT:AD:DP:GQ:PL	1:8,39:47:99:948,0
+ML755991.1	183139	.	GCCCCCCCCCCCCCCC	G	749.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.913;DP=52;FS=27.042;MLEAC=1;MLEAF=1.00;MQ=58.72;MQRankSum=0.000;QD=31.21;ReadPosRankSum=-0.685;SOR=6.090	GT:AD:DP:GQ:PL	1:4,20:24:99:759,0
+ML755991.1	272715	.	CAAAAAAA	C	4684.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.307;DP=293;FS=5.329;MLEAC=1;MLEAF=1.00;MQ=59.83;MQRankSum=0.000;QD=22.41;ReadPosRankSum=2.120;SOR=1.816	GT:AD:DP:GQ:PL	1:37,172:209:99:4694,0
+ML755991.1	301708	.	GT	G	765.04	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-5.515;DP=220;FS=96.862;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=6.54;ReadPosRankSum=-0.113;SOR=6.314	GT:AD:DP:GQ:PL	1:36,81:117:99:775,0
+ML755992.1	73176	.	GAAAAAAAAAAAAAAAAAAAAAAAAAA	G	541.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.070;DP=165;FS=5.160;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=7.84;ReadPosRankSum=0.792;SOR=2.165	GT:AD:DP:GQ:PL	1:28,41:69:99:551,0
+ML755992.1	87653	.	G	GA	4176.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.862;DP=354;FS=7.277;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=15.88;ReadPosRankSum=0.402;SOR=0.264	GT:AD:DP:GQ:PL	1:35,228:263:99:4186,0
+ML755992.1	290208	.	A	G	1065.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.203;DP=870;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=1.33;ReadPosRankSum=-0.551;SOR=0.680	GT:AD:DP:GQ:PL	1:388,414:802:99:1075,0
+ML755992.1	290255	.	C	T	544.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.463;DP=792;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=0.80;ReadPosRankSum=2.590;SOR=0.736	GT:AD:DP:GQ:PL	1:333,345:678:99:554,0
+ML755993.1	42829	.	A	AAAAAATAGTAATAGAATAAAAATAGTAATAGAAT	2904.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.537;DP=538;FS=8.587;MLEAC=1;MLEAF=1.00;MQ=59.41;MQRankSum=-1.289;QD=31.49;ReadPosRankSum=-2.335;SOR=1.303	GT:AD:DP:GQ:PL	1:4,33:37:99:2914,0
+ML755993.1	151944	.	CTT	C	1289.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.774;DP=132;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=22.22;ReadPosRankSum=1.079;SOR=1.329	GT:AD:DP:GQ:PL	1:5,53:58:99:1299,0
+ML755993.1	221841	.	GTTTTTTTTTTT	G	1237.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.392;DP=191;FS=29.165;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=17.18;ReadPosRankSum=-1.394;SOR=0.621	GT:AD:DP:GQ:PL	1:20,52:72:99:1247,0
+ML755993.1	225403	.	GAAA	G	3664.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.487;DP=389;FS=22.473;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=13.37;ReadPosRankSum=-0.380;SOR=1.502	GT:AD:DP:GQ:PL	1:47,227:274:99:3674,0
+ML755993.1	259939	.	TGGGG	T	742.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.256;DP=59;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=25.59;ReadPosRankSum=0.075;SOR=4.892	GT:AD:DP:GQ:PL	1:1,28:29:99:752,0
+ML755994.1	124	.	A	ATG	310.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.912;DP=88;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.18;MQRankSum=1.244;QD=5.35;SOR=0.368	GT:AD:DP:GQ:PL	1:16,42:58:99:320,0
+ML755994.1	128	.	A	ATG	301.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.000;DP=89;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.42;MQRankSum=1.244;QD=5.19;SOR=0.368	GT:AD:DP:GQ:PL	1:16,42:58:99:311,0
+ML755994.1	132	.	A	ATG	300.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.318;DP=90;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.47;MQRankSum=1.189;QD=5.09;ReadPosRankSum=0.342;SOR=0.321	GT:AD:DP:GQ:PL	1:17,42:59:99:310,0
+ML755994.1	136	.	A	ATG	300.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.189;DP=85;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.85;MQRankSum=1.189;QD=5.09;ReadPosRankSum=0.804;SOR=0.321	GT:AD:DP:GQ:PL	1:17,42:59:99:310,0
+ML755994.1	140	.	A	ATG	304.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.579;DP=71;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.48;MQRankSum=0.000;QD=5.33;ReadPosRankSum=2.096;SOR=0.495	GT:AD:DP:GQ:PL	1:15,42:57:99:314,0
+ML755994.1	144	.	A	ATG	332.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.579;DP=73;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.52;MQRankSum=0.000;QD=5.83;ReadPosRankSum=2.096;SOR=1.426	GT:AD:DP:GQ:PL	1:15,42:57:99:342,0
+ML755994.1	148	.	A	ATGT	313.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.956;DP=121;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.30;MQRankSum=0.000;QD=5.31;ReadPosRankSum=1.613;SOR=1.270	GT:AD:DP:GQ:PL	1:17,42:59:99:323,0
+ML755994.1	42496	.	A	AC	14587.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=6.048;DP=694;FS=21.916;MLEAC=1;MLEAF=1.00;MQ=46.05;MQRankSum=6.715;QD=27.01;ReadPosRankSum=-4.476;SOR=0.064	GT:AD:DP:GQ:PL	1:65,475:540:99:14597,0
+ML755994.1	139618	.	A	C	4720.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.045;DP=278;FS=4.658;MLEAC=1;MLEAF=1.00;MQ=59.82;MQRankSum=0.000;QD=21.85;ReadPosRankSum=2.163;SOR=0.348	GT:AD:DP:GQ:PL	1:21,195:216:99:4730,0
+ML755994.1	139619	.	A	G	12126.01	PASS	AC=1;AF=1.00;AN=1;DP=282;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.82;QD=27.57;SOR=1.037	GT:AD:DP:GQ:PL	1:1,279:280:99:12136,0
+ML755994.1	151700	.	GAAAA	G	2710.04	PASS	AC=1;AF=1.00;AN=1;DP=155;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=33.46;SOR=1.355	GT:AD:DP:GQ:PL	1:6,75:81:99:2720,0
+ML755994.1	256800	.	T	TCCCCCCC	3110.04	SORfilter	AC=1;AF=1.00;AN=1;DP=97;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.45;QD=32.70;SOR=7.941	GT:AD:DP:GQ:PL	1:0,67:67:99:3120,0
+ML755995.1	27890	.	GA	G	103.04	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.076;DP=171;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=1.61;ReadPosRankSum=0.017;SOR=0.764	GT:AD:DP:GQ:PL	1:26,38:64:99:113,0
+ML755995.1	44050	.	CA	C	1326.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.181;DP=199;FS=7.645;MLEAC=1;MLEAF=1.00;MQ=59.95;MQRankSum=0.000;QD=11.63;ReadPosRankSum=-0.654;SOR=0.129	GT:AD:DP:GQ:PL	1:22,92:114:99:1336,0
+ML755995.1	52035	.	GTTT	G	3961.04	PASS	AC=1;AF=1.00;AN=1;DP=214;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.89;QD=30.01;SOR=2.272	GT:AD:DP:GQ:PL	1:8,124:132:99:3971,0
+ML755995.1	74703	.	A	AAATTACTAGACTACTG	5641.04	PASS	AC=1;AF=1.00;AN=1;DP=590;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.63;QD=28.55;SOR=2.621	GT:AD:DP:GQ:PL	1:0,62:62:99:5651,0
+ML755995.1	87086	.	CAAAAAAAAAAAAA	C	12123.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.271;DP=461;FS=16.974;MLEAC=1;MLEAF=1.00;MQ=59.87;MQRankSum=0.000;QD=31.90;ReadPosRankSum=0.691;SOR=0.024	GT:AD:DP:GQ:PL	1:11,369:380:99:12133,0
+ML755995.1	145600	.	G	T	348.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.268;DP=434;FS=1.767;MLEAC=1;MLEAF=1.00;MQ=58.65;MQRankSum=-1.869;QD=0.84;ReadPosRankSum=0.797;SOR=0.810	GT:AD:DP:GQ:PL	1:218,195:413:99:358,0
+ML755996.1	5457	.	C	CAA	370.04	PASS	AC=1;AF=1.00;AN=1;DP=97;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=14.23;SOR=2.303	GT:AD:DP:GQ:PL	1:4,22:26:99:380,0
+ML755996.1	19729	.	TGGGGGGGGG	T	851.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.109;DP=79;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.02;MQRankSum=0.000;QD=20.76;ReadPosRankSum=1.125;SOR=3.611	GT:AD:DP:GQ:PL	1:10,31:41:99:861,0
+ML755996.1	84411	.	G	GGA	2447.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.039;DP=317;FS=1.862;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=15.20;ReadPosRankSum=0.093;SOR=0.456	GT:AD:DP:GQ:PL	1:30,131:161:99:2457,0
+ML755996.1	136625	.	A	AG	2460.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.385;DP=164;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.92;MQRankSum=0.000;QD=17.45;ReadPosRankSum=0.907;SOR=3.393	GT:AD:DP:GQ:PL	1:24,117:141:99:2470,0
+ML755996.1	176694	.	GAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGAAAAA	G	4176.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.085;DP=317;FS=26.231;MLEAC=1;MLEAF=1.00;MQ=58.97;MQRankSum=1.707;QD=20.47;ReadPosRankSum=-1.014;SOR=0.011	GT:AD:DP:GQ:PL	1:16,188:204:99:4186,0
+ML755996.1	199126	.	AT	A	11342.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.085;DP=546;FS=2.474;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=22.78;ReadPosRankSum=0.481;SOR=0.940	GT:AD:DP:GQ:PL	1:32,466:498:99:11352,0
+ML755997.1	558	.	TAAAAAAAAAAAAAAAAAAAAAAA	T	3202.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.281;DP=225;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.32;MQRankSum=-0.503;QD=25.62;ReadPosRankSum=1.334;SOR=0.760	GT:AD:DP:GQ:PL	1:18,107:125:99:3212,0
+ML755997.1	76641	.	CTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	C	7633.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.269;DP=332;FS=21.861;MLEAC=1;MLEAF=1.00;MQ=59.92;MQRankSum=0.000;QD=34.85;ReadPosRankSum=1.809;SOR=1.210	GT:AD:DP:GQ:PL	1:10,209:219:99:7643,0
+ML755998.1	5728	.	GCC	G	255.04	PASS	AC=1;AF=1.00;AN=1;DP=43;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=57.13;QD=23.19;SOR=2.303	GT:AD:DP:GQ:PL	1:0,11:11:99:265,0
+ML755998.1	26334	.	A	AAGAGAGAGAGAGAGAGAGAGAGAGAG	1366.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.000;DP=229;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=27.32;ReadPosRankSum=-1.544;SOR=4.407	GT:AD:DP:GQ:PL	1:2,48:50:99:1376,0
+ML755998.1	85163	.	CAAAAAAAAAAAAA	C	470.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.920;DP=117;FS=45.977;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=9.79;ReadPosRankSum=0.753;SOR=3.143	GT:AD:DP:GQ:PL	1:21,27:48:99:480,0
+ML755998.1	244710	.	AC	A	3526.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.319;DP=173;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=23.66;ReadPosRankSum=-1.061;SOR=5.892	GT:AD:DP:GQ:PL	1:2,147:149:99:3536,0
+ML756000.1	30911	.	GAAAAAA	G	2254.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.344;DP=178;FS=47.418;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=23.48;ReadPosRankSum=-1.940;SOR=0.301	GT:AD:DP:GQ:PL	1:20,76:96:99:2264,0
+ML756000.1	46299	.	CTTTTTTTTTTTTTTTTT	C	160.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.610;DP=142;FS=18.263;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=4.45;ReadPosRankSum=-1.397;SOR=1.577	GT:AD:DP:GQ:PL	1:16,20:36:99:170,0
+ML756000.1	54469	.	C	T	462.01	FSFilter;QDFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.776;DP=679;FS=446.482;MLEAC=1;MLEAF=1.00;MQ=42.79;MQRankSum=3.032;QD=0.75;ReadPosRankSum=1.499;SOR=5.071	GT:AD:DP:GQ:PL	1:290,325:615:99:472,0
+ML756000.1	54603	.	A	G	9219.01	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=5.832;DP=862;FS=267.157;MLEAC=1;MLEAF=1.00;MQ=49.05;MQRankSum=-10.088;QD=17.30;ReadPosRankSum=0.261;SOR=2.786	GT:AD:DP:GQ:PL	1:158,375:533:99:9229,0
+ML756000.1	57031	.	GA	G	6892.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.380;DP=423;FS=6.858;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=18.33;ReadPosRankSum=0.916;SOR=0.328	GT:AD:DP:GQ:PL	1:44,332:376:99:6902,0
+ML756000.1	57826	.	GT	G	1961.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.965;DP=240;FS=30.168;MLEAC=1;MLEAF=1.00;MQ=59.91;MQRankSum=0.000;QD=10.27;ReadPosRankSum=1.084;SOR=0.355	GT:AD:DP:GQ:PL	1:42,149:191:99:1971,0
+ML756000.1	83833	.	G	A	1027.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.188;DP=1086;FS=13.247;MLEAC=1;MLEAF=1.00;MQ=59.93;MQRankSum=2.031;QD=1.00;ReadPosRankSum=12.692;SOR=0.782	GT:AD:DP:GQ:PL	1:505,519:1024:99:1037,0
+ML756000.1	234862	.	A	AGTCTGTGATTGTCTGTGATT	4352.04	PASS	AC=1;AF=1.00;AN=1;DP=567;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.21;QD=30.18;SOR=0.874	GT:AD:DP:GQ:PL	1:0,46:46:99:4362,0
+ML756001.1	35556	.	TCCCC	T	3708.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.331;DP=139;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=33.11;ReadPosRankSum=1.733;SOR=6.207	GT:AD:DP:GQ:PL	1:2,110:112:99:3718,0
+ML756001.1	78982	.	TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	T	4400.04	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.020;DP=244;FS=69.892;MLEAC=1;MLEAF=1.00;MQ=59.52;MQRankSum=3.971;QD=27.50;ReadPosRankSum=-0.871;SOR=3.268	GT:AD:DP:GQ:PL	1:26,134:160:99:4410,0
+ML756001.1	91052	.	CTTTTTTTTTTATTTTTTATTTTTATTTTTATTTTTATTTTTTATTTTTTTTTTTTTTTTTTTTTTTTTT	C	4409.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.884;DP=177;FS=6.197;MLEAC=1;MLEAF=1.00;MQ=58.33;MQRankSum=4.204;QD=32.61;SOR=0.065	GT:AD:DP:GQ:PL	1:11,114:125:99:4419,0
+ML756001.1	93548	.	GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA	G	2173.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.289;DP=153;FS=13.378;MLEAC=1;MLEAF=1.00;MQ=59.60;MQRankSum=0.000;QD=31.96;ReadPosRankSum=0.867;SOR=2.526	GT:AD:DP:GQ:PL	1:11,57:68:99:2183,0
+ML756001.1	196467	.	G	GTT	2423.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.494;DP=211;FS=5.038;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=24.98;ReadPosRankSum=2.055;SOR=3.215	GT:AD:DP:GQ:PL	1:2,95:97:99:2433,0
+ML756001.1	235553	.	GGTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTCCTTTTTTTGTTTTTCCCCTTTTTTTTTTGGTTTCTTGTA	G	1003.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.277;DP=252;FS=22.277;MLEAC=1;MLEAF=1.00;MQ=59.85;MQRankSum=0.511;QD=7.72;ReadPosRankSum=1.790;SOR=2.416	GT:AD:DP:GQ:PL	1:42,88:130:99:1013,0
+ML756003.1	16734	.	G	GTT	1287.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.837;DP=157;FS=4.384;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=21.81;ReadPosRankSum=0.669;SOR=1.239	GT:AD:DP:GQ:PL	1:5,54:59:99:1297,0
+ML756003.1	24824	.	GCC	G	1673.04	SORfilter	AC=1;AF=1.00;AN=1;DP=73;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=30.98;SOR=7.701	GT:AD:DP:GQ:PL	1:0,54:54:99:1683,0
+ML756003.1	57186	.	A	G	5708.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=4.529;DP=728;FS=5.489;MLEAC=1;MLEAF=1.00;MQ=58.64;MQRankSum=-2.938;QD=9.00;ReadPosRankSum=4.695;SOR=0.886	GT:AD:DP:GQ:PL	1:197,437:634:99:5718,0
+ML756003.1	57188	.	C	T	8589.04	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=2.216;DP=728;FS=5.388;MLEAC=1;MLEAF=1.00;MQ=58.67;MQRankSum=-2.984;QD=13.32;ReadPosRankSum=4.364;SOR=0.900	GT:AD:DP:GQ:PL	1:202,443:645:99:8599,0
+ML756003.1	57189	.	A	C	8586.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=0.807;DP=721;FS=5.388;MLEAC=1;MLEAF=1.00;MQ=58.66;MQRankSum=-2.984;QD=13.31;ReadPosRankSum=4.151;SOR=0.900	GT:AD:DP:GQ:PL	1:202,443:645:99:8596,0
+ML756003.1	86962	.	ATTTTTTTTTT	A	14202.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.730;DP=397;FS=3.617;MLEAC=1;MLEAF=1.00;MQ=59.93;MQRankSum=0.000;QD=30.88;ReadPosRankSum=0.991;SOR=0.673	GT:AD:DP:GQ:PL	1:7,340:347:99:14212,0
+ML756003.1	144564	.	TC	T	133.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.465;DP=37;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.30;MQRankSum=0.000;QD=8.87;ReadPosRankSum=-1.465;SOR=2.584	GT:AD:DP:GQ:PL	1:2,13:15:99:143,0
+ML756003.1	182536	.	CTTTTTTTTTTTTTTTTTTT	C	3268.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.741;DP=218;FS=27.125;MLEAC=1;MLEAF=1.00;MQ=59.77;MQRankSum=2.468;QD=26.57;ReadPosRankSum=0.998;SOR=0.924	GT:AD:DP:GQ:PL	1:19,104:123:99:3278,0
+ML756003.1	186018	.	TGGGGGGGGGGGGGGGGGAAAAAAAAAGGGGG	T	2209.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.298;DP=188;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=57.14;MQRankSum=2.607;QD=19.72;ReadPosRankSum=0.287;SOR=4.011	GT:AD:DP:GQ:PL	1:14,98:112:99:2219,0
+ML756003.1	208114	.	CAAAAAAAAAAAAAAAA	C	318.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.635;DP=120;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=7.76;ReadPosRankSum=1.277;SOR=2.049	GT:AD:DP:GQ:PL	1:17,24:41:99:328,0
+ML756004.1	82074	.	T	TA	1470.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.007;DP=236;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=10.73;ReadPosRankSum=-0.216;SOR=0.679	GT:AD:DP:GQ:PL	1:29,108:137:99:1480,0
+ML756005.1	703	.	T	C	4011.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.297;DP=2208;FS=1.759;MLEAC=1;MLEAF=1.00;MQ=58.91;MQRankSum=-8.050;QD=3.22;ReadPosRankSum=0.376;SOR=0.859	GT:AD:DP:GQ:PL	1:577,669:1246:99:4021,0
+ML756005.1	715	.	A	T	3364.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.165;DP=2307;FS=4.076;MLEAC=1;MLEAF=1.00;MQ=59.27;MQRankSum=-5.664;QD=2.71;ReadPosRankSum=0.959;SOR=0.972	GT:AD:DP:GQ:PL	1:586,657:1243:99:3374,0
+ML756005.1	58627	.	GTT	G	2428.04	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-4.324;DP=209;FS=74.468;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=17.47;ReadPosRankSum=0.040;SOR=1.985	GT:AD:DP:GQ:PL	1:28,111:139:99:2438,0
+ML756005.1	70540	.	GAAAAAAAAAAAAAAAAAAAAAA	G	577.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.890;DP=145;FS=3.018;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=9.62;ReadPosRankSum=1.084;SOR=0.342	GT:AD:DP:GQ:PL	1:19,41:60:99:587,0
+ML756005.1	82769	.	CAAAAAAAAAAAA	C	6817.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.879;DP=256;FS=26.322;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=29.85;ReadPosRankSum=0.229;SOR=2.726	GT:AD:DP:GQ:PL	1:7,176:183:99:6827,0
+ML756005.1	161263	.	A	ATCTCTCAGATCAACGACGGCCAGATCCAGGCTCCCAAGTCTACCGCTGCTCCTGCCCCCGCCCCCAAGGAGACTGCCCAGGCTCCTG	6359.04	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.000;DP=527;FS=60.185;MLEAC=1;MLEAF=1.00;MQ=57.18;MQRankSum=1.860;QD=31.33;ReadPosRankSum=-1.405;SOR=5.348	GT:AD:DP:GQ:PL	1:8,195:203:99:6369,0
+ML756005.1	161280	.	C	T	11599.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.046;DP=464;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.48;MQRankSum=0.947;QD=27.54;ReadPosRankSum=0.251;SOR=1.022	GT:AD:DP:GQ:PL	1:8,296:304:99:11609,0
+ML756005.1	163808	.	CGGGGGGGGG	C	667.01	SORfilter	AC=1;AF=1.00;AN=1;DP=51;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.71;QD=31.33;SOR=5.670	GT:AD:DP:GQ:PL	1:0,16:16:99:677,0
+ML756007.1	26164	.	A	G	1246.01	MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.472;DP=1024;FS=7.056;MLEAC=1;MLEAF=1.00;MQ=49.16;MQRankSum=-29.008;QD=1.22;ReadPosRankSum=-2.742;SOR=1.048	GT:AD:DP:GQ:PL	1:471,552:1023:99:1256,0
+ML756007.1	26947	.	C	T	7053.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.233;DP=1308;FS=19.660;MLEAC=1;MLEAF=1.00;MQ=48.71;MQRankSum=-32.480;QD=5.41;ReadPosRankSum=-5.016;SOR=1.858	GT:AD:DP:GQ:PL	1:564,739:1303:99:7063,0
+ML756007.1	27194	.	TG	T	1612.01	FSFilter;MQRankSumFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-7.349;DP=710;FS=435.420;MLEAC=1;MLEAF=1.00;MQ=47.55;MQRankSum=-13.683;QD=3.59;ReadPosRankSum=-6.405;SOR=4.652	GT:AD:DP:GQ:PL	1:215,234:449:99:1622,0
+ML756007.1	27199	.	G	A	1697.01	FSFilter;MQRankSumFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.857;DP=743;FS=325.193;MLEAC=1;MLEAF=1.00;MQ=47.55;MQRankSum=-14.349;QD=3.55;ReadPosRankSum=-3.110;SOR=4.648	GT:AD:DP:GQ:PL	1:222,256:478:99:1707,0
+ML756007.1	27204	.	A	G	1880.01	FSFilter;MQRankSumFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.897;DP=790;FS=330.635;MLEAC=1;MLEAF=1.00;MQ=47.69;MQRankSum=-14.791;QD=3.73;ReadPosRankSum=-1.024;SOR=4.605	GT:AD:DP:GQ:PL	1:231,273:504:99:1890,0
+ML756007.1	27222	.	A	C	2179.01	FSFilter;MQRankSumFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.459;DP=991;FS=260.381;MLEAC=1;MLEAF=1.00;MQ=47.40;MQRankSum=-16.029;QD=3.66;ReadPosRankSum=6.434;SOR=4.647	GT:AD:DP:GQ:PL	1:272,323:595:99:2189,0
+ML756007.1	27252	.	G	GA	176.04	FSFilter;MQRankSumFilter;QDFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.141;DP=1293;FS=193.630;MLEAC=1;MLEAF=1.00;MQ=46.39;MQRankSum=-16.676;QD=0.27;ReadPosRankSum=6.589;SOR=4.758	GT:AD:DP:GQ:PL	1:329,328:657:99:186,0
+ML756007.1	33570	.	TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	T	5734.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.056;DP=242;FS=6.178;MLEAC=1;MLEAF=1.00;MQ=59.50;MQRankSum=2.086;QD=32.40;ReadPosRankSum=-0.132;SOR=0.673	GT:AD:DP:GQ:PL	1:16,161:177:99:5744,0
+ML756007.1	100959	.	TAAAAAAAAAAAGAAAAAAAA	T	4449.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.849;DP=328;FS=1.984;MLEAC=1;MLEAF=1.00;MQ=59.96;MQRankSum=-0.336;QD=21.39;ReadPosRankSum=1.090;SOR=0.976	GT:AD:DP:GQ:PL	1:24,184:208:99:4459,0
+ML756007.1	167242	.	TTTTTTTTTTTTTTTTTTTCCTTTTCTGGTTGTGAATTTTTTTTTTTTTGTTTTTG	T	745.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.188;DP=209;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.90;MQRankSum=1.815;QD=9.31;ReadPosRankSum=0.472;SOR=0.846	GT:AD:DP:GQ:PL	1:19,61:80:99:755,0
+ML756007.1	185007	.	GTTTTTTTTT	G	4636.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.253;DP=240;FS=4.010;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=33.35;ReadPosRankSum=0.390;SOR=2.584	GT:AD:DP:GQ:PL	1:5,134:139:99:4646,0
+ML756007.1	192538	.	CAAA	C	119.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.335;DP=118;FS=5.076;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=3.40;ReadPosRankSum=-0.114;SOR=0.097	GT:AD:DP:GQ:PL	1:17,18:35:99:129,0
+ML756008.1	328	.	CTTTT	C	1343.01	SORfilter	AC=1;AF=1.00;AN=1;DP=49;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.46;QD=27.72;SOR=4.514	GT:AD:DP:GQ:PL	1:0,19:19:99:1353,0
+ML756008.1	334	.	T	C	1250.01	SORfilter	AC=1;AF=1.00;AN=1;DP=35;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.41;QD=28.09;SOR=5.211	GT:AD:DP:GQ:PL	1:0,27:27:99:1260,0
+ML756008.1	336	.	T	TCCCCCCCCC	454.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.807;DP=36;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.46;MQRankSum=0.000;QD=19.74;SOR=1.445	GT:AD:DP:GQ:PL	1:8,15:23:99:464,0
+ML756008.1	339	.	CTTTTTAATA	C	1263.04	PASS	AC=1;AF=1.00;AN=1;DP=91;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.36;QD=35.37;SOR=1.981	GT:AD:DP:GQ:PL	1:1,33:34:99:1273,0
+ML756008.1	97419	.	GTTTTTTTTTTTTTTTTTTTTTTTTTGGTTTTTTCTGGT	G	2811.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.923;DP=218;FS=9.894;MLEAC=1;MLEAF=1.00;MQ=59.62;MQRankSum=2.697;QD=20.98;ReadPosRankSum=1.924;SOR=0.095	GT:AD:DP:GQ:PL	1:18,116:134:99:2821,0
+ML756008.1	206789	.	ATGTTGTTGTTGTTGTTGT	A	8647.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.222;DP=529;FS=11.726;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=26.71;ReadPosRankSum=-2.379;SOR=0.039	GT:AD:DP:GQ:PL	1:9,232:241:99:8657,0
+ML756009.1	111281	.	CA	C	1669.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.497;DP=200;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.95;MQRankSum=0.000;QD=12.64;ReadPosRankSum=-2.222;SOR=0.832	GT:AD:DP:GQ:PL	1:19,113:132:99:1679,0
+ML756009.1	188361	.	A	AT	1073.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.947;DP=226;FS=2.749;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=10.62;ReadPosRankSum=-0.731;SOR=0.853	GT:AD:DP:GQ:PL	1:23,78:101:99:1083,0
+ML756010.1	18891	.	A	G	12367.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.321;DP=413;FS=3.489;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=31.15;ReadPosRankSum=1.388;SOR=0.582	GT:AD:DP:GQ:PL	1:3,394:397:99:12377,0
+ML756010.1	84690	.	CTTTTTTTTTTTTTTTTTTTTTTTTTTTGGTTGGAAAATTTTTTTTTTGTCTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	C	3162.04	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.571;DP=268;FS=64.709;MLEAC=1;MLEAF=1.00;MQ=59.65;MQRankSum=-0.397;QD=26.13;ReadPosRankSum=1.879;SOR=2.055	GT:AD:DP:GQ:PL	1:19,102:121:99:3172,0
+ML756010.1	138491	.	CTTTTTTTTTTT	C	2111.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.586;DP=162;FS=28.237;MLEAC=1;MLEAF=1.00;MQ=59.93;MQRankSum=0.000;QD=27.78;ReadPosRankSum=-0.390;SOR=1.646	GT:AD:DP:GQ:PL	1:14,62:76:99:2121,0
+ML756010.1	165849	.	GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAATAAAAAA	G	3678.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.790;DP=309;FS=31.597;MLEAC=1;MLEAF=1.00;MQ=56.86;MQRankSum=3.577;QD=25.19;ReadPosRankSum=1.182;SOR=4.892	GT:AD:DP:GQ:PL	1:29,117:146:99:3688,0
+ML756011.1	176036	.	GAAAAAAAAAAAAAAAAAAAAAAAAATAATAAAAAAAAAAAAAAAAAGGAAAAGAAAA	G	2339.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.526;DP=212;FS=4.807;MLEAC=1;MLEAF=1.00;MQ=57.54;MQRankSum=4.417;QD=33.41;SOR=3.086	GT:AD:DP:GQ:PL	1:5,65:70:99:2349,0
+ML756012.1	21236	.	T	TGTGTCG	10852.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.700;DP=456;FS=2.297;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=33.59;ReadPosRankSum=0.601;SOR=0.681	GT:AD:DP:GQ:PL	1:3,271:274:99:10862,0
+ML756012.1	41115	.	GAAAAA	G	2256.04	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=6.320;DP=204;FS=78.953;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=19.79;ReadPosRankSum=2.196;SOR=4.458	GT:AD:DP:GQ:PL	1:23,91:114:99:2266,0
+ML756012.1	71614	.	GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	G	2354.01	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.331;DP=181;FS=98.580;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=20.83;ReadPosRankSum=0.418;SOR=4.396	GT:AD:DP:GQ:PL	1:25,88:113:99:2364,0
+ML756012.1	120488	.	TA	T	13539.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.365;DP=519;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=27.80;ReadPosRankSum=0.164;SOR=0.632	GT:AD:DP:GQ:PL	1:7,480:487:99:13549,0
+ML756013.1	108077	.	GTT	G	6602.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.323;DP=331;FS=23.261;MLEAC=1;MLEAF=1.00;MQ=59.96;MQRankSum=0.000;QD=28.70;ReadPosRankSum=-0.259;SOR=0.372	GT:AD:DP:GQ:PL	1:10,220:230:99:6612,0
+ML756013.1	139615	.	CTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	C	7633.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.610;DP=279;FS=9.529;MLEAC=1;MLEAF=1.00;MQ=59.79;MQRankSum=-0.157;QD=28.77;ReadPosRankSum=1.591;SOR=0.276	GT:AD:DP:GQ:PL	1:8,202:210:99:7643,0
+ML756014.1	133597	.	A	AG	7485.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.569;DP=330;FS=27.245;MLEAC=1;MLEAF=1.00;MQ=59.41;MQRankSum=0.000;QD=28.14;ReadPosRankSum=2.621;SOR=0.021	GT:AD:DP:GQ:PL	1:21,245:266:99:7495,0
+ML756014.1	133598	.	A	C	9452.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.294;DP=330;FS=24.303;MLEAC=1;MLEAF=1.00;MQ=59.41;MQRankSum=0.000;QD=34.38;ReadPosRankSum=2.031;SOR=0.013	GT:AD:DP:GQ:PL	1:11,259:270:99:9462,0
+ML756014.1	133606	.	A	G	10336.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.958;DP=330;FS=21.668;MLEAC=1;MLEAF=1.00;MQ=59.41;MQRankSum=0.000;QD=27.05;ReadPosRankSum=2.017;SOR=0.016	GT:AD:DP:GQ:PL	1:12,281:293:99:10346,0
+ML756014.1	133616	.	A	G	12230.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.524;DP=346;FS=15.351;MLEAC=1;MLEAF=1.00;MQ=59.44;MQRankSum=0.000;QD=32.25;ReadPosRankSum=0.814;SOR=0.026	GT:AD:DP:GQ:PL	1:9,318:327:99:12240,0
+ML756014.1	133619	.	GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	G	12640.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.740;DP=347;FS=5.404;MLEAC=1;MLEAF=1.00;MQ=59.44;MQRankSum=0.000;QD=25.77;ReadPosRankSum=1.152;SOR=0.144	GT:AD:DP:GQ:PL	1:6,312:318:99:12650,0
+ML756014.1	144713	.	T	TAGAGAGAGAGAGAGAGAGAGAGAGAGAG	3630.04	SORfilter	AC=1;AF=1.00;AN=1;DP=170;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.88;QD=27.88;SOR=6.273	GT:AD:DP:GQ:PL	1:0,83:83:99:3640,0
+ML756014.1	158330	.	CAA	C	64.04	QDFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.438;DP=141;FS=28.621;MLEAC=1;MLEAF=1.00;MQ=59.87;MQRankSum=0.000;QD=1.33;ReadPosRankSum=2.216;SOR=4.797	GT:AD:DP:GQ:PL	1:26,22:48:74:74,0
+ML756016.1	41777	.	GA	G	92.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.430;DP=115;FS=4.628;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=1.88;ReadPosRankSum=-1.835;SOR=0.252	GT:AD:DP:GQ:PL	1:20,29:49:99:102,0
+ML756016.1	54101	.	GAAAAA	G	1511.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.602;DP=172;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=0.000;QD=23.61;ReadPosRankSum=1.404;SOR=0.765	GT:AD:DP:GQ:PL	1:12,52:64:99:1521,0
+ML756018.1	5335	.	C	CAAA	2903.04	PASS	AC=1;AF=1.00;AN=1;DP=149;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=33.76;SOR=1.298	GT:AD:DP:GQ:PL	1:0,86:86:99:2913,0
+ML756018.1	34930	.	TGGGGGGGGGGGGGGGTAGGTGGGGGGGGGGGGGGGGGGGGGGGGGGGG	T	1330.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.908;DP=176;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=54.66;MQRankSum=2.879;QD=18.73;ReadPosRankSum=1.157;SOR=4.209	GT:AD:DP:GQ:PL	1:6,65:71:99:1340,0
+ML756018.1	127909	.	C	CAAAAAAAAA	224.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.320;DP=178;FS=10.414;MLEAC=1;MLEAF=1.00;MQ=59.38;MQRankSum=-0.704;QD=4.77;ReadPosRankSum=0.189;SOR=6.091	GT:AD:DP:GQ:PL	1:23,24:47:99:234,0
+ML756019.1	96052	.	A	AGAGGGCTTGGCACCCTCACCAGCGCCAGGAGCACCGGGAGCAGAGCCG	7556.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.394;DP=634;FS=4.627;MLEAC=1;MLEAF=1.00;MQ=59.26;MQRankSum=0.678;QD=34.63;ReadPosRankSum=-3.003;SOR=0.145	GT:AD:DP:GQ:PL	1:29,171:200:99:7566,0
+ML756019.1	128466	.	T	A	9529.01	SORfilter	AC=1;AF=1.00;AN=1;DP=212;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=30.17;SOR=5.303	GT:AD:DP:GQ:PL	1:0,210:210:99:9539,0
+ML756019.1	128470	.	T	A	9527.01	SORfilter	AC=1;AF=1.00;AN=1;DP=211;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=27.98;SOR=4.877	GT:AD:DP:GQ:PL	1:0,209:209:99:9537,0
+ML756019.1	128476	.	G	A	9620.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=214;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=31.04;SOR=4.555	GT:AD:DP:GQ:PL	1:0,212:212:99:9630,0
+ML756019.1	128480	.	T	C	9845.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=218;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=35.38;SOR=4.387	GT:AD:DP:GQ:PL	1:0,216:216:99:9855,0
+ML756019.1	128484	.	T	A	10025.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=223;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=25.39;SOR=3.983	GT:AD:DP:GQ:PL	1:0,221:221:99:10035,0
+ML756019.1	128487	.	T	C	10123.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=222;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=26.64;SOR=3.892	GT:AD:DP:GQ:PL	1:0,220:220:99:10133,0
+ML756019.1	128488	.	GA	G	10078.01	SORfilter	AC=1;AF=1.00;AN=1;DP=225;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=27.72;SOR=3.693	GT:AD:DP:GQ:PL	1:0,223:223:99:10088,0
+ML756019.1	138234	.	CAAAAAAAAAA	C	12069.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.011;DP=403;FS=3.001;MLEAC=1;MLEAF=1.00;MQ=59.94;MQRankSum=0.000;QD=32.88;ReadPosRankSum=1.386;SOR=0.137	GT:AD:DP:GQ:PL	1:8,303:311:99:12079,0
+ML756020.1	77195	.	G	GC	2002.04	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.805;DP=163;FS=70.870;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=16.82;ReadPosRankSum=-1.215;SOR=7.378	GT:AD:DP:GQ:PL	1:19,100:119:99:2012,0
+ML756021.1	63761	.	TCC	T	5417.04	SORfilter	AC=1;AF=1.00;AN=1;DP=149;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=30.04;SOR=9.401	GT:AD:DP:GQ:PL	1:1,136:137:99:5427,0
+ML756021.1	63768	.	C	T	2532.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.465;DP=139;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=19.94;ReadPosRankSum=1.096;SOR=3.541	GT:AD:DP:GQ:PL	1:18,109:127:99:2542,0
+ML756021.1	135584	.	A	G	16024.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.269;DP=532;FS=12.693;MLEAC=1;MLEAF=1.00;MQ=55.81;MQRankSum=14.280;QD=33.52;ReadPosRankSum=7.224;SOR=0.127	GT:AD:DP:GQ:PL	1:51,427:478:99:16034,0
+ML756021.1	135608	.	A	G	14883.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.061;DP=444;FS=11.812;MLEAC=1;MLEAF=1.00;MQ=55.14;MQRankSum=13.845;QD=34.14;ReadPosRankSum=-1.361;SOR=0.127	GT:AD:DP:GQ:PL	1:50,386:436:99:14893,0
+ML756022.1	97853	.	CTTTT	C	292.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.664;DP=121;FS=2.331;MLEAC=1;MLEAF=1.00;MQ=59.58;MQRankSum=0.000;QD=9.73;ReadPosRankSum=0.091;SOR=0.223	GT:AD:DP:GQ:PL	1:13,17:30:99:302,0
+ML756022.1	133829	.	CAAAAAAAAAAAAAAAAAAAAAA	C	1118.04	PASS	AC=1;AF=1.00;AN=1;DP=131;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.68;QD=32.88;SOR=2.093	GT:AD:DP:GQ:PL	1:3,31:34:99:1128,0
+ML756023.1	113623	.	TAAAAAAAAAAAAAAAAAAAAA	T	283.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.387;DP=105;FS=36.165;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=7.65;ReadPosRankSum=-2.202;SOR=2.568	GT:AD:DP:GQ:PL	1:16,21:37:99:293,0
+ML756023.1	139798	.	A	C	2026.01	MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.531;DP=1475;FS=39.326;MLEAC=1;MLEAF=1.00;MQ=51.16;MQRankSum=-21.090;QD=1.87;ReadPosRankSum=0.911;SOR=2.453	GT:AD:DP:GQ:PL	1:516,566:1082:99:2036,0
+ML756023.1	150333	.	T	TCCCCCCCCCCC	298.04	SORfilter	AC=1;AF=1.00;AN=1;DP=93;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.97;QD=27.95;SOR=3.258	GT:AD:DP:GQ:PL	1:0,4:4:99:308,0
+ML756023.1	150409	.	C	T	28656.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-4.600;DP=1679;FS=14.320;MLEAC=1;MLEAF=1.00;MQ=58.29;MQRankSum=-3.831;QD=20.14;ReadPosRankSum=3.204;SOR=2.126	GT:AD:DP:GQ:PL	1:187,1236:1423:99:28666,0
+ML756023.1	150445	.	T	C	1659.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.897;DP=1943;FS=16.354;MLEAC=1;MLEAF=1.00;MQ=58.06;MQRankSum=-4.332;QD=1.52;ReadPosRankSum=1.446;SOR=1.991	GT:AD:DP:GQ:PL	1:252,836:1088:99:1669,0
+ML756023.1	150479	.	T	TTC	27170.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=5.279;DP=2024;FS=6.879;MLEAC=1;MLEAF=1.00;MQ=57.68;MQRankSum=-7.092;QD=15.29;ReadPosRankSum=-4.339;SOR=1.360	GT:AD:DP:GQ:PL	1:331,1446:1777:99:27180,0
+ML756023.1	150480	.	A	C	27173.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=6.068;DP=1760;FS=6.747;MLEAC=1;MLEAF=1.00;MQ=58.47;MQRankSum=-7.087;QD=15.65;ReadPosRankSum=-3.795;SOR=1.371	GT:AD:DP:GQ:PL	1:329,1407:1736:99:27183,0
+ML756023.1	150486	.	G	A	23438.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=4.864;DP=1719;FS=6.596;MLEAC=1;MLEAF=1.00;MQ=58.43;MQRankSum=-7.308;QD=13.83;ReadPosRankSum=-4.585;SOR=1.378	GT:AD:DP:GQ:PL	1:340,1355:1695:99:23448,0
+ML756023.1	150495	.	A	C	719.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=4.661;DP=1610;FS=15.791;MLEAC=1;MLEAF=1.00;MQ=58.27;MQRankSum=-7.597;QD=0.63;ReadPosRankSum=-7.283;SOR=1.803	GT:AD:DP:GQ:PL	1:325,821:1146:99:729,0
+ML756023.1	150498	.	G	GTT	21215.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=4.761;DP=1549;FS=8.950;MLEAC=1;MLEAF=1.00;MQ=58.15;MQRankSum=-8.129;QD=13.90;ReadPosRankSum=-7.242;SOR=1.393	GT:AD:DP:GQ:PL	1:332,1194:1526:99:21225,0
+ML756023.1	150525	.	G	T	21819.01	ReadPosRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-4.529;DP=1465;FS=2.219;MLEAC=1;MLEAF=1.00;MQ=55.85;MQRankSum=-9.488;QD=16.44;ReadPosRankSum=-8.417;SOR=0.959	GT:AD:DP:GQ:PL	1:325,1002:1327:99:21829,0
+ML756023.1	150539	.	G	T	16610.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.696;DP=1275;FS=0.599;MLEAC=1;MLEAF=1.00;MQ=55.68;MQRankSum=-9.481;QD=14.65;ReadPosRankSum=-7.500;SOR=0.767	GT:AD:DP:GQ:PL	1:329,805:1134:99:16620,0
+ML756023.1	150544	.	C	CAA	16015.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.565;DP=1227;FS=1.256;MLEAC=1;MLEAF=1.00;MQ=55.57;MQRankSum=-9.749;QD=14.76;ReadPosRankSum=-6.467;SOR=0.826	GT:AD:DP:GQ:PL	1:330,755:1085:99:16025,0
+ML756023.1	150546	.	GCA	G	15195.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.754;DP=1208;FS=0.574;MLEAC=1;MLEAF=1.00;MQ=55.60;MQRankSum=-10.104;QD=14.21;ReadPosRankSum=-5.507;SOR=0.759	GT:AD:DP:GQ:PL	1:347,722:1069:99:15205,0
+ML756023.1	150549	.	C	T	14041.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=1.074;DP=1191;FS=0.582;MLEAC=1;MLEAF=1.00;MQ=55.54;MQRankSum=-10.020;QD=13.35;ReadPosRankSum=-5.110;SOR=0.767	GT:AD:DP:GQ:PL	1:337,715:1052:99:14051,0
+ML756023.1	150554	.	G	A	14455.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=0.675;DP=1162;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.43;MQRankSum=-10.369;QD=14.13;ReadPosRankSum=-2.810;SOR=0.734	GT:AD:DP:GQ:PL	1:345,678:1023:99:14465,0
+ML756023.1	150557	.	C	A	14730.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=1.028;DP=1125;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.27;MQRankSum=-10.619;QD=14.92;ReadPosRankSum=-2.576;SOR=0.704	GT:AD:DP:GQ:PL	1:342,645:987:99:14740,0
+ML756023.1	150571	.	T	C	9349.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=5.204;DP=1051;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.11;MQRankSum=-11.305;QD=10.40;ReadPosRankSum=2.460;SOR=0.692	GT:AD:DP:GQ:PL	1:353,546:899:99:9359,0
+ML756023.1	150573	.	GAGAA	G	8134.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.450;DP=1060;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.18;MQRankSum=-11.403;QD=8.97;ReadPosRankSum=2.473;SOR=0.707	GT:AD:DP:GQ:PL	1:365,542:907:99:8144,0
+ML756023.1	150578	.	A	T	8809.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.732;DP=1063;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.20;MQRankSum=-11.159;QD=9.78;ReadPosRankSum=2.068;SOR=0.738	GT:AD:DP:GQ:PL	1:353,548:901:99:8819,0
+ML756023.1	150586	.	G	C	15829.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.446;DP=1277;FS=1.157;MLEAC=1;MLEAF=1.00;MQ=55.98;MQRankSum=-10.067;QD=15.38;ReadPosRankSum=1.151;SOR=0.591	GT:AD:DP:GQ:PL	1:368,661:1029:99:15839,0
+ML756023.1	150669	.	G	A	10767.01	ReadPosRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=4.063;DP=1947;FS=35.094;MLEAC=1;MLEAF=1.00;MQ=58.19;MQRankSum=-5.987;QD=8.60;ReadPosRankSum=-9.340;SOR=1.189	GT:AD:DP:GQ:PL	1:435,817:1252:99:10777,0
+ML756023.1	150675	.	CAA	C	8006.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.737;DP=1971;FS=36.654;MLEAC=1;MLEAF=1.00;MQ=58.20;MQRankSum=-6.225;QD=6.61;ReadPosRankSum=-4.636;SOR=1.177	GT:AD:DP:GQ:PL	1:445,767:1212:99:8016,0
+ML756023.1	150680	.	TTC	T	11374.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.773;DP=2003;FS=32.738;MLEAC=1;MLEAF=1.00;MQ=58.03;MQRankSum=-6.247;QD=8.80;ReadPosRankSum=-2.489;SOR=1.179	GT:AD:DP:GQ:PL	1:447,846:1293:99:11384,0
+ML756023.1	150690	.	A	C	16255.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=4.178;DP=2233;FS=33.962;MLEAC=1;MLEAF=1.00;MQ=56.93;MQRankSum=-7.305;QD=11.45;ReadPosRankSum=3.068;SOR=1.128	GT:AD:DP:GQ:PL	1:449,971:1420:99:16265,0
+ML756023.1	150729	.	A	G	41103.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.251;DP=2688;FS=54.752;MLEAC=1;MLEAF=1.00;MQ=54.77;MQRankSum=-14.400;QD=21.93;ReadPosRankSum=10.616;SOR=1.544	GT:AD:DP:GQ:PL	1:462,1412:1874:99:41113,0
+ML756023.1	150745	.	A	C	33741.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.903;DP=2753;FS=52.258;MLEAC=1;MLEAF=1.00;MQ=53.64;MQRankSum=-15.754;QD=16.39;ReadPosRankSum=6.371;SOR=1.802	GT:AD:DP:GQ:PL	1:465,1594:2059:99:33751,0
+ML756023.1	150754	.	C	T	37305.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.660;DP=2829;FS=54.725;MLEAC=1;MLEAF=1.00;MQ=53.11;MQRankSum=-16.628;QD=17.43;ReadPosRankSum=2.822;SOR=1.895	GT:AD:DP:GQ:PL	1:453,1687:2140:99:37315,0
+ML756023.1	150788	.	C	CT	12828.04	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.490;DP=2811;FS=46.576;MLEAC=1;MLEAF=1.00;MQ=50.23;MQRankSum=-23.281;QD=5.77;ReadPosRankSum=-3.619;SOR=2.506	GT:AD:DP:GQ:PL	1:660,1564:2224:99:12838,0
+ML756023.1	150790	.	C	A	12533.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.538;DP=2703;FS=46.725;MLEAC=1;MLEAF=1.00;MQ=49.48;MQRankSum=-24.141;QD=5.58;ReadPosRankSum=-2.657;SOR=2.565	GT:AD:DP:GQ:PL	1:671,1575:2246:99:12543,0
+ML756023.1	150807	.	A	G	32010.01	FSFilter;MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.713;DP=2368;FS=78.183;MLEAC=1;MLEAF=1.00;MQ=46.32;MQRankSum=-28.388;QD=15.40;ReadPosRankSum=-2.516;SOR=2.923	GT:AD:DP:GQ:PL	1:456,1623:2079:99:32020,0
+ML756023.1	150821	.	T	A	32459.01	FSFilter;MQRankSumFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=8.188;DP=2295;FS=87.421;MLEAC=1;MLEAF=1.00;MQ=45.27;MQRankSum=-31.436;QD=15.30;ReadPosRankSum=-0.761;SOR=3.363	GT:AD:DP:GQ:PL	1:462,1660:2122:99:32469,0
+ML756023.1	150831	.	C	T	37783.01	FSFilter;MQRankSumFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.616;DP=2332;FS=87.300;MLEAC=1;MLEAF=1.00;MQ=44.74;MQRankSum=-31.957;QD=17.27;ReadPosRankSum=-1.396;SOR=3.511	GT:AD:DP:GQ:PL	1:460,1728:2188:99:37793,0
+ML756023.1	150843	.	C	T	37182.01	FSFilter;MQRankSumFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.039;DP=2187;FS=99.434;MLEAC=1;MLEAF=1.00;MQ=44.07;MQRankSum=-35.868;QD=17.10;ReadPosRankSum=1.063;SOR=4.157	GT:AD:DP:GQ:PL	1:474,1701:2175:99:37192,0
+ML756023.1	150921	.	T	C	28588.01	FSFilter;MQRankSumFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.620;DP=1670;FS=126.549;MLEAC=1;MLEAF=1.00;MQ=45.23;MQRankSum=-34.728;QD=17.21;ReadPosRankSum=3.910;SOR=5.340	GT:AD:DP:GQ:PL	1:507,1154:1661:99:28598,0
+ML756023.1	150932	.	A	T	23918.01	FSFilter;MQRankSumFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.203;DP=1576;FS=123.675;MLEAC=1;MLEAF=1.00;MQ=45.74;MQRankSum=-34.256;QD=15.26;ReadPosRankSum=1.520;SOR=5.535	GT:AD:DP:GQ:PL	1:522,1045:1567:99:23928,0
+ML756023.1	150956	.	T	C	2082.01	FSFilter;MQRankSumFilter;QDFilter;ReadPosRankSumFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.429;DP=1341;FS=106.450;MLEAC=1;MLEAF=1.00;MQ=47.14;MQRankSum=-28.769;QD=1.60;ReadPosRankSum=-8.906;SOR=5.320	GT:AD:DP:GQ:PL	1:575,730:1305:99:2092,0
+ML756023.1	150966	.	A	G	8372.01	FSFilter;MQRankSumFilter;ReadPosRankSumFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=5.910;DP=1196;FS=132.246;MLEAC=1;MLEAF=1.00;MQ=48.10;MQRankSum=-31.581;QD=7.05;ReadPosRankSum=-8.468;SOR=6.694	GT:AD:DP:GQ:PL	1:531,656:1187:99:8382,0
+ML756024.1	21099	.	C	G	5273.01	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.502;DP=202;FS=65.999;MLEAC=1;MLEAF=1.00;MQ=58.07;MQRankSum=6.039;QD=31.20;ReadPosRankSum=2.894;SOR=8.172	GT:AD:DP:GQ:PL	1:25,144:169:99:5283,0
+ML756024.1	21102	.	ACCCCCCCCCCCC	A	3694.04	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=5.276;DP=201;FS=185.645;MLEAC=1;MLEAF=1.00;MQ=58.06;MQRankSum=2.918;QD=21.11;ReadPosRankSum=4.606;SOR=8.862	GT:AD:DP:GQ:PL	1:40,135:175:99:3704,0
+ML756024.1	35167	.	G	GTCGTCAAATATCATCAATATTCGTCAAATATCATCAATAT	6502.04	PASS	AC=1;AF=1.00;AN=1;DP=489;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.32;QD=26.72;SOR=0.693	GT:AD:DP:GQ:PL	1:4,57:61:99:6512,0
+ML756025.1	28108	.	ACC	A	2309.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.166;DP=92;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=56.55;MQRankSum=-0.094;QD=28.86;ReadPosRankSum=-1.464;SOR=3.877	GT:AD:DP:GQ:PL	1:14,66:80:99:2319,0
+ML756025.1	28119	.	A	AAG	2452.04	SORfilter	AC=1;AF=1.00;AN=1;DP=54;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.53;QD=32.40;SOR=7.978	GT:AD:DP:GQ:PL	1:0,54:54:99:2462,0
+ML756025.1	28123	.	C	A	2261.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=48;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=30.67;SOR=7.784	GT:AD:DP:GQ:PL	1:0,48:48:99:2271,0
+ML756025.1	28126	.	C	T	2375.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=50;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=30.54;SOR=7.864	GT:AD:DP:GQ:PL	1:0,50:50:99:2385,0
+ML756025.1	28129	.	C	A	2375.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=47;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=28.41;SOR=7.701	GT:AD:DP:GQ:PL	1:0,47:47:99:2385,0
+ML756025.1	28134	.	C	G	2125.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=46;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=32.00;SOR=7.658	GT:AD:DP:GQ:PL	1:0,46:46:99:2135,0
+ML756025.1	28136	.	GCCCCCCCCACCCCCCCCCCCCCCCCCCAAAGCCCCATTTTCA	G	1216.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.248;DP=46;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.88;MQRankSum=0.000;QD=27.64;ReadPosRankSum=0.155;SOR=5.136	GT:AD:DP:GQ:PL	1:2,42:44:99:1226,0
+ML756025.1	28180	.	C	CT	1749.04	SORfilter	AC=1;AF=1.00;AN=1;DP=42;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=28.36;SOR=7.168	GT:AD:DP:GQ:PL	1:0,41:41:99:1759,0
+ML756025.1	28183	.	GCCCCCC	G	1846.01	SORfilter	AC=1;AF=1.00;AN=1;DP=40;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=36.63;SOR=7.378	GT:AD:DP:GQ:PL	1:1,39:40:99:1856,0
+ML756025.1	28192	.	C	A	561.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.333;DP=36;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=18.70;SOR=4.255	GT:AD:DP:GQ:PL	1:4,26:30:99:571,0
+ML756025.1	54085	.	CAAA	C	7261.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.076;DP=311;FS=9.379;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=29.88;ReadPosRankSum=-0.885;SOR=0.059	GT:AD:DP:GQ:PL	1:13,230:243:99:7271,0
+ML756025.1	137403	.	GGTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTATATTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTGGTGA	G	2629.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.110;DP=417;FS=6.732;MLEAC=1;MLEAF=1.00;MQ=52.84;MQRankSum=0.951;QD=13.76;ReadPosRankSum=2.510;SOR=0.290	GT:AD:DP:GQ:PL	1:27,164:191:99:2639,0
+ML756025.1	148593	.	A	T	7353.01	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.077;DP=978;FS=111.651;MLEAC=1;MLEAF=1.00;MQ=49.88;MQRankSum=-4.346;QD=8.87;ReadPosRankSum=0.062;SOR=1.050	GT:AD:DP:GQ:PL	1:308,521:829:99:7363,0
+ML756025.1	148619	.	A	T	7328.01	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.456;DP=910;FS=100.574;MLEAC=1;MLEAF=1.00;MQ=50.26;MQRankSum=-0.155;QD=9.18;ReadPosRankSum=-0.166;SOR=0.490	GT:AD:DP:GQ:PL	1:298,500:798:99:7338,0
+ML756025.1	148651	.	A	T	2088.01	FSFilter;MQRankSumFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.098;DP=889;FS=137.043;MLEAC=1;MLEAF=1.00;MQ=51.36;MQRankSum=-18.354;QD=2.62;ReadPosRankSum=0.490;SOR=4.389	GT:AD:DP:GQ:PL	1:381,416:797:99:2098,0
+ML756025.1	148673	.	T	C	2359.01	FSFilter;MQRankSumFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.693;DP=902;FS=148.327;MLEAC=1;MLEAF=1.00;MQ=51.94;MQRankSum=-24.280;QD=2.94;ReadPosRankSum=-0.689;SOR=4.805	GT:AD:DP:GQ:PL	1:383,419:802:99:2369,0
+ML756026.1	23234	.	A	AT	8361.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.256;DP=250;FS=8.110;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=25.74;ReadPosRankSum=1.605;SOR=0.940	GT:AD:DP:GQ:PL	1:2,217:219:99:8371,0
+ML756026.1	23238	.	CA	C	2540.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.100;DP=237;FS=7.719;MLEAC=1;MLEAF=1.00;MQ=59.93;MQRankSum=0.000;QD=14.11;ReadPosRankSum=0.191;SOR=0.247	GT:AD:DP:GQ:PL	1:22,158:180:99:2550,0
+ML756026.1	23240	.	A	C	2474.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.434;DP=224;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=13.37;ReadPosRankSum=1.458;SOR=0.709	GT:AD:DP:GQ:PL	1:30,155:185:99:2484,0
+ML756026.1	121265	.	T	C	7135.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.689;DP=390;FS=4.469;MLEAC=1;MLEAF=1.00;MQ=59.96;MQRankSum=3.498;QD=22.02;ReadPosRankSum=2.863;SOR=1.100	GT:AD:DP:GQ:PL	1:22,302:324:99:7145,0
+ML756028.1	123970	.	TC	T	4232.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.735;DP=224;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.94;MQRankSum=0.000;QD=21.70;ReadPosRankSum=-0.551;SOR=5.931	GT:AD:DP:GQ:PL	1:7,188:195:99:4242,0
+ML756029.1	56711	.	CTTTTTTTTTTTTT	C	5891.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.220;DP=174;FS=56.162;MLEAC=1;MLEAF=1.00;MQ=59.83;MQRankSum=5.831;QD=32.15;ReadPosRankSum=-0.209;SOR=6.993	GT:AD:DP:GQ:PL	1:4,134:138:99:5901,0
+ML756029.1	56737	.	T	C	7252.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.945;DP=168;FS=26.311;MLEAC=1;MLEAF=1.00;MQ=59.83;MQRankSum=6.384;QD=29.37;ReadPosRankSum=-2.611;SOR=4.893	GT:AD:DP:GQ:PL	1:4,161:165:99:7262,0
+ML756029.1	56739	.	T	A	7280.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.605;DP=171;FS=24.840;MLEAC=1;MLEAF=1.00;MQ=59.83;MQRankSum=6.442;QD=27.96;ReadPosRankSum=0.288;SOR=4.621	GT:AD:DP:GQ:PL	1:4,164:168:99:7290,0
+ML756029.1	56750	.	T	C	7618.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=0.872;DP=170;FS=3.035;MLEAC=1;MLEAF=1.00;MQ=59.83;MQRankSum=7.439;QD=27.92;ReadPosRankSum=0.735;SOR=2.041	GT:AD:DP:GQ:PL	1:3,164:167:99:7628,0
+ML756029.1	56752	.	T	A	7978.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=2.185;DP=177;FS=2.889;MLEAC=1;MLEAF=1.00;MQ=59.84;MQRankSum=7.594;QD=33.85;ReadPosRankSum=0.659;SOR=1.947	GT:AD:DP:GQ:PL	1:3,171:174:99:7988,0
+ML756029.1	56759	.	T	G	8915.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=2.740;DP=195;FS=2.410;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=26.07;ReadPosRankSum=1.027;SOR=0.263	GT:AD:DP:GQ:PL	1:4,189:193:99:8925,0
+ML756029.1	56761	.	T	A	8662.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=0.268;DP=201;FS=2.403;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=32.02;ReadPosRankSum=0.816;SOR=0.250	GT:AD:DP:GQ:PL	1:4,196:200:99:8672,0
+ML756029.1	72846	.	A	ATTTT	465.04	SORfilter	AC=1;AF=1.00;AN=1;DP=19;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.68;QD=33.22;SOR=5.421	GT:AD:DP:GQ:PL	1:0,14:14:99:475,0
+ML756029.1	118710	.	CTTTTTTTTTTTTTTTTTTTTT	C	361.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.511;DP=125;FS=4.222;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=14.44;ReadPosRankSum=-0.884;SOR=0.760	GT:AD:DP:GQ:PL	1:6,19:25:99:371,0
+ML756029.1	147055	.	T	C	3778.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.456;DP=2351;FS=12.063;MLEAC=1;MLEAF=1.00;MQ=59.89;MQRankSum=-2.517;QD=5.36;ReadPosRankSum=2.233;SOR=0.145	GT:AD:DP:GQ:PL	1:310,395:705:99:3788,0
+ML756030.1	88985	.	CTTTTTTTTTTTTTTTTTTTTTTTCCCTTTT	C	5384.04	PASS	AC=1;AF=1.00;AN=1;DP=236;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.52;QD=28.52;SOR=1.085	GT:AD:DP:GQ:PL	1:2,151:153:99:5394,0
+ML756030.1	140784	.	CTTT	C	9393.04	PASS	AC=1;AF=1.00;AN=1;DP=495;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.53;QD=26.92;SOR=2.136	GT:AD:DP:GQ:PL	1:2,257:259:99:9403,0
+ML756032.1	56754	.	A	AAT	3623.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.271;DP=281;FS=2.588;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=18.30;ReadPosRankSum=-0.533;SOR=0.469	GT:AD:DP:GQ:PL	1:34,164:198:99:3633,0
+ML756032.1	80248	.	AGGG	A	1349.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.865;DP=103;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=17.99;ReadPosRankSum=1.563;SOR=3.611	GT:AD:DP:GQ:PL	1:8,67:75:99:1359,0
+ML756032.1	137916	.	T	A	124.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.904;DP=2983;FS=43.880;MLEAC=1;MLEAF=1.00;MQ=56.73;MQRankSum=-8.906;QD=0.22;ReadPosRankSum=1.746;SOR=0.071	GT:AD:DP:GQ:PL	1:287,278:565:99:134,0
+ML756032.1	137918	.	C	G	83.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.785;DP=3034;FS=35.986;MLEAC=1;MLEAF=1.00;MQ=56.82;MQRankSum=-8.484;QD=0.14;ReadPosRankSum=1.015;SOR=0.086	GT:AD:DP:GQ:PL	1:287,291:578:93:93,0
+ML756032.1	137986	.	C	A	8331.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-8.987;DP=4163;FS=19.130;MLEAC=1;MLEAF=1.00;MQ=58.24;MQRankSum=-5.186;QD=11.67;ReadPosRankSum=-0.098;SOR=0.059	GT:AD:DP:GQ:PL	1:259,455:714:99:8341,0
+ML756032.1	137999	.	G	A	6118.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.973;DP=3698;FS=15.269;MLEAC=1;MLEAF=1.00;MQ=58.57;MQRankSum=-2.509;QD=9.41;ReadPosRankSum=1.145;SOR=0.047	GT:AD:DP:GQ:PL	1:259,391:650:99:6128,0
+ML756034.1	49022	.	GAAAAAAAAAAAAA	G	4213.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.167;DP=207;FS=2.327;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=34.25;ReadPosRankSum=0.150;SOR=0.436	GT:AD:DP:GQ:PL	1:9,114:123:99:4223,0
+ML756034.1	117796	.	CAAAAAAAAAAA	C	3982.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.176;DP=200;FS=7.550;MLEAC=1;MLEAF=1.00;MQ=59.78;MQRankSum=0.000;QD=31.86;ReadPosRankSum=0.640;SOR=1.584	GT:AD:DP:GQ:PL	1:8,117:125:99:3992,0
+ML756034.1	131154	.	TG	T	99.04	SORfilter	AC=1;AF=1.00;AN=1;DP=35;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=14.15;SOR=3.258	GT:AD:DP:GQ:PL	1:0,7:7:99:109,0
+ML756035.1	124210	.	T	TTGTAGAAGAGTGCACATGAATGTCAACACTCCCCTAC	2423.04	PASS	AC=1;AF=1.00;AN=1;DP=453;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.87;QD=5.35;SOR=0.693	GT:AD:DP:GQ:PL	1:0,0:0:99:2433,0
+ML756036.1	124855	.	C	T	8890.01	SnpCluster	AC=1;AF=1.00;AN=1;DP=197;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=51.27;QD=25.81;SOR=0.745	GT:AD:DP:GQ:PL	1:0,197:197:99:8900,0
+ML756036.1	124859	.	A	T	8688.01	SnpCluster	AC=1;AF=1.00;AN=1;DP=187;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=50.57;QD=33.64;SOR=0.770	GT:AD:DP:GQ:PL	1:0,187:187:99:8698,0
+ML756036.1	124862	.	A	C	8540.01	SnpCluster	AC=1;AF=1.00;AN=1;DP=185;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=50.36;QD=29.51;SOR=0.726	GT:AD:DP:GQ:PL	1:0,185:185:99:8550,0
+ML756036.1	124864	.	G	A	8405.01	SnpCluster	AC=1;AF=1.00;AN=1;DP=181;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=49.92;QD=26.89;SOR=0.704	GT:AD:DP:GQ:PL	1:0,181:181:99:8415,0
+ML756036.1	124868	.	T	A	8090.01	SnpCluster	AC=1;AF=1.00;AN=1;DP=161;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=48.29;QD=32.13;SOR=0.756	GT:AD:DP:GQ:PL	1:0,161:161:99:8100,0
+ML756036.1	124871	.	A	G	7280.01	SnpCluster	AC=1;AF=1.00;AN=1;DP=159;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=47.99;QD=27.13;SOR=0.757	GT:AD:DP:GQ:PL	1:0,159:159:99:7290,0
+ML756036.1	124874	.	A	G	7280.01	SnpCluster	AC=1;AF=1.00;AN=1;DP=152;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=47.29;QD=27.55;SOR=0.803	GT:AD:DP:GQ:PL	1:0,152:152:99:7290,0
+ML756036.1	124880	.	A	T	6200.01	SnpCluster	AC=1;AF=1.00;AN=1;DP=131;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=44.92;QD=29.81;SOR=0.771	GT:AD:DP:GQ:PL	1:0,131:131:99:6210,0
+ML756036.1	124886	.	G	T	6290.01	SnpCluster	AC=1;AF=1.00;AN=1;DP=123;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=46.09;QD=31.72;SOR=0.848	GT:AD:DP:GQ:PL	1:0,123:123:99:6300,0
+ML756036.1	124889	.	A	G	5705.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.327;DP=116;FS=3.241;MLEAC=1;MLEAF=1.00;MQ=47.24;MQRankSum=-1.035;QD=32.79;ReadPosRankSum=1.241;SOR=0.419	GT:AD:DP:GQ:PL	1:1,115:116:99:5715,0
+ML756036.1	124892	.	G	C	5030.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.504;DP=113;FS=6.392;MLEAC=1;MLEAF=1.00;MQ=48.55;MQRankSum=-1.358;QD=29.87;ReadPosRankSum=1.792;SOR=0.308	GT:AD:DP:GQ:PL	1:2,106:108:99:5040,0
+ML756036.1	124897	.	T	TTG	2523.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.808;DP=107;FS=12.411;MLEAC=1;MLEAF=1.00;MQ=47.90;MQRankSum=-1.815;QD=30.40;ReadPosRankSum=-1.190;SOR=0.307	GT:AD:DP:GQ:PL	1:8,75:83:99:2533,0
+ML756036.1	124899	.	GTA	G	3492.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.050;DP=113;FS=25.855;MLEAC=1;MLEAF=1.00;MQ=48.46;MQRankSum=-1.838;QD=31.91;ReadPosRankSum=0.715;SOR=0.308	GT:AD:DP:GQ:PL	1:10,88:98:99:3502,0
+ML756037.1	4977	.	GAGATTAAAAAAAAAAAAAAA	G	4790.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.110;DP=419;FS=1.753;MLEAC=1;MLEAF=1.00;MQ=59.94;MQRankSum=2.053;QD=14.56;ReadPosRankSum=0.875;SOR=0.709	GT:AD:DP:GQ:PL	1:60,269:329:99:4800,0
+ML756039.1	146	.	T	C	28919.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.500;DP=4474;FS=6.827;MLEAC=1;MLEAF=1.00;MQ=54.93;MQRankSum=-7.041;QD=27.75;ReadPosRankSum=0.375;SOR=0.103	GT:AD:DP:GQ:PL	1:191,851:1042:99:28929,0
+ML756039.1	164	.	C	T	9068.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.726;DP=3869;FS=0.951;MLEAC=1;MLEAF=1.00;MQ=56.51;MQRankSum=-5.393;QD=9.49;ReadPosRankSum=5.500;SOR=0.579	GT:AD:DP:GQ:PL	1:354,602:956:99:9078,0
+ML756039.1	745	.	G	A	4771.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.293;DP=2235;FS=1.756;MLEAC=1;MLEAF=1.00;MQ=49.87;MQRankSum=-12.589;QD=4.31;ReadPosRankSum=2.589;SOR=0.532	GT:AD:DP:GQ:PL	1:493,615:1108:99:4781,0
+ML756039.1	830	.	A	G	13667.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-4.520;DP=2589;FS=6.302;MLEAC=1;MLEAF=1.00;MQ=45.02;MQRankSum=1.328;QD=11.01;ReadPosRankSum=1.480;SOR=1.021	GT:AD:DP:GQ:PL	1:441,800:1241:99:13677,0
+ML756039.1	929	.	G	A	5958.01	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-5.618;DP=2056;FS=69.259;MLEAC=1;MLEAF=1.00;MQ=44.11;MQRankSum=4.442;QD=4.99;ReadPosRankSum=5.296;SOR=3.839	GT:AD:DP:GQ:PL	1:532,663:1195:99:5968,0
+ML756039.1	951	.	C	T	1215.01	FSFilter;QDFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.406;DP=1853;FS=79.826;MLEAC=1;MLEAF=1.00;MQ=45.44;MQRankSum=-0.799;QD=1.08;ReadPosRankSum=6.626;SOR=4.363	GT:AD:DP:GQ:PL	1:556,573:1129:99:1225,0
+ML756039.1	62494	.	GTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	G	8968.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.535;DP=390;FS=40.418;MLEAC=1;MLEAF=1.00;MQ=59.60;MQRankSum=4.558;QD=30.20;ReadPosRankSum=2.654;SOR=0.830	GT:AD:DP:GQ:PL	1:30,267:297:99:8978,0
+ML756039.1	71799	.	GTTTTTTTTTTTTTTTTTTTTTTTTTATATTTATTTTTTTGTTT	G	10726.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.288;DP=458;FS=39.616;MLEAC=1;MLEAF=1.00;MQ=59.51;MQRankSum=-0.222;QD=28.83;ReadPosRankSum=1.924;SOR=0.005	GT:AD:DP:GQ:PL	1:23,349:372:99:10736,0
+ML756040.1	18576	.	CAA	C	971.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.536;DP=137;FS=13.163;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=20.66;ReadPosRankSum=2.205;SOR=2.780	GT:AD:DP:GQ:PL	1:3,44:47:99:981,0
+ML756040.1	45338	.	A	G	5007.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.636;DP=240;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=28.94;ReadPosRankSum=1.524;SOR=7.511	GT:AD:DP:GQ:PL	1:3,170:173:99:5017,0
+ML756041.1	44865	.	A	AGGGG	826.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.000;DP=62;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=31.77;ReadPosRankSum=-1.161;SOR=3.611	GT:AD:DP:GQ:PL	1:2,24:26:99:836,0
+ML756042.1	20584	.	CAAAAAAAAAAAAAAAAAGGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGA	C	8921.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.909;DP=326;FS=7.106;MLEAC=1;MLEAF=1.00;MQ=59.16;MQRankSum=-0.233;QD=34.58;ReadPosRankSum=0.566;SOR=0.568	GT:AD:DP:GQ:PL	1:17,241:258:99:8931,0
+ML756042.1	38473	.	C	CAAAAAAA	675.04	PASS	AC=1;AF=1.00;AN=1;DP=128;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.95;QD=30.68;SOR=2.833	GT:AD:DP:GQ:PL	1:0,22:22:99:685,0
+ML756042.1	85412	.	A	AGAAGAGAAGGG	3757.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.127;DP=227;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=28.25;ReadPosRankSum=-0.850;SOR=0.651	GT:AD:DP:GQ:PL	1:10,123:133:99:3767,0
+ML756043.1	78	.	T	TTTTTTATTTTTATTTTTATTTTTATTTTTATTTTTATTTTTATTTTTA	1198.04	SORfilter	AC=1;AF=1.00;AN=1;DP=135;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=54.43;QD=27.68;SOR=4.174	GT:AD:DP:GQ:PL	1:0,16:16:99:1208,0
+ML756043.1	87767	.	GGTATGTTGGA	G	2724.01	SORfilter	AC=1;AF=1.00;AN=1;DP=76;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=33.45;SOR=7.743	GT:AD:DP:GQ:PL	1:0,70:70:99:2734,0
+ML756043.1	108187	.	T	C	2097.01	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-4.200;DP=2051;FS=107.935;MLEAC=1;MLEAF=1.00;MQ=58.17;MQRankSum=-2.445;QD=2.53;ReadPosRankSum=-2.027;SOR=2.554	GT:AD:DP:GQ:PL	1:381,449:830:99:2107,0
+ML756043.1	108303	.	T	C	270.01	MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.490;DP=1262;FS=30.118;MLEAC=1;MLEAF=1.00;MQ=57.11;MQRankSum=-12.629;QD=0.46;ReadPosRankSum=-1.857;SOR=0.106	GT:AD:DP:GQ:PL	1:292,296:588:99:280,0
+ML756043.1	108341	.	A	T	116.01	MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.347;DP=1098;FS=13.330;MLEAC=1;MLEAF=1.00;MQ=54.08;MQRankSum=-15.452;QD=0.21;ReadPosRankSum=-0.162;SOR=0.199	GT:AD:DP:GQ:PL	1:275,273:548:99:126,0
+ML756043.1	108349	.	A	T	437.01	MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.033;DP=1109;FS=5.980;MLEAC=1;MLEAF=1.00;MQ=53.54;MQRankSum=-15.307;QD=0.79;ReadPosRankSum=-0.414;SOR=0.306	GT:AD:DP:GQ:PL	1:276,280:556:99:447,0
+ML756043.1	108360	.	G	A	1250.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.403;DP=1073;FS=6.289;MLEAC=1;MLEAF=1.00;MQ=52.95;MQRankSum=-14.847;QD=2.27;ReadPosRankSum=-1.341;SOR=0.310	GT:AD:DP:GQ:PL	1:262,288:550:99:1260,0
+ML756043.1	108371	.	C	A	1205.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.902;DP=1058;FS=2.827;MLEAC=1;MLEAF=1.00;MQ=53.89;MQRankSum=-14.677;QD=2.16;ReadPosRankSum=-0.207;SOR=0.409	GT:AD:DP:GQ:PL	1:266,293:559:99:1215,0
+ML756043.1	108373	.	C	T	1655.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.946;DP=1063;FS=4.155;MLEAC=1;MLEAF=1.00;MQ=54.07;MQRankSum=-14.635;QD=2.93;ReadPosRankSum=-0.102;SOR=0.369	GT:AD:DP:GQ:PL	1:268,296:564:99:1665,0
+ML756043.1	108391	.	A	G	3182.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.723;DP=1190;FS=0.942;MLEAC=1;MLEAF=1.00;MQ=53.30;MQRankSum=-12.207;QD=5.64;ReadPosRankSum=-1.677;SOR=0.513	GT:AD:DP:GQ:PL	1:246,318:564:99:3192,0
+ML756043.1	108406	.	C	T	4581.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.075;DP=1303;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=52.66;MQRankSum=-10.611;QD=7.61;ReadPosRankSum=-0.675;SOR=0.639	GT:AD:DP:GQ:PL	1:255,347:602:99:4591,0
+ML756043.1	108415	.	G	T	5037.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.848;DP=1398;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=52.25;MQRankSum=-9.688;QD=7.98;ReadPosRankSum=-0.208;SOR=0.634	GT:AD:DP:GQ:PL	1:258,373:631:99:5047,0
+ML756043.1	108451	.	G	T	5561.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.950;DP=1339;FS=4.912;MLEAC=1;MLEAF=1.00;MQ=51.51;MQRankSum=-5.147;QD=9.31;ReadPosRankSum=3.765;SOR=0.308	GT:AD:DP:GQ:PL	1:238,359:597:99:5571,0
+ML756043.1	108453	.	T	C	5438.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.406;DP=1325;FS=3.124;MLEAC=1;MLEAF=1.00;MQ=51.48;MQRankSum=-4.725;QD=9.30;ReadPosRankSum=3.708;SOR=0.312	GT:AD:DP:GQ:PL	1:232,353:585:99:5448,0
+ML756044.1	44621	.	C	CTGCTGCTGT	13322.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.243;DP=525;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=34.18;ReadPosRankSum=-0.982;SOR=0.233	GT:AD:DP:GQ:PL	1:2,288:290:99:13332,0
+ML756044.1	59482	.	TGGGGGGGGGGGGGGGG	T	310.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.186;DP=100;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.35;MQRankSum=0.000;QD=7.21;ReadPosRankSum=1.881;SOR=1.371	GT:AD:DP:GQ:PL	1:17,26:43:99:320,0
+ML756046.1	15624	.	CTTTTTTTTTTTTT	C	366.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.526;DP=145;FS=14.012;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=10.17;ReadPosRankSum=-2.414;SOR=1.889	GT:AD:DP:GQ:PL	1:15,21:36:99:376,0
+ML756047.1	89606	.	GTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTCCTTTTT	G	2441.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.948;DP=253;FS=12.481;MLEAC=1;MLEAF=1.00;MQ=59.08;MQRankSum=0.000;QD=23.03;ReadPosRankSum=1.758;SOR=0.072	GT:AD:DP:GQ:PL	1:25,81:106:99:2451,0
+ML756048.1	33081	.	CTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	C	5800.04	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.531;DP=271;FS=71.026;MLEAC=1;MLEAF=1.00;MQ=59.84;MQRankSum=0.000;QD=29.15;ReadPosRankSum=0.932;SOR=2.005	GT:AD:DP:GQ:PL	1:23,176:199:99:5810,0
+ML756048.1	33130	.	T	C	3211.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.344;DP=235;FS=0.910;MLEAC=1;MLEAF=1.00;MQ=59.72;MQRankSum=0.000;QD=16.90;ReadPosRankSum=-1.183;SOR=0.563	GT:AD:DP:GQ:PL	1:24,166:190:99:3221,0
+ML756048.1	48735	.	CAAAAAAAAAAAAAAAAAAAAAAAAAA	C	1311.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.029;DP=105;FS=26.019;MLEAC=1;MLEAF=1.00;MQ=59.79;MQRankSum=0.000;QD=30.49;ReadPosRankSum=0.821;SOR=3.045	GT:AD:DP:GQ:PL	1:6,37:43:99:1321,0
+ML756049.1	53775	.	CAAAAAAAAAAAAAAAAAAAAAAAACCCAAAAA	C	9477.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.659;DP=294;FS=4.512;MLEAC=1;MLEAF=1.00;MQ=59.48;MQRankSum=0.000;QD=28.41;SOR=1.291	GT:AD:DP:GQ:PL	1:4,238:242:99:9487,0
+ML756050.1	21904	.	CTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTGGGGGGTTTTTTTGGTTTT	C	2089.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.979;DP=264;FS=6.858;MLEAC=1;MLEAF=1.00;MQ=57.50;MQRankSum=1.942;QD=25.17;ReadPosRankSum=-1.407;SOR=1.078	GT:AD:DP:GQ:PL	1:17,66:83:99:2099,0
+ML756051.1	3943	.	CAAAAAAAAAA	C	8368.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.376;DP=313;FS=4.096;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=33.63;ReadPosRankSum=0.477;SOR=1.070	GT:AD:DP:GQ:PL	1:8,223:231:99:8378,0
+ML756051.1	52150	.	ACCCCCCC	A	1998.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.939;DP=73;FS=15.682;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=33.30;ReadPosRankSum=0.516;SOR=7.222	GT:AD:DP:GQ:PL	1:3,57:60:99:2008,0
+ML756051.1	97964	.	C	T	14759.01	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.520;DP=786;FS=61.680;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=23.69;ReadPosRankSum=0.881;SOR=0.010	GT:AD:DP:GQ:PL	1:130,493:623:99:14769,0
+ML756051.1	97980	.	A	AAGCACC	14608.04	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.989;DP=850;FS=63.979;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=22.61;ReadPosRankSum=-0.777;SOR=0.016	GT:AD:DP:GQ:PL	1:162,484:646:99:14618,0
+ML756051.1	98192	.	A	C	631.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.994;DP=1192;FS=28.001;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=0.69;ReadPosRankSum=-1.093;SOR=1.523	GT:AD:DP:GQ:PL	1:453,461:914:99:641,0
+ML756051.1	98531	.	G	A	11840.04	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-6.440;DP=1085;FS=121.390;MLEAC=1;MLEAF=1.00;MQ=59.95;MQRankSum=0.000;QD=16.04;ReadPosRankSum=0.895;SOR=0.180	GT:AD:DP:GQ:PL	1:229,509:738:99:11850,0
+ML756051.1	98532	.	C	T	11840.01	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=6.050;DP=1069;FS=121.071;MLEAC=1;MLEAF=1.00;MQ=59.95;MQRankSum=0.000;QD=16.17;ReadPosRankSum=0.532;SOR=0.180	GT:AD:DP:GQ:PL	1:224,508:732:99:11850,0
+ML756052.1	17948	.	TCCCCCCCCCC	T	787.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.842;DP=50;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.81;MQRankSum=0.000;QD=25.99;SOR=4.294	GT:AD:DP:GQ:PL	1:1,20:21:99:797,0
+ML756053.1	38607	.	ATTTTTTTT	A	2464.04	PASS	AC=1;AF=1.00;AN=1;DP=165;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=28.32;SOR=0.804	GT:AD:DP:GQ:PL	1:7,80:87:99:2474,0
+ML756053.1	95534	.	T	G	412.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=0.761;DP=133;FS=6.990;MLEAC=1;MLEAF=1.00;MQ=58.68;MQRankSum=0.000;QD=20.60;ReadPosRankSum=1.474;SOR=4.294	GT:AD:DP:GQ:PL	1:4,16:20:99:422,0
+ML756053.1	95539	.	T	G	524.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=2.349;DP=63;FS=11.139;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=26.09;ReadPosRankSum=-1.486;SOR=5.131	GT:AD:DP:GQ:PL	1:1,12:13:99:534,0
+ML756053.1	95540	.	T	C	469.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=12;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=28.84;SOR=4.804	GT:AD:DP:GQ:PL	1:0,10:10:99:479,0
+ML756053.1	95542	.	T	C	440.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=8;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=29.55;SOR=4.407	GT:AD:DP:GQ:PL	1:0,8:8:99:450,0
+ML756053.1	95545	.	T	C	260.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=4;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=32.06;SOR=3.258	GT:AD:DP:GQ:PL	1:0,4:4:99:270,0
+ML756055.1	32093	.	C	CCTCTCTCATTTT	2399.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.116;DP=419;FS=35.899;MLEAC=1;MLEAF=1.00;MQ=59.98;MQRankSum=0.000;QD=29.99;ReadPosRankSum=-4.865;SOR=0.943	GT:AD:DP:GQ:PL	1:33,47:80:99:2409,0
+ML756057.1	1514	.	TGGG	T	208.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.227;DP=57;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=9.91;ReadPosRankSum=0.498;SOR=2.833	GT:AD:DP:GQ:PL	1:6,15:21:99:218,0
+ML756057.1	4983	.	GAAAAAAAAAAAAAA	G	124.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.539;DP=136;FS=18.710;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=3.76;ReadPosRankSum=0.545;SOR=2.384	GT:AD:DP:GQ:PL	1:18,15:33:99:134,0
+ML756058.1	1473	.	A	ACACAGCAGATACAGCAGCCACAGCAGCCACAGCAGCCACAGCAGCCACAGCAGCCACAGCAGC	9130.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.447;DP=503;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.77;MQRankSum=-0.055;QD=30.43;ReadPosRankSum=0.442;SOR=0.362	GT:AD:DP:GQ:PL	1:2,165:167:99:9140,0
+ML756060.1	38496	.	G	GT	9348.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.284;DP=425;FS=1.083;MLEAC=1;MLEAF=1.00;MQ=59.94;MQRankSum=0.000;QD=24.41;ReadPosRankSum=-1.513;SOR=0.923	GT:AD:DP:GQ:PL	1:19,364:383:99:9358,0
+ML756060.1	47230	.	GCCCCCCCC	G	390.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.000;DP=40;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=20.53;SOR=2.494	GT:AD:DP:GQ:PL	1:4,15:19:99:400,0
+ML756061.1	39232	.	GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA	G	2599.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.566;DP=303;FS=22.668;MLEAC=1;MLEAF=1.00;MQ=57.09;MQRankSum=0.000;QD=22.80;ReadPosRankSum=1.872;SOR=4.147	GT:AD:DP:GQ:PL	1:21,93:114:99:2609,0
+ML756061.1	58137	.	CTTTTTTTTTTTTTTTTTTTTTTTTTTTTTATATTTTTTTTTTTTTTTTCTTTT	C	3046.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.087;DP=297;FS=37.312;MLEAC=1;MLEAF=1.00;MQ=59.39;MQRankSum=0.000;QD=20.58;ReadPosRankSum=2.577;SOR=1.003	GT:AD:DP:GQ:PL	1:24,124:148:99:3056,0
+ML756063.1	66092	.	CTTTTTTTTTTTTTTTTTTTTTTTTTTTTTAATAGTCCCTTT	C	3907.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.214;DP=230;FS=6.184;MLEAC=1;MLEAF=1.00;MQ=59.58;MQRankSum=0.000;QD=34.27;ReadPosRankSum=1.506;SOR=0.110	GT:AD:DP:GQ:PL	1:6,108:114:99:3917,0
+ML756063.1	68799	.	GTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	G	444.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.053;DP=390;FS=2.428;MLEAC=1;MLEAF=1.00;MQ=47.45;MQRankSum=1.217;QD=6.73;ReadPosRankSum=0.612;SOR=0.387	GT:AD:DP:GQ:PL	1:33,33:66:99:454,0
+ML756064.1	129	.	G	A	1125.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.089;DP=813;FS=1.658;MLEAC=1;MLEAF=1.00;MQ=53.47;MQRankSum=-10.624;QD=2.78;ReadPosRankSum=-0.787;SOR=0.386	GT:AD:DP:GQ:PL	1:203,202:405:99:1135,0
+ML756064.1	342	.	T	A	2590.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.687;DP=1058;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=54.62;MQRankSum=-15.406;QD=3.51;ReadPosRankSum=0.854;SOR=0.671	GT:AD:DP:GQ:PL	1:342,396:738:99:2600,0
+ML756064.1	15967	.	G	A	3560.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.939;DP=260;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=18.35;ReadPosRankSum=-0.408;SOR=0.759	GT:AD:DP:GQ:PL	1:24,170:194:99:3570,0
+ML756064.1	15969	.	T	G	4054.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.683;DP=261;FS=1.186;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=20.37;ReadPosRankSum=0.237;SOR=0.941	GT:AD:DP:GQ:PL	1:11,188:199:99:4064,0
+ML756064.1	21055	.	CTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTAAAAAATTATTTTTTTTTTTTTTTTTTTTTTTTT	C	7041.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.886;DP=477;FS=3.490;MLEAC=1;MLEAF=1.00;MQ=56.87;MQRankSum=0.000;QD=17.34;ReadPosRankSum=0.349;SOR=0.595	GT:AD:DP:GQ:PL	1:13,393:406:99:7051,0
+ML756064.1	38802	.	C	CAA	412.04	PASS	AC=1;AF=1.00;AN=1;DP=80;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=17.91;SOR=0.941	GT:AD:DP:GQ:PL	1:2,21:23:99:422,0
+ML756064.1	43829	.	CTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTGTTTT	C	6014.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.892;DP=311;FS=1.290;MLEAC=1;MLEAF=1.00;MQ=57.70;MQRankSum=-0.598;QD=25.41;ReadPosRankSum=-1.139;SOR=0.516	GT:AD:DP:GQ:PL	1:11,156:167:99:6024,0
+ML756065.1	255	.	G	A	594.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.246;DP=827;FS=2.838;MLEAC=1;MLEAF=1.00;MQ=53.15;MQRankSum=-7.611;QD=0.86;ReadPosRankSum=-0.936;SOR=0.961	GT:AD:DP:GQ:PL	1:355,337:692:99:604,0
+ML756065.1	411	.	G	T	3996.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.345;DP=1344;FS=16.661;MLEAC=1;MLEAF=1.00;MQ=54.82;MQRankSum=-12.246;QD=4.38;ReadPosRankSum=0.799;SOR=0.467	GT:AD:DP:GQ:PL	1:409,503:912:99:4006,0
+ML756065.1	414	.	C	T	3928.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.782;DP=1334;FS=15.037;MLEAC=1;MLEAF=1.00;MQ=54.72;MQRankSum=-12.546;QD=4.36;ReadPosRankSum=1.530;SOR=0.476	GT:AD:DP:GQ:PL	1:411,490:901:99:3938,0
+ML756065.1	423	.	C	T	2949.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.420;DP=1318;FS=11.887;MLEAC=1;MLEAF=1.00;MQ=54.31;MQRankSum=-13.504;QD=3.29;ReadPosRankSum=2.420;SOR=0.380	GT:AD:DP:GQ:PL	1:417,479:896:99:2959,0
+ML756065.1	426	.	C	A	3399.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.359;DP=1306;FS=12.064;MLEAC=1;MLEAF=1.00;MQ=54.13;MQRankSum=-13.913;QD=3.81;ReadPosRankSum=2.304;SOR=0.345	GT:AD:DP:GQ:PL	1:415,478:893:99:3409,0
+ML756065.1	438	.	C	T	3324.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.221;DP=1292;FS=4.999;MLEAC=1;MLEAF=1.00;MQ=53.82;MQRankSum=-15.230;QD=3.72;ReadPosRankSum=1.619;SOR=0.426	GT:AD:DP:GQ:PL	1:411,483:894:99:3334,0
+ML756065.1	447	.	C	G	2334.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.414;DP=1239;FS=2.456;MLEAC=1;MLEAF=1.00;MQ=53.55;MQRankSum=-15.692;QD=2.63;ReadPosRankSum=2.674;SOR=0.531	GT:AD:DP:GQ:PL	1:420,466:886:99:2344,0
+ML756065.1	450	.	C	T	1569.01	MQRankSumFilter;QDFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.924;DP=1233;FS=1.743;MLEAC=1;MLEAF=1.00;MQ=53.51;MQRankSum=-15.819;QD=1.77;ReadPosRankSum=2.892;SOR=0.569	GT:AD:DP:GQ:PL	1:423,462:885:99:1579,0
+ML756065.1	456	.	C	T	1344.01	MQRankSumFilter;QDFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.749;DP=1210;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=53.38;MQRankSum=-16.138;QD=1.55;ReadPosRankSum=3.093;SOR=0.661	GT:AD:DP:GQ:PL	1:423,446:869:99:1354,0
+ML756065.1	459	.	G	C	1918.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-4.084;DP=1208;FS=0.527;MLEAC=1;MLEAF=1.00;MQ=53.37;MQRankSum=-16.088;QD=2.21;ReadPosRankSum=2.481;SOR=0.750	GT:AD:DP:GQ:PL	1:420,446:866:99:1928,0
+ML756065.1	475	.	A	C	344.01	MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.698;DP=1202;FS=8.284;MLEAC=1;MLEAF=1.00;MQ=53.42;MQRankSum=-16.051;QD=0.40;ReadPosRankSum=0.995;SOR=1.189	GT:AD:DP:GQ:PL	1:427,437:864:99:354,0
+ML756065.1	2091	.	C	CTCTGGCTCTGGCTCT	3535.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.664;DP=544;FS=28.969;MLEAC=1;MLEAF=1.00;MQ=59.31;MQRankSum=-1.533;QD=31.84;ReadPosRankSum=-4.322;SOR=0.759	GT:AD:DP:GQ:PL	1:11,86:97:99:3545,0
+ML756067.1	54961	.	ACCCCCC	A	1490.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.281;DP=73;FS=14.150;MLEAC=1;MLEAF=1.00;MQ=59.50;MQRankSum=5.200;QD=33.11;ReadPosRankSum=0.400;SOR=6.517	GT:AD:DP:GQ:PL	1:1,44:45:99:1500,0
+ML756067.1	74571	.	T	TCTGCA	599.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.777;DP=223;FS=7.659;MLEAC=1;MLEAF=1.00;MQ=59.24;MQRankSum=2.236;QD=8.56;ReadPosRankSum=2.043;SOR=4.582	GT:AD:DP:GQ:PL	1:12,58:70:99:609,0
+ML756068.1	67677	.	GAAAAAAAAAAAAAAAAAAAAAAAAAAATTTAAAATTTAAAAAAAA	G	3841.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.736;DP=307;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.42;MQRankSum=-0.278;QD=20.43;ReadPosRankSum=-0.089;SOR=1.071	GT:AD:DP:GQ:PL	1:25,163:188:99:3851,0
+ML756069.1	64551	.	CAAAAA	C	7894.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.232;DP=274;FS=11.211;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=29.96;ReadPosRankSum=1.726;SOR=1.888	GT:AD:DP:GQ:PL	1:7,201:208:99:7904,0
+ML756072.1	66147	.	T	A	1396.01	MQFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.943;DP=86;FS=9.854;MLEAC=1;MLEAF=1.00;MQ=36.88;MQRankSum=4.269;QD=16.23;ReadPosRankSum=-0.498;SOR=3.784	GT:AD:DP:GQ:PL	1:28,58:86:99:1406,0
+ML756074.1	39434	.	CTTTTTTTTTTTTTTTTTTTTTTTTTTTTGTTTTTTTTTTTTTTTTTTTTT	C	1177.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.650;DP=186;FS=25.851;MLEAC=1;MLEAF=1.00;MQ=58.41;MQRankSum=1.291;QD=16.12;ReadPosRankSum=0.082;SOR=1.846	GT:AD:DP:GQ:PL	1:27,46:73:99:1187,0
+ML756074.1	62437	.	TAAAAATAAAAATAAAAATAAAAATAAAAAA	T	1970.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.784;DP=178;FS=17.243;MLEAC=1;MLEAF=1.00;MQ=57.23;MQRankSum=2.347;QD=31.51;ReadPosRankSum=1.768;SOR=7.941	GT:AD:DP:GQ:PL	1:1,52:53:99:1980,0
+ML756076.1	35407	.	AGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG	A	2998.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.401;DP=195;FS=22.435;MLEAC=1;MLEAF=1.00;MQ=56.72;MQRankSum=4.794;QD=30.59;ReadPosRankSum=2.831;SOR=7.418	GT:AD:DP:GQ:PL	1:8,90:98:99:3008,0
+ML756077.1	54	.	TAAAAAAAAAAAAAAAAAAGAGAAAAAAAAAA	T	2228.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.339;DP=238;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=54.60;MQRankSum=1.610;QD=25.03;ReadPosRankSum=1.038;SOR=4.528	GT:AD:DP:GQ:PL	1:6,83:89:99:2238,0
+ML756079.1	21852	.	C	A	23544.01	MQFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.768;DP=3302;FS=28.708;MLEAC=1;MLEAF=1.00;MQ=38.57;MQRankSum=4.047;QD=8.72;ReadPosRankSum=-0.095;SOR=1.651	GT:AD:DP:GQ:PL	1:964,1737:2701:99:23554,0
+ML756079.1	21873	.	C	T	55253.01	MQFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.845;DP=2845;FS=42.162;MLEAC=1;MLEAF=1.00;MQ=37.82;MQRankSum=-5.633;QD=19.45;ReadPosRankSum=-0.870;SOR=0.961	GT:AD:DP:GQ:PL	1:808,2033:2841:99:55263,0
+ML756081.1	511	.	A	C	4699.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.192;DP=194;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.51;MQRankSum=0.000;QD=32.41;ReadPosRankSum=1.256;SOR=0.905	GT:AD:DP:GQ:PL	1:3,142:145:99:4709,0
+ML756081.1	2056	.	CAAAAAAAAAAAA	C	1790.01	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=4.607;DP=173;FS=90.523;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=18.84;ReadPosRankSum=1.755;SOR=3.893	GT:AD:DP:GQ:PL	1:28,67:95:99:1800,0
+ML756081.1	11270	.	GGGT	G	1163.01	SORfilter	AC=1;AF=1.00;AN=1;DP=35;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;QD=26.80;SOR=6.091	GT:AD:DP:GQ:PL	1:0,31:31:99:1173,0
+ML756082.1	2061	.	A	ACTCAGGCTCTGGCTCAGGCGACTCAGGCTCAGGCTCTAATGGATCAGGCTCTGGCGACTCAGGCTCAGGCTCAGGCTCGGGCTCTAGTGATTCCGGCTCTGGTGGATCAGGCTCAGG	2639.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.282;DP=334;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.78;MQRankSum=0.000;QD=36.89;ReadPosRankSum=-1.645;SOR=1.609	GT:AD:DP:GQ:PL	1:3,2:5:99:2649,0
+ML756085.1	47251	.	T	G	1809.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.471;DP=1418;FS=43.560;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=1.80;ReadPosRankSum=-0.179;SOR=2.142	GT:AD:DP:GQ:PL	1:496,511:1007:99:1819,0
+ML756085.1	47322	.	C	G	228.01	QDFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.991;DP=1521;FS=16.307;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=0.20;ReadPosRankSum=-0.093;SOR=0.937	GT:AD:DP:GQ:PL	1:574,570:1144:99:238,0
+ML756085.1	47327	.	A	C	3913.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=0.399;DP=1532;FS=13.343;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=3.38;ReadPosRankSum=-0.675;SOR=0.908	GT:AD:DP:GQ:PL	1:575,583:1158:99:3923,0
+ML756085.1	47330	.	C	T	422.01	QDFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-5.662;DP=1538;FS=14.850;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=0.36;ReadPosRankSum=-0.943;SOR=0.920	GT:AD:DP:GQ:PL	1:582,585:1167:99:432,0
+ML756085.1	47360	.	G	A	2604.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.513;DP=1576;FS=6.921;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=2.18;ReadPosRankSum=-3.366;SOR=0.607	GT:AD:DP:GQ:PL	1:573,622:1195:99:2614,0
+ML756085.1	47363	.	A	C	2821.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=2.698;DP=1564;FS=8.044;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=2.38;ReadPosRankSum=-3.896;SOR=0.620	GT:AD:DP:GQ:PL	1:561,626:1187:99:2831,0
+ML756085.1	47369	.	A	G	3005.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=0.583;DP=1574;FS=6.921;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=2.52;ReadPosRankSum=-2.818;SOR=0.637	GT:AD:DP:GQ:PL	1:564,628:1192:99:3015,0
+ML756085.1	47385	.	T	C	1744.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.365;DP=1574;FS=3.226;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=1.47;ReadPosRankSum=0.361;SOR=0.482	GT:AD:DP:GQ:PL	1:572,617:1189:99:1754,0
+ML756085.1	47388	.	C	G	1910.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.714;DP=1571;FS=4.931;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=1.61;ReadPosRankSum=0.631;SOR=0.482	GT:AD:DP:GQ:PL	1:571,617:1188:99:1920,0
+ML756085.1	47443	.	C	T	3604.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-4.330;DP=1540;FS=3.221;MLEAC=1;MLEAF=1.00;MQ=59.30;MQRankSum=-4.802;QD=2.98;ReadPosRankSum=-0.001;SOR=0.669	GT:AD:DP:GQ:PL	1:562,647:1209:99:3614,0
+ML756085.1	47448	.	G	C	2775.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.239;DP=1547;FS=3.198;MLEAC=1;MLEAF=1.00;MQ=59.13;MQRankSum=-5.457;QD=2.30;ReadPosRankSum=0.586;SOR=0.652	GT:AD:DP:GQ:PL	1:575,634:1209:99:2785,0
+ML756085.1	47475	.	C	T	96.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.644;DP=1341;FS=8.098;MLEAC=1;MLEAF=1.00;MQ=58.53;MQRankSum=-8.248;QD=0.09;ReadPosRankSum=-1.140;SOR=0.714	GT:AD:DP:GQ:PL	1:552,559:1111:99:106,0
+ML756089.1	20962	.	G	GTGGGAATAAA	4760.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.422;DP=476;FS=3.397;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=-0.074;QD=31.20;ReadPosRankSum=-1.697;SOR=0.538	GT:AD:DP:GQ:PL	1:1,93:94:99:4770,0
+ML756091.1	636	.	T	TGGCTCTGATTCTGGCTCTGGTTCCGGCTCCGGTTCTGGATCTGGCTCA	10844.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.667;DP=397;FS=1.544;MLEAC=1;MLEAF=1.00;MQ=59.10;MQRankSum=0.199;QD=30.96;ReadPosRankSum=-1.894;SOR=0.421	GT:AD:DP:GQ:PL	1:9,142:151:99:10854,0
+ML756091.1	6865	.	CTTTTTTTTTTTTTT	C	1396.04	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.372;DP=147;FS=21.651;MLEAC=1;MLEAF=1.00;MQ=59.66;MQRankSum=0.000;QD=29.70;ReadPosRankSum=-1.084;SOR=3.412	GT:AD:DP:GQ:PL	1:7,40:47:99:1406,0
+ML756095.1	27049	.	A	AGGGTCCTTGGGGTCCCAGTGGTGCTCGGGGTCCTTGGGGTCGACAGGGTCCTTGGGGTCCCAGTGGTGCTCG	4079.04	SORfilter	AC=1;AF=1.00;AN=1;DP=556;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.64;QD=28.73;SOR=5.283	GT:AD:DP:GQ:PL	1:1,141:142:99:4089,0
+ML756097.1	22380	.	G	GCCCCGAGATGGA	8970.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.571;DP=459;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=32.42;ReadPosRankSum=1.422;SOR=0.382	GT:AD:DP:GQ:PL	1:3,211:214:99:8980,0
+ML756100.1	31283	.	T	C	41672.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.823;DP=4006;FS=34.974;MLEAC=1;MLEAF=1.00;MQ=57.24;MQRankSum=-4.088;QD=17.89;ReadPosRankSum=4.351;SOR=2.605	GT:AD:DP:GQ:PL	1:600,1729:2329:99:41682,0
+ML756100.1	31321	.	G	C	20324.01	SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-7.066;DP=4452;FS=46.148;MLEAC=1;MLEAF=1.00;MQ=58.68;MQRankSum=-2.523;QD=7.47;ReadPosRankSum=-0.753;SOR=3.111	GT:AD:DP:GQ:PL	1:1060,1659:2719:99:20334,0
+ML756100.1	31324	.	C	A	11528.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.709;DP=4479;FS=41.291;MLEAC=1;MLEAF=1.00;MQ=58.74;MQRankSum=-0.218;QD=4.22;ReadPosRankSum=0.769;SOR=2.870	GT:AD:DP:GQ:PL	1:1070,1659:2729:99:11538,0
+ML756100.1	31375	.	G	A	57012.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-4.028;DP=4582;FS=23.948;MLEAC=1;MLEAF=1.00;MQ=59.83;MQRankSum=-2.496;QD=19.93;ReadPosRankSum=1.960;SOR=2.146	GT:AD:DP:GQ:PL	1:732,2128:2860:99:57022,0
+ML756100.1	31377	.	C	T	57326.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-4.032;DP=4568;FS=21.440;MLEAC=1;MLEAF=1.00;MQ=59.83;MQRankSum=-2.492;QD=20.06;ReadPosRankSum=1.934;SOR=2.119	GT:AD:DP:GQ:PL	1:730,2128:2858:99:57336,0
+ML756100.1	31393	.	CT	C	60313.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.686;DP=4532;FS=18.969;MLEAC=1;MLEAF=1.00;MQ=59.83;MQRankSum=-2.477;QD=21.05;ReadPosRankSum=1.618;SOR=2.017	GT:AD:DP:GQ:PL	1:725,2140:2865:99:60323,0
+ML756100.1	31407	.	AT	A	30692.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.141;DP=4351;FS=13.705;MLEAC=1;MLEAF=1.00;MQ=59.83;MQRankSum=-3.163;QD=11.23;ReadPosRankSum=3.947;SOR=1.635	GT:AD:DP:GQ:PL	1:973,1761:2734:99:30702,0
+ML756100.1	31414	.	G	A	32849.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=0.714;DP=3924;FS=15.665;MLEAC=1;MLEAF=1.00;MQ=59.82;MQRankSum=-3.109;QD=12.26;ReadPosRankSum=1.707;SOR=1.684	GT:AD:DP:GQ:PL	1:932,1747:2679:99:32859,0
+ML756100.1	31419	.	A	G	55954.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=2.810;DP=3863;FS=22.429;MLEAC=1;MLEAF=1.00;MQ=59.82;MQRankSum=-2.565;QD=21.30;ReadPosRankSum=5.188;SOR=2.078	GT:AD:DP:GQ:PL	1:700,1927:2627:99:55964,0
+ML756100.1	31420	.	G	T	54822.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=1.324;DP=3867;FS=22.040;MLEAC=1;MLEAF=1.00;MQ=59.82;MQRankSum=-2.574;QD=20.83;ReadPosRankSum=3.169;SOR=2.093	GT:AD:DP:GQ:PL	1:705,1927:2632:99:54832,0
+ML756100.1	31422	.	A	G	32933.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=0.199;DP=3903;FS=15.300;MLEAC=1;MLEAF=1.00;MQ=59.82;MQRankSum=-3.168;QD=12.47;ReadPosRankSum=1.368;SOR=1.664	GT:AD:DP:GQ:PL	1:942,1700:2642:99:32943,0
+ML756100.1	31430	.	A	G	56823.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.084;DP=3972;FS=17.075;MLEAC=1;MLEAF=1.00;MQ=59.82;MQRankSum=-2.547;QD=21.59;ReadPosRankSum=0.413;SOR=1.843	GT:AD:DP:GQ:PL	1:694,1938:2632:99:56833,0
+ML756100.1	31437	.	A	G	57308.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.894;DP=4086;FS=16.475;MLEAC=1;MLEAF=1.00;MQ=59.83;MQRankSum=-2.562;QD=21.50;ReadPosRankSum=-0.354;SOR=1.737	GT:AD:DP:GQ:PL	1:709,1957:2666:99:57318,0
+ML756100.1	31450	.	G	A	57817.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.227;DP=4141;FS=13.820;MLEAC=1;MLEAF=1.00;MQ=59.84;MQRankSum=-2.455;QD=21.68;ReadPosRankSum=-3.313;SOR=1.621	GT:AD:DP:GQ:PL	1:695,1972:2667:99:57827,0
+ML756100.1	31488	.	G	A	51138.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.684;DP=4112;FS=9.974;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=0.000;QD=19.12;ReadPosRankSum=-1.413;SOR=1.270	GT:AD:DP:GQ:PL	1:710,1964:2674:99:51148,0
+ML756100.1	31567	.	G	GAAGGA	25135.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.396;DP=4369;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=0.000;QD=9.18;ReadPosRankSum=0.292;SOR=0.726	GT:AD:DP:GQ:PL	1:985,1753:2738:99:25145,0
+ML756100.1	31575	.	C	T	20796.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=1.091;DP=3907;FS=2.510;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=0.000;QD=7.79;ReadPosRankSum=4.490;SOR=0.520	GT:AD:DP:GQ:PL	1:1067,1603:2670:99:20806,0
+ML756100.1	31578	.	C	A	20891.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=2.833;DP=3877;FS=2.510;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=0.000;QD=7.93;ReadPosRankSum=4.249;SOR=0.533	GT:AD:DP:GQ:PL	1:1058,1578:2636:99:20901,0
+ML756100.1	31582	.	C	T	53618.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=0.057;DP=3816;FS=0.597;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=0.000;QD=20.78;ReadPosRankSum=3.453;SOR=0.612	GT:AD:DP:GQ:PL	1:685,1895:2580:99:53628,0
+ML756100.1	31583	.	T	TG	54004.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.861;DP=3811;FS=0.596;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=0.000;QD=21.10;ReadPosRankSum=3.504;SOR=0.623	GT:AD:DP:GQ:PL	1:682,1877:2559:99:54014,0
+ML756100.1	31590	.	T	A	51531.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.629;DP=3891;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=0.000;QD=20.35;ReadPosRankSum=1.455;SOR=0.671	GT:AD:DP:GQ:PL	1:666,1866:2532:99:51541,0
+ML756100.1	31615	.	T	A	79436.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.348;DP=4101;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=0.000;QD=30.97;ReadPosRankSum=-2.830;SOR=0.675	GT:AD:DP:GQ:PL	1:324,2241:2565:99:79446,0
+ML756100.1	31639	.	A	C	50467.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.817;DP=3816;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=0.000;QD=21.97;ReadPosRankSum=-4.879;SOR=0.781	GT:AD:DP:GQ:PL	1:309,1988:2297:99:50477,0
+ML756100.1	31641	.	G	T	50468.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.186;DP=3808;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=0.000;QD=22.14;ReadPosRankSum=-5.416;SOR=0.782	GT:AD:DP:GQ:PL	1:303,1976:2279:99:50478,0
+ML756100.1	31650	.	G	A	27795.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.846;DP=3763;FS=2.636;MLEAC=1;MLEAF=1.00;MQ=59.93;MQRankSum=0.000;QD=12.67;ReadPosRankSum=-1.281;SOR=1.011	GT:AD:DP:GQ:PL	1:388,1806:2194:99:27805,0
+ML756100.1	31679	.	G	A	23192.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.724;DP=3744;FS=0.922;MLEAC=1;MLEAF=1.00;MQ=58.68;MQRankSum=-1.565;QD=10.73;ReadPosRankSum=-0.053;SOR=0.850	GT:AD:DP:GQ:PL	1:302,1860:2162:99:23202,0
+ML756100.1	31681	.	A	G	22984.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.553;DP=3756;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.53;MQRankSum=-1.558;QD=10.66;ReadPosRankSum=-0.077;SOR=0.803	GT:AD:DP:GQ:PL	1:299,1858:2157:99:22994,0
+ML756100.1	31697	.	TTCTTC	T	12335.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.020;DP=3686;FS=0.926;MLEAC=1;MLEAF=1.00;MQ=57.65;MQRankSum=1.474;QD=6.03;ReadPosRankSum=5.621;SOR=0.866	GT:AD:DP:GQ:PL	1:330,1717:2047:99:12345,0
+ML756100.1	31707	.	A	T	16933.01	ReadPosRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.827;DP=3625;FS=2.152;MLEAC=1;MLEAF=1.00;MQ=57.33;MQRankSum=-2.524;QD=8.24;ReadPosRankSum=-11.039;SOR=0.964	GT:AD:DP:GQ:PL	1:284,1771:2055:99:16943,0
+ML756100.1	31721	.	G	C	24902.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.735;DP=3714;FS=2.393;MLEAC=1;MLEAF=1.00;MQ=56.98;MQRankSum=-4.305;QD=11.84;ReadPosRankSum=2.648;SOR=0.927	GT:AD:DP:GQ:PL	1:272,1832:2104:99:24912,0
+ML756100.1	31722	.	T	C	26226.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=4.875;DP=3722;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=56.97;MQRankSum=-4.463;QD=12.41;ReadPosRankSum=2.059;SOR=0.898	GT:AD:DP:GQ:PL	1:268,1845:2113:99:26236,0
+ML756100.1	31762	.	G	A	39952.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.961;DP=3382;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=54.36;MQRankSum=-9.992;QD=19.12;ReadPosRankSum=-0.502;SOR=0.763	GT:AD:DP:GQ:PL	1:254,1836:2090:99:39962,0
+ML756100.1	31767	.	A	G	38979.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=1.204;DP=3294;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=54.15;MQRankSum=-10.226;QD=19.10;ReadPosRankSum=-0.539;SOR=0.578	GT:AD:DP:GQ:PL	1:252,1789:2041:99:38989,0
+ML756100.1	31775	.	G	T	14795.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-5.975;DP=3073;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=53.52;MQRankSum=-10.976;QD=9.87;ReadPosRankSum=0.692;SOR=0.669	GT:AD:DP:GQ:PL	1:251,1248:1499:99:14805,0
+ML756100.1	31776	.	G	C	15594.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=0.833;DP=3046;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=53.45;MQRankSum=-11.046;QD=10.52;ReadPosRankSum=0.808;SOR=0.714	GT:AD:DP:GQ:PL	1:250,1233:1483:99:15604,0
+ML756100.1	31789	.	G	T	42940.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.733;DP=2904;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=52.28;MQRankSum=-12.741;QD=22.53;ReadPosRankSum=-0.651;SOR=0.943	GT:AD:DP:GQ:PL	1:251,1655:1906:99:42950,0
+ML756100.1	31804	.	A	C	46586.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.021;DP=2754;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=50.58;MQRankSum=-14.641;QD=24.38;ReadPosRankSum=-1.820;SOR=1.251	GT:AD:DP:GQ:PL	1:243,1668:1911:99:46596,0
+ML756100.1	31845	.	T	C	40950.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=3.159;DP=1919;FS=3.961;MLEAC=1;MLEAF=1.00;MQ=48.02;MQRankSum=-22.368;QD=24.36;ReadPosRankSum=-0.516;SOR=1.899	GT:AD:DP:GQ:PL	1:234,1447:1681:99:40960,0
+ML756100.1	31848	.	C	T	41177.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=2.056;DP=1890;FS=3.961;MLEAC=1;MLEAF=1.00;MQ=47.93;MQRankSum=-22.835;QD=24.81;ReadPosRankSum=0.418;SOR=2.088	GT:AD:DP:GQ:PL	1:238,1422:1660:99:41187,0
+ML756100.1	31852	.	A	G	49393.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=5.982;DP=1857;FS=4.223;MLEAC=1;MLEAF=1.00;MQ=47.62;MQRankSum=-23.964;QD=30.06;ReadPosRankSum=0.920;SOR=2.205	GT:AD:DP:GQ:PL	1:240,1403:1643:99:49403,0
+ML756100.1	31856	.	GTTAT	G	48161.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=5.045;DP=1803;FS=4.204;MLEAC=1;MLEAF=1.00;MQ=47.19;MQRankSum=-24.220;QD=30.08;ReadPosRankSum=0.994;SOR=2.431	GT:AD:DP:GQ:PL	1:240,1361:1601:99:48171,0
+ML756100.1	31863	.	C	A	48580.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=5.181;DP=1757;FS=5.793;MLEAC=1;MLEAF=1.00;MQ=46.78;MQRankSum=-23.649;QD=31.10;ReadPosRankSum=0.251;SOR=2.762	GT:AD:DP:GQ:PL	1:223,1339:1562:99:48590,0
+ML756100.1	31865	.	C	CATTG	48887.04	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=4.903;DP=1717;FS=5.793;MLEAC=1;MLEAF=1.00;MQ=46.40;MQRankSum=-23.151;QD=32.12;ReadPosRankSum=-1.542;SOR=2.562	GT:AD:DP:GQ:PL	1:217,1305:1522:99:48897,0
+ML756100.1	31867	.	C	A	48500.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=6.686;DP=1648;FS=5.653;MLEAC=1;MLEAF=1.00;MQ=45.89;MQRankSum=-23.803;QD=33.38;ReadPosRankSum=0.384;SOR=2.862	GT:AD:DP:GQ:PL	1:216,1237:1453:99:48510,0
+ML756100.1	31871	.	C	T	40149.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=4.463;DP=1621;FS=5.281;MLEAC=1;MLEAF=1.00;MQ=45.66;MQRankSum=-23.233;QD=30.62;ReadPosRankSum=0.344;SOR=2.464	GT:AD:DP:GQ:PL	1:210,1101:1311:99:40159,0
+ML756100.1	31874	.	A	G	34170.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=4.432;DP=1575;FS=3.794;MLEAC=1;MLEAF=1.00;MQ=45.29;MQRankSum=-16.241;QD=24.67;ReadPosRankSum=2.121;SOR=2.255	GT:AD:DP:GQ:PL	1:326,1059:1385:99:34180,0
+ML756100.1	31879	.	C	A	14985.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=3.139;DP=1461;FS=4.684;MLEAC=1;MLEAF=1.00;MQ=44.63;MQRankSum=-15.452;QD=11.75;ReadPosRankSum=-1.387;SOR=1.987	GT:AD:DP:GQ:PL	1:435,840:1275:99:14995,0
+ML756100.1	31950	.	A	G	1780.01	ReadPosRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=1.585;DP=637;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=43.68;MQRankSum=-6.864;QD=3.26;ReadPosRankSum=-8.843;SOR=0.161	GT:AD:DP:GQ:PL	1:175,371:546:99:1790,0
+ML756100.1	31952	.	T	A	1780.01	ReadPosRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.256;DP=607;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=43.71;MQRankSum=-6.410;QD=3.42;ReadPosRankSum=-8.358;SOR=0.145	GT:AD:DP:GQ:PL	1:173,347:520:99:1790,0
+ML756100.1	31954	.	C	G	946.01	QDFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=0.176;DP=568;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=43.80;MQRankSum=-5.924;QD=1.95;ReadPosRankSum=-7.861;SOR=0.128	GT:AD:DP:GQ:PL	1:169,317:486:99:956,0
+ML756101.1	143	.	C	CGCCTCTTCCACTGGCGGAGCCGATGCCTCTTCCACTGGCGACTCTGGCGCCTCTTCCACTGGCGGAGCCGATGCCTCTTCCACTGGCGGAGCCGATGCCTCTTCCACTGGCGGAGCCGAT	4988.04	PASS	AC=1;AF=1.00;AN=1;DP=545;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=52.69;QD=25.19;SOR=0.446	GT:AD:DP:GQ:PL	1:17,181:198:99:4998,0
+ML756101.1	1229	.	A	AAACGGCAACGGCTCTGACGGTTCCAACGGCAACGGCTCTGATGGAAACGGCAACGGCTCTGACGGTTCCAACGGCAACGGCTCTGATGGTTCCAACGGCAACGGATCTGACGGTTCC	1899.04	PASS	AC=1;AF=1.00;AN=1;DP=219;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=57.18;QD=28.15;SOR=0.078	GT:AD:DP:GQ:PL	1:32,2:34:99:1909,0
+ML756104.1	10743	.	CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAA	C	6258.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.531;DP=283;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.00;MQRankSum=-0.100;QD=28.06;ReadPosRankSum=-0.177;SOR=0.960	GT:AD:DP:GQ:PL	1:6,217:223:99:6268,0
+ML756104.1	16139	.	T	C	9451.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.562;DP=301;FS=5.688;MLEAC=1;MLEAF=1.00;MQ=59.95;MQRankSum=0.000;QD=33.87;ReadPosRankSum=1.587;SOR=2.035	GT:AD:DP:GQ:PL	1:2,277:279:99:9461,0
+ML756106.1	966	.	A	G	213.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.410;DP=2549;FS=7.187;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=0.11;ReadPosRankSum=0.160;SOR=1.181	GT:AD:DP:GQ:PL	1:992,1016:2008:99:223,0
+ML756106.1	1011	.	A	G	35172.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=5.404;DP=2447;FS=27.116;MLEAC=1;MLEAF=1.00;MQ=59.16;MQRankSum=-3.905;QD=19.07;ReadPosRankSum=0.421;SOR=1.923	GT:AD:DP:GQ:PL	1:532,1312:1844:99:35182,0
+ML756106.1	1116	.	A	G	8557.01	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.702;DP=1650;FS=64.918;MLEAC=1;MLEAF=1.00;MQ=48.40;MQRankSum=3.693;QD=5.82;ReadPosRankSum=0.668;SOR=0.019	GT:AD:DP:GQ:PL	1:634,836:1470:99:8567,0
+ML756106.1	1394	.	G	GTT	3041.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.614;DP=235;FS=5.299;MLEAC=1;MLEAF=1.00;MQ=59.86;MQRankSum=0.000;QD=24.72;ReadPosRankSum=1.994;SOR=1.057	GT:AD:DP:GQ:PL	1:8,115:123:99:3051,0
+ML756106.1	10126	.	C	T	7594.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=7.031;DP=705;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=52.52;MQRankSum=-14.384;QD=29.90;ReadPosRankSum=-2.328;SOR=0.697	GT:AD:DP:GQ:PL	1:36,218:254:99:7604,0
+ML756106.1	10140	.	AAT	A	1424.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=6.428;DP=709;FS=7.736;MLEAC=1;MLEAF=1.00;MQ=53.86;MQRankSum=-12.206;QD=7.87;ReadPosRankSum=-3.472;SOR=0.996	GT:AD:DP:GQ:PL	1:48,133:181:99:1434,0
+ML756106.1	10157	.	C	G	2806.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=6.855;DP=648;FS=33.561;MLEAC=1;MLEAF=1.00;MQ=55.33;MQRankSum=-11.202;QD=17.76;ReadPosRankSum=-5.197;SOR=1.129	GT:AD:DP:GQ:PL	1:47,111:158:99:2816,0
+ML756106.1	10158	.	A	G	2807.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=6.324;DP=641;FS=33.382;MLEAC=1;MLEAF=1.00;MQ=55.48;MQRankSum=-10.980;QD=18.47;ReadPosRankSum=-5.104;SOR=1.112	GT:AD:DP:GQ:PL	1:47,105:152:99:2817,0
+ML756106.1	10164	.	T	C	1809.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=4.034;DP=586;FS=32.725;MLEAC=1;MLEAF=1.00;MQ=56.56;MQRankSum=-9.440;QD=15.59;ReadPosRankSum=-5.034;SOR=0.986	GT:AD:DP:GQ:PL	1:43,73:116:99:1819,0
+ML756106.1	10166	.	A	ATAGTAGCACACACCCTT	3415.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.296;DP=564;FS=32.083;MLEAC=1;MLEAF=1.00;MQ=56.98;MQRankSum=-8.737;QD=33.81;ReadPosRankSum=-4.428;SOR=0.923	GT:AD:DP:GQ:PL	1:42,59:101:99:3425,0
+ML756109.1	597	.	CACG	C	1865.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.388;DP=440;FS=29.785;MLEAC=1;MLEAF=1.00;MQ=54.75;MQRankSum=1.383;QD=20.27;ReadPosRankSum=0.902;SOR=1.493	GT:AD:DP:GQ:PL	1:22,70:92:99:1875,0
+ML756109.1	606	.	CA	C	71.04	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.106;DP=794;FS=46.457;MLEAC=1;MLEAF=1.00;MQ=55.84;MQRankSum=1.877;QD=0.80;ReadPosRankSum=0.267;SOR=0.295	GT:AD:DP:GQ:PL	1:32,57:89:81:81,0
+ML756109.1	677	.	TGAACCCCAAGAAACGGCTCCGGCCATGAACCCCAAGAAACGGCTCCGGCCAC	T	5971.01	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.337;DP=924;FS=65.943;MLEAC=1;MLEAF=1.00;MQ=57.15;MQRankSum=-1.651;QD=13.85;ReadPosRankSum=4.260;SOR=4.505	GT:AD:DP:GQ:PL	1:131,300:431:99:5981,0
+ML756112.1	20550	.	G	C	9230.01	FSFilter;SORfilter	AC=1;AF=1.00;AN=1;BaseQRankSum=10.670;DP=258;FS=238.903;MLEAC=1;MLEAF=1.00;MQ=59.90;MQRankSum=3.757;QD=35.22;ReadPosRankSum=5.326;SOR=8.739	GT:AD:DP:GQ:PL	1:17,238:255:99:9240,0
+ML756115.1	16015	.	C	T	521.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.609;DP=173;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=57.61;MQRankSum=0.956;QD=6.06;ReadPosRankSum=-4.067;SOR=0.566	GT:AD:DP:GQ:PL	1:46,40:86:99:531,0
+ML756115.1	16016	.	C	G	521.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=125;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=56.76;QD=13.03;SOR=7.428	GT:AD:DP:GQ:PL	1:0,40:40:99:531,0
+ML756115.1	16020	.	C	G	1724.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=111;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=56.34;QD=27.33;SOR=7.276	GT:AD:DP:GQ:PL	1:0,37:37:99:1734,0
+ML756115.1	16021	.	C	T	1701.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=111;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=56.34;QD=29.52;SOR=7.276	GT:AD:DP:GQ:PL	1:0,37:37:99:1711,0
+ML756115.1	16024	.	C	A	1655.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=108;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=56.23;QD=28.24;SOR=7.223	GT:AD:DP:GQ:PL	1:0,36:36:99:1665,0
+ML756115.1	16031	.	C	A	1565.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=103;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=56.04;QD=30.19;SOR=7.168	GT:AD:DP:GQ:PL	1:0,35:35:99:1575,0
+ML756115.1	16034	.	C	T	1565.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=93;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=56.09;QD=34.16;SOR=7.168	GT:AD:DP:GQ:PL	1:0,35:35:99:1575,0
+ML756115.1	16035	.	C	T	1565.01	SORfilter;SnpCluster	AC=1;AF=1.00;AN=1;DP=87;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.81;QD=32.23;SOR=7.168	GT:AD:DP:GQ:PL	1:0,35:35:99:1575,0
+ML756117.1	14824	.	G	T	12807.01	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.867;DP=3050;FS=84.740;MLEAC=1;MLEAF=1.00;MQ=57.37;MQRankSum=-10.360;QD=12.53;ReadPosRankSum=-0.809;SOR=1.112	GT:AD:DP:GQ:PL	1:370,652:1022:99:12817,0
+ML756117.1	14861	.	T	C	12723.01	FSFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.395;DP=3570;FS=72.466;MLEAC=1;MLEAF=1.00;MQ=57.27;MQRankSum=-7.413;QD=13.02;ReadPosRankSum=-5.665;SOR=0.269	GT:AD:DP:GQ:PL	1:344,633:977:99:12733,0
+ML756117.1	14878	.	G	GGCTATCGCTCTGACTCTGTGGTATCTGGCGTATCA	9575.04	FSFilter;ReadPosRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.407;DP=3554;FS=86.932;MLEAC=1;MLEAF=1.00;MQ=57.43;MQRankSum=-7.073;QD=9.95;ReadPosRankSum=-8.288;SOR=0.144	GT:AD:DP:GQ:PL	1:351,611:962:99:9585,0
+ML756118.1	14726	.	GA	G	194.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.119;DP=341;FS=10.812;MLEAC=1;MLEAF=1.00;MQ=58.85;MQRankSum=0.000;QD=2.55;ReadPosRankSum=2.242;SOR=0.120	GT:AD:DP:GQ:PL	1:33,43:76:99:204,0
+ML756128.1	2887	.	C	T	5661.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=5.540;DP=1182;FS=26.190;MLEAC=1;MLEAF=1.00;MQ=47.13;MQRankSum=-10.604;QD=7.17;ReadPosRankSum=1.946;SOR=0.729	GT:AD:DP:GQ:PL	1:333,457:790:99:5671,0
+ML756128.1	2906	.	CTATTTTTGAAGTAT	C	5043.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=6.676;DP=1184;FS=40.142;MLEAC=1;MLEAF=1.00;MQ=48.16;MQRankSum=-14.382;QD=6.34;ReadPosRankSum=2.123;SOR=0.921	GT:AD:DP:GQ:PL	1:341,455:796:99:5053,0
+ML756128.1	2924	.	T	C	6965.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=5.787;DP=1017;FS=43.687;MLEAC=1;MLEAF=1.00;MQ=49.27;MQRankSum=-15.341;QD=9.42;ReadPosRankSum=-3.942;SOR=0.933	GT:AD:DP:GQ:PL	1:296,443:739:99:6975,0
+ML756128.1	2936	.	C	T	7785.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.095;DP=966;FS=47.108;MLEAC=1;MLEAF=1.00;MQ=49.05;MQRankSum=-16.846;QD=10.92;ReadPosRankSum=-2.770;SOR=1.074	GT:AD:DP:GQ:PL	1:270,443:713:99:7795,0
+ML756128.1	2944	.	T	C	7610.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.840;DP=945;FS=56.991;MLEAC=1;MLEAF=1.00;MQ=48.57;MQRankSum=-18.783;QD=10.93;ReadPosRankSum=-3.473;SOR=1.146	GT:AD:DP:GQ:PL	1:262,434:696:99:7620,0
+ML756128.1	2952	.	A	T	10532.01	FSFilter;MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=6.793;DP=949;FS=73.739;MLEAC=1;MLEAF=1.00;MQ=48.04;MQRankSum=-22.176;QD=15.00;ReadPosRankSum=-5.396;SOR=1.230	GT:AD:DP:GQ:PL	1:244,458:702:99:10542,0
+ML756128.1	2974	.	G	T	7360.01	FSFilter;MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.268;DP=871;FS=65.713;MLEAC=1;MLEAF=1.00;MQ=49.05;MQRankSum=-21.817;QD=11.25;ReadPosRankSum=-2.710;SOR=1.065	GT:AD:DP:GQ:PL	1:264,390:654:99:7370,0
+ML756128.1	2975	.	G	T	5097.01	FSFilter;MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=6.101;DP=875;FS=65.253;MLEAC=1;MLEAF=1.00;MQ=49.10;MQRankSum=-22.002;QD=7.76;ReadPosRankSum=-2.528;SOR=1.092	GT:AD:DP:GQ:PL	1:269,388:657:99:5107,0
+ML756128.1	2985	.	C	A	3436.01	FSFilter;MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=5.729;DP=837;FS=82.378;MLEAC=1;MLEAF=1.00;MQ=50.15;MQRankSum=-23.424;QD=5.46;ReadPosRankSum=-1.545;SOR=1.143	GT:AD:DP:GQ:PL	1:274,355:629:99:3446,0
+ML756128.1	2996	.	A	G	1790.01	FSFilter;MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.623;DP=829;FS=81.381;MLEAC=1;MLEAF=1.00;MQ=50.66;MQRankSum=-23.574;QD=2.85;ReadPosRankSum=-0.248;SOR=1.011	GT:AD:DP:GQ:PL	1:293,335:628:99:1800,0
+ML756128.1	3006	.	A	G	485.01	FSFilter;MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=5.679;DP=828;FS=83.120;MLEAC=1;MLEAF=1.00;MQ=51.07;MQRankSum=-23.899;QD=0.76;ReadPosRankSum=0.968;SOR=1.038	GT:AD:DP:GQ:PL	1:315,322:637:99:495,0
+ML756128.1	3019	.	T	C	125.01	FSFilter;MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.091;DP=854;FS=73.657;MLEAC=1;MLEAF=1.00;MQ=50.96;MQRankSum=-24.634;QD=0.19;ReadPosRankSum=-0.565;SOR=1.129	GT:AD:DP:GQ:PL	1:339,336:675:99:135,0
+ML756128.1	3162	.	A	T	3129.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.187;DP=972;FS=7.082;MLEAC=1;MLEAF=1.00;MQ=58.60;MQRankSum=-10.227;QD=3.72;ReadPosRankSum=0.027;SOR=0.376	GT:AD:DP:GQ:PL	1:380,461:841:99:3139,0
+ML756128.1	3177	.	T	TTAA	3716.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.842;DP=992;FS=5.967;MLEAC=1;MLEAF=1.00;MQ=59.24;MQRankSum=-6.094;QD=4.33;ReadPosRankSum=0.151;SOR=0.410	GT:AD:DP:GQ:PL	1:383,476:859:99:3726,0
+ML756128.1	3256	.	C	T	220.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.189;DP=1030;FS=2.429;MLEAC=1;MLEAF=1.00;MQ=59.69;MQRankSum=-3.268;QD=0.25;ReadPosRankSum=-0.336;SOR=0.540	GT:AD:DP:GQ:PL	1:439,457:896:99:230,0
+ML756128.1	3724	.	A	C	889.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.712;DP=567;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=53.50;MQRankSum=-2.173;QD=2.77;ReadPosRankSum=2.782;SOR=0.470	GT:AD:DP:GQ:PL	1:148,173:321:99:899,0
+ML756128.1	3749	.	A	G	1687.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.210;DP=388;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=51.16;MQRankSum=-2.013;QD=7.06;ReadPosRankSum=3.994;SOR=0.377	GT:AD:DP:GQ:PL	1:101,138:239:99:1697,0
+ML756128.1	3762	.	C	T	1835.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.925;DP=317;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=49.45;MQRankSum=-1.853;QD=8.95;ReadPosRankSum=3.977;SOR=0.424	GT:AD:DP:GQ:PL	1:83,122:205:99:1845,0
+ML756129.1	96	.	A	T	786.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.241;DP=543;FS=0.660;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=1.51;ReadPosRankSum=-0.148;SOR=0.588	GT:AD:DP:GQ:PL	1:250,271:521:99:796,0
+ML756129.1	746	.	C	T	1321.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.044;DP=1252;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=1.06;ReadPosRankSum=-0.724;SOR=0.705	GT:AD:DP:GQ:PL	1:608,637:1245:99:1331,0
+ML756129.1	849	.	A	G	3368.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=5.090;DP=1236;FS=1.102;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=2.74;ReadPosRankSum=-0.648;SOR=0.644	GT:AD:DP:GQ:PL	1:583,644:1227:99:3378,0
+ML756129.1	1143	.	T	G	2471.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.057;DP=1379;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=1.79;ReadPosRankSum=0.835;SOR=0.735	GT:AD:DP:GQ:PL	1:657,720:1377:99:2481,0
+ML756129.1	1150	.	CA	C	1270.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.359;DP=1385;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=0.92;ReadPosRankSum=1.906;SOR=0.721	GT:AD:DP:GQ:PL	1:675,708:1383:99:1280,0
+ML756129.1	1153	.	A	ATC	1787.04	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.903;DP=1376;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=1.30;ReadPosRankSum=-3.677;SOR=0.713	GT:AD:DP:GQ:PL	1:671,703:1374:99:1797,0
+ML756129.1	1219	.	GA	G	2358.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.518;DP=1337;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=1.80;ReadPosRankSum=-2.725;SOR=0.705	GT:AD:DP:GQ:PL	1:632,681:1313:99:2368,0
+ML756129.1	1229	.	C	T	2754.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.088;DP=1315;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=2.09;ReadPosRankSum=-2.556;SOR=0.706	GT:AD:DP:GQ:PL	1:626,689:1315:99:2764,0
+ML756129.1	1233	.	T	C	3049.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=4.577;DP=1319;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=2.31;ReadPosRankSum=-2.190;SOR=0.695	GT:AD:DP:GQ:PL	1:627,691:1318:99:3059,0
+ML756129.1	1300	.	A	G	4714.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.970;DP=1247;FS=0.527;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=3.80;ReadPosRankSum=0.811;SOR=0.645	GT:AD:DP:GQ:PL	1:571,670:1241:99:4724,0
+ML756129.1	1303	.	T	A	4636.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.554;DP=1249;FS=1.107;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=3.73;ReadPosRankSum=0.526;SOR=0.616	GT:AD:DP:GQ:PL	1:569,674:1243:99:4646,0
+ML756129.1	1468	.	C	T	4070.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.151;DP=1412;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=2.88;ReadPosRankSum=-0.871;SOR=0.683	GT:AD:DP:GQ:PL	1:653,758:1411:99:4080,0
+ML756129.1	1802	.	C	T	5530.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.061;DP=1273;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=4.36;ReadPosRankSum=-0.814;SOR=0.719	GT:AD:DP:GQ:PL	1:574,695:1269:99:5540,0
+ML756129.1	1827	.	T	C	7793.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=2.601;DP=1302;FS=0.520;MLEAC=1;MLEAF=1.00;MQ=59.97;MQRankSum=-3.975;QD=6.00;ReadPosRankSum=-0.681;SOR=0.640	GT:AD:DP:GQ:PL	1:603,696:1299:99:7803,0
+ML756129.1	1832	.	T	TGTAC	3783.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.203;DP=1311;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.95;MQRankSum=-5.242;QD=2.89;ReadPosRankSum=-0.053;SOR=0.655	GT:AD:DP:GQ:PL	1:618,690:1308:99:3793,0
+ML756129.1	1843	.	TA	T	1766.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.640;DP=1301;FS=0.519;MLEAC=1;MLEAF=1.00;MQ=59.95;MQRankSum=-5.367;QD=1.36;ReadPosRankSum=0.678;SOR=0.645	GT:AD:DP:GQ:PL	1:629,670:1299:99:1776,0
+ML756129.1	1846	.	GTACA	G	1028.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.661;DP=1307;FS=1.732;MLEAC=1;MLEAF=1.00;MQ=59.95;MQRankSum=-5.467;QD=0.79;ReadPosRankSum=-4.391;SOR=0.571	GT:AD:DP:GQ:PL	1:641,664:1305:99:1038,0
+ML756129.1	2021	.	G	A	2798.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.331;DP=1363;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=58.02;MQRankSum=-15.877;QD=2.06;ReadPosRankSum=-0.538;SOR=0.696	GT:AD:DP:GQ:PL	1:639,719:1358:99:2808,0
+ML756129.1	2061	.	C	A	5081.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.550;DP=1435;FS=1.750;MLEAC=1;MLEAF=1.00;MQ=58.17;MQRankSum=-14.716;QD=3.56;ReadPosRankSum=0.157;SOR=0.553	GT:AD:DP:GQ:PL	1:654,774:1428:99:5091,0
+ML756129.1	2128	.	G	T	2073.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.721;DP=1474;FS=1.744;MLEAC=1;MLEAF=1.00;MQ=59.80;MQRankSum=-11.444;QD=1.41;ReadPosRankSum=1.996;SOR=0.583	GT:AD:DP:GQ:PL	1:697,771:1468:99:2083,0
+ML756129.1	2183	.	C	T	2182.01	MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.204;DP=1377;FS=1.733;MLEAC=1;MLEAF=1.00;MQ=59.71;MQRankSum=-15.996;QD=1.59;ReadPosRankSum=-2.032;SOR=0.598	GT:AD:DP:GQ:PL	1:662,709:1371:99:2192,0
+ML756129.1	2225	.	T	C	610.01	MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.681;DP=1281;FS=0.516;MLEAC=1;MLEAF=1.00;MQ=59.35;MQRankSum=-20.302;QD=0.48;ReadPosRankSum=1.047;SOR=0.643	GT:AD:DP:GQ:PL	1:630,640:1270:99:620,0
+ML756129.1	2235	.	A	T	575.01	MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.245;DP=1270;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.36;MQRankSum=-20.277;QD=0.46;ReadPosRankSum=1.021;SOR=0.693	GT:AD:DP:GQ:PL	1:620,636:1256:99:585,0
+ML756129.1	2274	.	A	G	3519.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.175;DP=1269;FS=0.518;MLEAC=1;MLEAF=1.00;MQ=59.46;MQRankSum=-14.997;QD=2.82;ReadPosRankSum=-1.085;SOR=0.763	GT:AD:DP:GQ:PL	1:584,665:1249:99:3529,0
+ML756129.1	2279	.	TC	T	3159.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.745;DP=1264;FS=0.518;MLEAC=1;MLEAF=1.00;MQ=59.48;MQRankSum=-14.374;QD=2.54;ReadPosRankSum=-1.134;SOR=0.728	GT:AD:DP:GQ:PL	1:585,658:1243:99:3169,0
+ML756129.1	2340	.	A	G	3529.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.538;DP=1169;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.66;MQRankSum=-6.852;QD=3.10;ReadPosRankSum=0.425;SOR=0.719	GT:AD:DP:GQ:PL	1:534,606:1140:99:3539,0
+ML756129.1	2586	.	T	C	2841.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.523;DP=1216;FS=1.134;MLEAC=1;MLEAF=1.00;MQ=57.89;MQRankSum=-6.171;QD=2.86;ReadPosRankSum=-0.353;SOR=0.828	GT:AD:DP:GQ:PL	1:462,530:992:99:2851,0
+ML756129.1	2648	.	A	C	4243.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.844;DP=1186;FS=0.554;MLEAC=1;MLEAF=1.00;MQ=56.15;MQRankSum=-4.974;QD=5.05;ReadPosRankSum=-0.241;SOR=0.766	GT:AD:DP:GQ:PL	1:369,471:840:99:4253,0
+ML756130.1	529	.	T	TA	28029.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.911;DP=7397;FS=0.551;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=-0.000;QD=4.26;ReadPosRankSum=0.900;SOR=0.751	GT:AD:DP:GQ:PL	1:2777,3796:6573:99:28039,0
+ML756130.1	747	.	T	G	8497.01	QDFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=1.398;DP=7381;FS=1.124;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=-0.010;QD=1.16;ReadPosRankSum=7.454;SOR=0.605	GT:AD:DP:GQ:PL	1:3297,4013:7310:99:8507,0
+ML756130.1	749	.	C	A	24878.01	SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-5.247;DP=7409;FS=0.532;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=-0.001;QD=3.39;ReadPosRankSum=8.428;SOR=0.622	GT:AD:DP:GQ:PL	1:3348,3991:7339:99:24888,0
+ML756130.1	750	.	C	T	9012.01	QDFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-4.222;DP=7430;FS=0.532;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=-0.010;QD=1.22;ReadPosRankSum=8.377;SOR=0.633	GT:AD:DP:GQ:PL	1:3357,4003:7360:99:9022,0
+ML756131.1	84	.	T	TA	3815.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.903;DP=1213;FS=1.619;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=3.45;ReadPosRankSum=-1.476;SOR=0.531	GT:AD:DP:GQ:PL	1:506,599:1105:99:3825,0
+ML756131.1	96	.	T	C	23597.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.032;DP=1417;FS=2.827;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=18.35;ReadPosRankSum=1.313;SOR=0.964	GT:AD:DP:GQ:PL	1:359,927:1286:99:23607,0
+ML756131.1	290	.	C	A	43859.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.100;DP=2814;FS=0.602;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=19.22;ReadPosRankSum=-2.677;SOR=0.764	GT:AD:DP:GQ:PL	1:588,1694:2282:99:43869,0
+ML756131.1	318	.	T	C	25843.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=5.013;DP=2984;FS=2.527;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=10.72;ReadPosRankSum=-0.853;SOR=0.746	GT:AD:DP:GQ:PL	1:917,1493:2410:99:25853,0
+ML756131.1	501	.	T	C	16479.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.453;DP=3224;FS=4.230;MLEAC=1;MLEAF=1.00;MQ=59.80;MQRankSum=3.436;QD=6.78;ReadPosRankSum=-1.723;SOR=1.009	GT:AD:DP:GQ:PL	1:1002,1427:2429:99:16489,0
+ML756131.1	567	.	G	C	58833.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.337;DP=2724;FS=1.409;MLEAC=1;MLEAF=1.00;MQ=56.75;MQRankSum=-13.072;QD=25.64;ReadPosRankSum=4.450;SOR=0.846	GT:AD:DP:GQ:PL	1:467,1828:2295:99:58843,0
+ML756131.1	573	.	T	C	55978.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.637;DP=2644;FS=2.192;MLEAC=1;MLEAF=1.00;MQ=56.54;MQRankSum=-13.999;QD=24.92;ReadPosRankSum=4.942;SOR=0.873	GT:AD:DP:GQ:PL	1:485,1761:2246:99:55988,0
+ML756131.1	579	.	T	A	52325.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.142;DP=2496;FS=2.178;MLEAC=1;MLEAF=1.00;MQ=56.32;MQRankSum=-14.367;QD=24.46;ReadPosRankSum=4.152;SOR=0.888	GT:AD:DP:GQ:PL	1:475,1664:2139:99:52335,0
+ML756131.1	590	.	T	A	47775.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=1.804;DP=2286;FS=0.616;MLEAC=1;MLEAF=1.00;MQ=55.97;MQRankSum=-15.305;QD=23.37;ReadPosRankSum=3.208;SOR=0.779	GT:AD:DP:GQ:PL	1:495,1549:2044:99:47785,0
+ML756131.1	592	.	A	G	45405.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=0.862;DP=2282;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.96;MQRankSum=-15.444;QD=22.28;ReadPosRankSum=2.811;SOR=0.756	GT:AD:DP:GQ:PL	1:500,1538:2038:99:45415,0
+ML756131.1	595	.	G	T	44621.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=2.454;DP=2243;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.89;MQRankSum=-15.469;QD=22.30;ReadPosRankSum=1.248;SOR=0.695	GT:AD:DP:GQ:PL	1:490,1511:2001:99:44631,0
+ML756131.1	599	.	T	C	44299.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=1.821;DP=2198;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.80;MQRankSum=-15.861;QD=22.67;ReadPosRankSum=0.440;SOR=0.763	GT:AD:DP:GQ:PL	1:494,1460:1954:99:44309,0
+ML756131.1	763	.	G	A	16092.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-4.139;DP=1455;FS=3.370;MLEAC=1;MLEAF=1.00;MQ=55.65;MQRankSum=12.098;QD=12.73;ReadPosRankSum=3.764;SOR=0.508	GT:AD:DP:GQ:PL	1:451,813:1264:99:16102,0
+ML756131.1	771	.	T	A	15964.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.423;DP=1500;FS=2.599;MLEAC=1;MLEAF=1.00;MQ=55.80;MQRankSum=11.730;QD=12.55;ReadPosRankSum=4.862;SOR=0.514	GT:AD:DP:GQ:PL	1:462,810:1272:99:15974,0
+ML756131.1	993	.	T	G	17837.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-4.092;DP=2694;FS=3.344;MLEAC=1;MLEAF=1.00;MQ=58.51;MQRankSum=-1.401;QD=9.59;ReadPosRankSum=1.516;SOR=0.956	GT:AD:DP:GQ:PL	1:691,1168:1859:99:17847,0
+ML756131.1	1049	.	T	A	33273.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.655;DP=2091;FS=8.728;MLEAC=1;MLEAF=1.00;MQ=57.28;MQRankSum=-0.809;QD=20.98;ReadPosRankSum=-1.974;SOR=0.470	GT:AD:DP:GQ:PL	1:374,1212:1586:99:33283,0
+ML756131.1	1098	.	C	T	8732.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.656;DP=1360;FS=3.260;MLEAC=1;MLEAF=1.00;MQ=55.77;MQRankSum=11.394;QD=7.47;ReadPosRankSum=7.167;SOR=0.651	GT:AD:DP:GQ:PL	1:474,695:1169:99:8742,0
+ML756131.1	1385	.	A	G	1337.01	MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=5.082;DP=1467;FS=3.222;MLEAC=1;MLEAF=1.00;MQ=52.40;MQRankSum=-27.708;QD=0.94;ReadPosRankSum=1.221;SOR=0.489	GT:AD:DP:GQ:PL	1:647,770:1417:99:1347,0
+ML756131.1	1410	.	T	C	17857.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.966;DP=1758;FS=12.273;MLEAC=1;MLEAF=1.00;MQ=51.86;MQRankSum=-25.700;QD=11.25;ReadPosRankSum=-7.382;SOR=0.877	GT:AD:DP:GQ:PL	1:612,975:1587:99:17867,0
+ML756131.1	1463	.	A	T	22968.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.691;DP=2016;FS=34.027;MLEAC=1;MLEAF=1.00;MQ=52.70;MQRankSum=-21.025;QD=13.44;ReadPosRankSum=4.434;SOR=1.856	GT:AD:DP:GQ:PL	1:608,1101:1709:99:22978,0
+ML756131.1	1467	.	GT	G	46.01	MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.984;DP=2035;FS=38.201;MLEAC=1;MLEAF=1.00;MQ=52.65;MQRankSum=-23.075;QD=0.04;ReadPosRankSum=6.028;SOR=2.019	GT:AD:DP:GQ:PL	1:615,626:1241:56:56,0
+ML756131.1	1504	.	A	G	27840.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.290;DP=2172;FS=33.571;MLEAC=1;MLEAF=1.00;MQ=52.98;MQRankSum=-19.509;QD=15.68;ReadPosRankSum=5.892;SOR=2.100	GT:AD:DP:GQ:PL	1:585,1191:1776:99:27850,0
+ML756131.1	1547	.	A	G	3275.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.151;DP=2138;FS=33.122;MLEAC=1;MLEAF=1.00;MQ=53.81;MQRankSum=-15.194;QD=2.51;ReadPosRankSum=-4.646;SOR=1.799	GT:AD:DP:GQ:PL	1:613,694:1307:99:3285,0
+ML756131.1	1554	.	A	C	2860.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.836;DP=2066;FS=32.715;MLEAC=1;MLEAF=1.00;MQ=54.08;MQRankSum=-15.244;QD=2.20;ReadPosRankSum=-4.477;SOR=1.748	GT:AD:DP:GQ:PL	1:615,685:1300:99:2870,0
+ML756131.1	1567	.	A	C	18824.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.762;DP=1934;FS=40.577;MLEAC=1;MLEAF=1.00;MQ=54.43;MQRankSum=-18.706;QD=11.51;ReadPosRankSum=-6.553;SOR=1.985	GT:AD:DP:GQ:PL	1:619,1016:1635:99:18834,0
+ML756131.1	1693	.	T	A	865.01	MQRankSumFilter;QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=4.968;DP=1994;FS=41.532;MLEAC=1;MLEAF=1.00;MQ=48.07;MQRankSum=-37.443;QD=0.45;ReadPosRankSum=5.540;SOR=2.374	GT:AD:DP:GQ:PL	1:975,961:1936:99:875,0
+ML756131.1	1725	.	T	A	25439.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.571;DP=2037;FS=40.092;MLEAC=1;MLEAF=1.00;MQ=46.53;MQRankSum=-36.175;QD=12.71;ReadPosRankSum=2.154;SOR=2.146	GT:AD:DP:GQ:PL	1:624,1378:2002:99:25449,0
+ML756131.1	1730	.	A	G	24897.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=8.823;DP=2014;FS=39.402;MLEAC=1;MLEAF=1.00;MQ=46.47;MQRankSum=-36.292;QD=12.54;ReadPosRankSum=2.931;SOR=2.120	GT:AD:DP:GQ:PL	1:631,1355:1986:99:24907,0
+ML756131.1	1731	.	C	G	24875.01	MQRankSumFilter;SnpCluster	AC=1;AF=1.00;AN=1;BaseQRankSum=2.342;DP=2012;FS=37.121;MLEAC=1;MLEAF=1.00;MQ=46.42;MQRankSum=-36.144;QD=12.53;ReadPosRankSum=2.603;SOR=2.135	GT:AD:DP:GQ:PL	1:627,1358:1985:99:24885,0
+ML756131.1	1750	.	T	G	25998.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.929;DP=2023;FS=29.083;MLEAC=1;MLEAF=1.00;MQ=45.71;MQRankSum=-35.470;QD=13.06;ReadPosRankSum=0.858;SOR=1.984	GT:AD:DP:GQ:PL	1:623,1368:1991:99:26008,0
+ML756131.1	1800	.	T	G	35647.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.181;DP=2311;FS=12.541;MLEAC=1;MLEAF=1.00;MQ=49.84;MQRankSum=-24.398;QD=16.84;ReadPosRankSum=-4.813;SOR=1.450	GT:AD:DP:GQ:PL	1:623,1494:2117:99:35657,0
+ML756131.1	1805	.	C	T	8042.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-10.079;DP=2343;FS=1.833;MLEAC=1;MLEAF=1.00;MQ=50.38;MQRankSum=-18.040;QD=3.76;ReadPosRankSum=-3.284;SOR=0.858	GT:AD:DP:GQ:PL	1:886,1255:2141:99:8052,0
+ML756131.1	1925	.	G	GA	63459.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.253;DP=3218;FS=3.257;MLEAC=1;MLEAF=1.00;MQ=59.71;MQRankSum=-2.945;QD=27.12;ReadPosRankSum=-1.205;SOR=0.468	GT:AD:DP:GQ:PL	1:449,1891:2340:99:63469,0
+ML756132.1	686	.	C	T	9216.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-16.929;DP=7110;FS=3.305;MLEAC=1;MLEAF=1.00;MQ=59.63;MQRankSum=11.181;QD=1.33;ReadPosRankSum=0.243;SOR=0.945	GT:AD:DP:GQ:PL	1:3227,3698:6925:99:9226,0
+ML756134.1	360	.	A	C	19667.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.686;DP=3478;FS=0.554;MLEAC=1;MLEAF=1.00;MQ=59.99;MQRankSum=0.000;QD=7.28;ReadPosRankSum=-2.063;SOR=0.771	GT:AD:DP:GQ:PL	1:1195,1505:2700:99:19677,0
+ML756134.1	1057	.	G	GT	32226.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.603;DP=3079;FS=1.194;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=11.01;ReadPosRankSum=-0.974;SOR=0.823	GT:AD:DP:GQ:PL	1:819,2109:2928:99:32236,0
+ML756134.1	1120	.	G	A	15343.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.539;DP=3065;FS=1.104;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=7.21;ReadPosRankSum=0.746;SOR=0.712	GT:AD:DP:GQ:PL	1:897,1230:2127:99:15353,0
+ML756134.1	1184	.	A	G	23966.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=0.232;DP=2874;FS=2.515;MLEAC=1;MLEAF=1.00;MQ=59.96;MQRankSum=-2.212;QD=8.39;ReadPosRankSum=-0.787;SOR=0.631	GT:AD:DP:GQ:PL	1:1083,1775:2858:99:23976,0
+ML756134.1	1199	.	A	G	36557.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.992;DP=2705;FS=1.825;MLEAC=1;MLEAF=1.00;MQ=59.93;MQRankSum=-2.671;QD=13.58;ReadPosRankSum=-5.570;SOR=0.759	GT:AD:DP:GQ:PL	1:951,1741:2692:99:36567,0
+ML756134.1	1221	.	G	GCTAAAA	3876.04	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.297;DP=2513;FS=4.972;MLEAC=1;MLEAF=1.00;MQ=59.92;MQRankSum=-3.363;QD=1.80;ReadPosRankSum=-4.367;SOR=1.045	GT:AD:DP:GQ:PL	1:1041,1110:2151:99:3886,0
+ML756134.1	1224	.	G	GTC	1880.04	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.324;DP=2323;FS=6.993;MLEAC=1;MLEAF=1.00;MQ=59.91;MQRankSum=-3.381;QD=0.96;ReadPosRankSum=-2.409;SOR=1.123	GT:AD:DP:GQ:PL	1:957,1010:1967:99:1890,0
+ML756134.1	1226	.	AACC	A	845.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=0.496;DP=2300;FS=5.977;MLEAC=1;MLEAF=1.00;MQ=59.91;MQRankSum=-3.452;QD=0.43;ReadPosRankSum=-2.092;SOR=1.133	GT:AD:DP:GQ:PL	1:966,978:1944:99:855,0
+ML756134.1	1464	.	T	A	1100.01	QDFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.895;DP=1395;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=60.00;MQRankSum=0.000;QD=0.79;ReadPosRankSum=-3.391;SOR=0.738	GT:AD:DP:GQ:PL	1:682,709:1391:99:1110,0
+ML756135.1	681	.	T	A	5966.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=4.579;DP=336;FS=21.903;MLEAC=1;MLEAF=1.00;MQ=54.48;MQRankSum=5.307;QD=17.92;ReadPosRankSum=3.381;SOR=0.202	GT:AD:DP:GQ:PL	1:89,244:333:99:5976,0
+ML756137.1	386	.	A	T	10006.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.165;DP=1279;FS=12.988;MLEAC=1;MLEAF=1.00;MQ=59.84;MQRankSum=-1.493;QD=12.00;ReadPosRankSum=1.676;SOR=1.462	GT:AD:DP:GQ:PL	1:298,536:834:99:10016,0
+ML756141.1	91	.	G	A	3388.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=-8.701;DP=909;FS=1.879;MLEAC=1;MLEAF=1.00;MQ=52.90;MQRankSum=-6.670;QD=4.41;ReadPosRankSum=-1.759;SOR=0.475	GT:AD:DP:GQ:PL	1:311,457:768:99:3398,0
+ML756141.1	132	.	T	C	24763.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-2.068;DP=1262;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=52.60;MQRankSum=-13.533;QD=23.41;ReadPosRankSum=1.218;SOR=0.436	GT:AD:DP:GQ:PL	1:222,836:1058:99:24773,0
+ML756141.1	146	.	A	C	26848.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=1.181;DP=1371;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=53.14;MQRankSum=-16.650;QD=23.68;ReadPosRankSum=0.632;SOR=0.565	GT:AD:DP:GQ:PL	1:228,906:1134:99:26858,0
+ML756141.1	183	.	G	GT	31993.04	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-1.692;DP=1498;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=53.54;MQRankSum=-17.211;QD=26.84;ReadPosRankSum=-0.332;SOR=0.654	GT:AD:DP:GQ:PL	1:234,958:1192:99:32003,0
+ML756141.1	271	.	A	AT	6879.04	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-3.937;DP=1878;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.78;MQRankSum=-19.444;QD=5.01;ReadPosRankSum=1.242;SOR=0.711	GT:AD:DP:GQ:PL	1:600,772:1372:99:6889,0
+ML756141.1	352	.	A	C	11359.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.014;DP=1367;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=56.29;MQRankSum=-7.067;QD=10.66;ReadPosRankSum=-3.342;SOR=0.703	GT:AD:DP:GQ:PL	1:397,669:1066:99:11369,0
+ML756141.1	358	.	T	TATGCTCTATACACTCCTTCTTTC	5033.04	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.600;DP=1302;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=56.11;MQRankSum=-13.246;QD=5.16;ReadPosRankSum=-7.972;SOR=0.712	GT:AD:DP:GQ:PL	1:342,633:975:99:5043,0
+ML756141.1	362	.	A	C	1970.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=6.405;DP=986;FS=0.555;MLEAC=1;MLEAF=1.00;MQ=55.58;MQRankSum=-9.993;QD=2.26;ReadPosRankSum=-3.314;SOR=0.774	GT:AD:DP:GQ:PL	1:409,462:871:99:1980,0
+ML756141.1	372	.	C	T	7595.01	MQRankSumFilter;ReadPosRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=2.548;DP=978;FS=0.558;MLEAC=1;MLEAF=1.00;MQ=55.05;MQRankSum=-16.838;QD=8.88;ReadPosRankSum=-11.931;SOR=0.625	GT:AD:DP:GQ:PL	1:350,505:855:99:7605,0
+ML756141.1	445	.	C	T	14505.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-0.355;DP=1252;FS=2.645;MLEAC=1;MLEAF=1.00;MQ=54.32;MQRankSum=-18.752;QD=13.03;ReadPosRankSum=-0.921;SOR=0.916	GT:AD:DP:GQ:PL	1:399,714:1113:99:14515,0
+ML756141.1	461	.	A	G	13210.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=3.509;DP=1379;FS=1.831;MLEAC=1;MLEAF=1.00;MQ=53.16;MQRankSum=-13.465;QD=10.64;ReadPosRankSum=-0.713;SOR=0.872	GT:AD:DP:GQ:PL	1:478,763:1241:99:13220,0
+ML756141.1	466	.	A	G	21896.01	MQRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=4.769;DP=1439;FS=1.218;MLEAC=1;MLEAF=1.00;MQ=53.23;MQRankSum=-20.364;QD=16.84;ReadPosRankSum=1.131;SOR=0.832	GT:AD:DP:GQ:PL	1:406,894:1300:99:21906,0
+ML756141.1	493	.	AC	A	17351.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.757;DP=1773;FS=1.162;MLEAC=1;MLEAF=1.00;MQ=53.88;MQRankSum=-9.515;QD=11.24;ReadPosRankSum=5.672;SOR=0.773	GT:AD:DP:GQ:PL	1:516,1027:1543:99:17361,0
+ML756141.1	563	.	T	A	33614.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=7.717;DP=2350;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=55.99;MQRankSum=-11.158;QD=18.14;ReadPosRankSum=-1.089;SOR=0.724	GT:AD:DP:GQ:PL	1:550,1303:1853:99:33624,0
+ML756141.1	571	.	C	A	32817.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.542;DP=2389;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=56.27;MQRankSum=-9.863;QD=17.72;ReadPosRankSum=-0.686;SOR=0.705	GT:AD:DP:GQ:PL	1:560,1292:1852:99:32827,0
+ML756141.1	580	.	C	CCTG	51123.04	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.533;DP=2429;FS=0.664;MLEAC=1;MLEAF=1.00;MQ=56.54;MQRankSum=-10.977;QD=27.62;ReadPosRankSum=-0.669;SOR=0.767	GT:AD:DP:GQ:PL	1:373,1478:1851:99:51133,0
+ML756141.1	1167	.	T	C	11748.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=3.344;DP=2386;FS=9.576;MLEAC=1;MLEAF=1.00;MQ=59.15;MQRankSum=-4.989;QD=13.43;ReadPosRankSum=0.950;SOR=2.047	GT:AD:DP:GQ:PL	1:294,581:875:99:11758,0
+ML756144.1	264	.	C	A	112944.01	ReadPosRankSumFilter	AC=1;AF=1.00;AN=1;BaseQRankSum=-6.839;DP=6945;FS=0.000;MLEAC=1;MLEAF=1.00;MQ=59.74;MQRankSum=6.907;QD=23.66;ReadPosRankSum=-8.897;SOR=0.579	GT:AD:DP:GQ:PL	1:937,3836:4773:99:112954,0
+ML756144.1	368	.	G	C	161465.01	PASS	AC=1;AF=1.00;AN=1;BaseQRankSum=1.365;DP=7567;FS=0.847;MLEAC=1;MLEAF=1.00;MQ=59.95;MQRankSum=2.490;QD=27.05;ReadPosRankSum=23.813;SOR=0.496	GT:AD:DP:GQ:PL	1:1062,4908:5970:99:161475,0
