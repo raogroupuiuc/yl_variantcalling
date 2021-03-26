@@ -102,6 +102,10 @@ write.table(hits.strains4, "results/snpsingene-annotated-strains.txt", sep = "\t
 
 save.image("02-analysis-part1.Rdata")
 
+# code to pick up analysis from here
+setwd("R_scripts")
+load("02-analysis-part1.Rdata")
+
 # Identifying functional consequences of SNPs #### 
 
 snps2search.plasmid <- subsetByOverlaps(sig.hits.plasmid, gtf.gene.plasmid)
@@ -113,13 +117,48 @@ snps2search.strains <- subsetByOverlaps(sig.hits.strains, gtf.gene.strains)
 # genome.plasmid <- FaFile("data/pINT03-XYL123.fa")
 txdb.strains <- makeTxDbFromGFF("data/GCA_009372015.1_YarliW29_genomic.gff",
                            format = "gff", organism = "Yarrowia lipolytica",
-                           dataSource = "NCBI")
+                           dataSource = "NCBI") # works
 
-txdb.plasmid <- makeTxDbFromGFF("data/pINT03-XYL123.gff",
-                                format = "gff", organism = "Yarrowia lipolytica",
-                                dataSource = "NCBI")
+# txdb.plasmid <- makeTxDbFromGFF("data/pINT03-XYL123.gff",
+#                                 format = "gff", organism = "Yarrowia lipolytica",
+#                                 dataSource = "NCBI")
 
+# Parents missing; import as GRanges and modify
+pre.txdb.strains <- rtracklayer::import("data/GCA_009372015.1_YarliW29_genomic.gff")
+pre.txdb.plasmid <- rtracklayer::import("data/pINT03-XYL123.gff")
 
+# First make IDs unique
+pre.txdb.plasmid$ID_orig <- pre.txdb.plasmid$ID
+pre.txdb.plasmid$ID <- paste(pre.txdb.plasmid$type, pre.txdb.plasmid$ID_orig, sep = "-")
+
+# Check how parents are coded in the one that works
+table(pre.txdb.strains$type)
+table(pre.txdb.plasmid$type)
+pre.txdb.strains[pre.txdb.strains$type == "gene"] # no parent
+pre.txdb.strains[pre.txdb.strains$type == "mRNA"] # parent is gene
+pre.txdb.strains[pre.txdb.strains$type == "exon"] # parent is mRNA
+pre.txdb.strains[pre.txdb.strains$type == "CDS"] # parent is mRNA
+
+# Code parents for plasmid features
+plasmid.parents <- rep(NA_character_, length(pre.txdb.plasmid))
+plasmid.parents[pre.txdb.plasmid$type == "mRNA"] <- paste0("gene-", pre.txdb.plasmid$ID_orig[pre.txdb.plasmid$type == "mRNA"])
+plasmid.parents[pre.txdb.plasmid$type == "exon"] <- paste0("mRNA-", pre.txdb.plasmid$ID_orig[pre.txdb.plasmid$type == "exon"])
+plasmid.parents[pre.txdb.plasmid$type == "CDS"] <- paste0("mRNA-", pre.txdb.plasmid$ID_orig[pre.txdb.plasmid$type == "CDS"])
+
+plasmid.parents <- as(plasmid.parents, "CharacterList")
+
+for(i in seq_along(plasmid.parents)){
+  if(all(is.na(plasmid.parents[[i]]))){
+    plasmid.parents[[i]] <- character(0)
+  }
+}
+
+pre.txdb.plasmid$Parent <- plasmid.parents
+
+# Make TxDb from GRanges
+txdb.plasmid <- makeTxDbFromGRanges(pre.txdb.plasmid)
+
+# continuing Anshu's code
 genes(txdb.strains)
 
 exonsBy(txdb.strains, by = "tx")
