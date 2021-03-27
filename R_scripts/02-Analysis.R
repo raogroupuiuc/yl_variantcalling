@@ -240,6 +240,41 @@ as.numeric(snpmat.strains$genotypes)
 
 # cannot do statistics and filtering because of ignore filter in genotypetoSnpMatrix 
 
+# Make a SNP matrix the DIY way if SnpMatrix is being a pain ####
+# (maybe it doesn't work on haploid data)
+gt.strains <- geno(readvcf.strains)$GT
+table(gt.strains)
+
+colnames(gt.strains)
+rownames(gt.strains)
+
+mean(apply(gt.strains, 1, function(x) any(x %in% c("2", "3", "4")))) # 16% of loci have multiple alleles
+
+# Function to make a binary matrix indicating presence/absence of each allele in the dataset
+haploidSnpMat <- function(vcf){
+  gt <- geno(vcf)$GT
+  nalt <- lengths(rowRanges(vcf)$ALT)
+  al.ind <- rep(seq_along(rowRanges(vcf)), times = nalt)
+  al.names <- paste0(gsub("/.*$", "/", names(rowRanges(vcf)))[al.ind],
+                     unlist(rowRanges(vcf)$ALT))
+  out <- matrix(NA_integer_, nrow = length(al.names), ncol = ncol(gt),
+                dimnames = list(al.names, colnames(gt)))
+  curr.row <- 1L
+  for(i in seq_len(nrow(gt))){
+    theseals <- unique(gt[i,])
+    theseals <- theseals[!is.na(theseals)]
+    theseals <- theseals[theseals != "."]
+    for(j in seq_len(nalt[i])){
+      out[curr.row, which(gt[i,] %in% setdiff(theseals, as.character(j)))] <- 0L
+      out[curr.row, which(gt[i,] == as.character(j))] <- 1L
+      curr.row <- curr.row + 1L
+    }
+  }
+  return(out)
+}
+
+mat.strains <- haploidSnpMat(readvcf.strains)
+
 # Basic statistics and filtering on SNPs #### 
 
 mat <- mysnpmat$genotypes[,!mysnpmat$map$ignore]
