@@ -102,6 +102,10 @@ write.table(hits.strains4, "results/snpsingene-annotated-strains.txt", sep = "\t
 
 save.image("02-analysis-part1.Rdata")
 
+# code to pick up analysis from here
+setwd("R_scripts")
+load("02-analysis-part1.Rdata")
+
 # Identifying functional consequences of SNPs #### 
 
 snps2search.plasmid <- subsetByOverlaps(sig.hits.plasmid, gtf.gene.plasmid)
@@ -113,13 +117,48 @@ snps2search.strains <- subsetByOverlaps(sig.hits.strains, gtf.gene.strains)
 # genome.plasmid <- FaFile("data/pINT03-XYL123.fa")
 txdb.strains <- makeTxDbFromGFF("data/GCA_009372015.1_YarliW29_genomic.gff",
                            format = "gff", organism = "Yarrowia lipolytica",
-                           dataSource = "NCBI")
+                           dataSource = "NCBI") # works
 
-txdb.plasmid <- makeTxDbFromGFF("data/pINT03-XYL123.gff",
-                                format = "gff", organism = "Yarrowia lipolytica",
-                                dataSource = "NCBI")
+# txdb.plasmid <- makeTxDbFromGFF("data/pINT03-XYL123.gff",
+#                                 format = "gff", organism = "Yarrowia lipolytica",
+#                                 dataSource = "NCBI")
 
+# Parents missing; import as GRanges and modify
+pre.txdb.strains <- rtracklayer::import("data/GCA_009372015.1_YarliW29_genomic.gff")
+pre.txdb.plasmid <- rtracklayer::import("data/pINT03-XYL123.gff")
 
+# First make IDs unique
+pre.txdb.plasmid$ID_orig <- pre.txdb.plasmid$ID
+pre.txdb.plasmid$ID <- paste(pre.txdb.plasmid$type, pre.txdb.plasmid$ID_orig, sep = "-")
+
+# Check how parents are coded in the one that works
+table(pre.txdb.strains$type)
+table(pre.txdb.plasmid$type)
+pre.txdb.strains[pre.txdb.strains$type == "gene"] # no parent
+pre.txdb.strains[pre.txdb.strains$type == "mRNA"] # parent is gene
+pre.txdb.strains[pre.txdb.strains$type == "exon"] # parent is mRNA
+pre.txdb.strains[pre.txdb.strains$type == "CDS"] # parent is mRNA
+
+# Code parents for plasmid features
+plasmid.parents <- rep(NA_character_, length(pre.txdb.plasmid))
+plasmid.parents[pre.txdb.plasmid$type == "mRNA"] <- paste0("gene-", pre.txdb.plasmid$ID_orig[pre.txdb.plasmid$type == "mRNA"])
+plasmid.parents[pre.txdb.plasmid$type == "exon"] <- paste0("mRNA-", pre.txdb.plasmid$ID_orig[pre.txdb.plasmid$type == "exon"])
+plasmid.parents[pre.txdb.plasmid$type == "CDS"] <- paste0("mRNA-", pre.txdb.plasmid$ID_orig[pre.txdb.plasmid$type == "CDS"])
+
+plasmid.parents <- as(plasmid.parents, "CharacterList")
+
+for(i in seq_along(plasmid.parents)){
+  if(all(is.na(plasmid.parents[[i]]))){
+    plasmid.parents[[i]] <- character(0)
+  }
+}
+
+pre.txdb.plasmid$Parent <- plasmid.parents
+
+# Make TxDb from GRanges
+txdb.plasmid <- makeTxDbFromGRanges(pre.txdb.plasmid)
+
+# continuing Anshu's code
 genes(txdb.strains)
 
 exonsBy(txdb.strains, by = "tx")
@@ -200,6 +239,41 @@ as.numeric(snpmat.strains$genotypes)
 # 2: In .local(x, ...) : non-diploid variants are set to NA
 
 # cannot do statistics and filtering because of ignore filter in genotypetoSnpMatrix 
+
+# Make a SNP matrix the DIY way if SnpMatrix is being a pain ####
+# (maybe it doesn't work on haploid data)
+gt.strains <- geno(readvcf.strains)$GT
+table(gt.strains)
+
+colnames(gt.strains)
+rownames(gt.strains)
+
+mean(apply(gt.strains, 1, function(x) any(x %in% c("2", "3", "4")))) # 16% of loci have multiple alleles
+
+# Function to make a binary matrix indicating presence/absence of each allele in the dataset
+haploidSnpMat <- function(vcf){
+  gt <- geno(vcf)$GT
+  nalt <- lengths(rowRanges(vcf)$ALT)
+  al.ind <- rep(seq_along(rowRanges(vcf)), times = nalt)
+  al.names <- paste0(gsub("/.*$", "/", names(rowRanges(vcf)))[al.ind],
+                     unlist(rowRanges(vcf)$ALT))
+  out <- matrix(NA_integer_, nrow = length(al.names), ncol = ncol(gt),
+                dimnames = list(al.names, colnames(gt)))
+  curr.row <- 1L
+  for(i in seq_len(nrow(gt))){
+    theseals <- unique(gt[i,])
+    theseals <- theseals[!is.na(theseals)]
+    theseals <- theseals[theseals != "."]
+    for(j in seq_len(nalt[i])){
+      out[curr.row, which(gt[i,] %in% setdiff(theseals, as.character(j)))] <- 0L
+      out[curr.row, which(gt[i,] == as.character(j))] <- 1L
+      curr.row <- curr.row + 1L
+    }
+  }
+  return(out)
+}
+
+mat.strains <- haploidSnpMat(readvcf.strains)
 
 # Basic statistics and filtering on SNPs #### 
 
