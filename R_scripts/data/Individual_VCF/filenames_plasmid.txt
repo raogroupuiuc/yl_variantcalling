@@ -1,3 +1,0 @@
-GEV_ACGCACCT-CCTTCACC.filtered.vcf
-X123_CGCTATGT-GTGTCGGA.filtered.vcf
-XEV_GTATGTTC-TTCCTGTT.filtered.vcf

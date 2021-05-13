@@ -1,0 +1,2 @@
+#rname	startpos	endpos	numreads	covbases	coverage	meandepth	meanbaseq	meanmapq
+pINT03-XYL123.gb	1	13224	360918	12432	94.0109	4042.08	36	56.9

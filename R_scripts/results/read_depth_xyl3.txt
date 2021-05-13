@@ -1,0 +1,7 @@
+"     Pos" "  GEV_Depth" "  XEV_Depth" "  X12_Depth" "   XEV.X12" "   GEV.X12" "   XEV.GEV" "  Features" "    Gene"
+"" "Min.   : 8527  " "Min.   :1772  " "Min.   :4370  " "Min.   :643.0  " "Min.   :6.168  " "Min.   :2.583  " "Min.   :2.178  " "Length:1872       " "Length:1872       "
+"" "1st Qu.: 8995  " "1st Qu.:2341  " "1st Qu.:5591  " "1st Qu.:813.0  " "1st Qu.:6.680  " "1st Qu.:2.776  " "1st Qu.:2.314  " "Class :character  " "Class :character  "
+"" "Median : 9462  " "Median :2407  " "Median :5716  " "Median :835.0  " "Median :6.830  " "Median :2.896  " "Median :2.361  " "Mode  :character  " "Mode  :character  "
+"" "Mean   : 9462  " "Mean   :2406  " "Mean   :5694  " "Mean   :835.6  " "Mean   :6.820  " "Mean   :2.882  " "Mean   :2.369  " NA NA
+"" "3rd Qu.: 9930  " "3rd Qu.:2490  " "3rd Qu.:5832  " "3rd Qu.:860.2  " "3rd Qu.:6.970  " "3rd Qu.:2.983  " "3rd Qu.:2.427  " NA NA
+"" "Max.   :10398  " "Max.   :2664  " "Max.   :6116  " "Max.   :934.0  " "Max.   :8.094  " "Max.   :3.389  " "Max.   :2.618  " NA NA

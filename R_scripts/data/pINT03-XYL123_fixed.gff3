@@ -1,0 +1,32 @@
+##gff-version 3
+##source-version rtracklayer 1.49.5
+##date 2021-04-01
+pINT03-XYL123.gb	Genbank	Region	1	13224	.	+	0	ID=Region-plasmid;ID_orig=plasmid;
+pINT03-XYL123.gb	Genbank	gene	3235	4078	.	+	0	ID=gene-GPM1p;ID_orig=GPM1p;
+pINT03-XYL123.gb	Genbank	mRNA	3235	4078	.	+	0	ID=mRNA-GPM1p;ID_orig=GPM1p;Parent=gene-GPM1p
+pINT03-XYL123.gb	Genbank	exon	3235	4078	.	+	0	ID=exon-GPM1p;ID_orig=GPM1p;Parent=mRNA-GPM1p
+pINT03-XYL123.gb	Genbank	CDS	3235	4078	.	+	0	ID=CDS-GPM1p;ID_orig=GPM1p;Parent=mRNA-GPM1p
+pINT03-XYL123.gb	Genbank	gene	4079	5035	.	+	0	ID=gene-XYL1;ID_orig=XYL1;
+pINT03-XYL123.gb	Genbank	mRNA	4079	5035	.	+	0	ID=mRNA-XYL1;ID_orig=XYL1;Parent=gene-XYL1
+pINT03-XYL123.gb	Genbank	exon	4079	5035	.	+	0	ID=exon-XYL1;ID_orig=XYL1;Parent=mRNA-XYL1
+pINT03-XYL123.gb	Genbank	CDS	4079	5035	.	+	0	ID=CDS-XYL1;ID_orig=XYL1;Parent=mRNA-XYL1
+pINT03-XYL123.gb	Genbank	gene	5336	6302	.	+	0	ID=gene-TDH1P;ID_orig=TDH1P;
+pINT03-XYL123.gb	Genbank	mRNA	5336	6302	.	+	0	ID=mRNA-TDH1P;ID_orig=TDH1P;Parent=gene-TDH1P
+pINT03-XYL123.gb	Genbank	exon	5336	6302	.	+	0	ID=exon-TDH1P;ID_orig=TDH1P;Parent=mRNA-TDH1P
+pINT03-XYL123.gb	Genbank	CDS	5336	6302	.	+	0	ID=CDS-TDH1P;ID_orig=TDH1P;Parent=mRNA-TDH1P
+pINT03-XYL123.gb	Genbank	gene	6303	7394	.	+	0	ID=gene-XYL2;ID_orig=XYL2;
+pINT03-XYL123.gb	Genbank	mRNA	6303	7394	.	+	0	ID=mRNA-XYL2;ID_orig=XYL2;Parent=gene-XYL2
+pINT03-XYL123.gb	Genbank	exon	6303	7394	.	+	0	ID=exon-XYL2;ID_orig=XYL2;Parent=mRNA-XYL2
+pINT03-XYL123.gb	Genbank	CDS	6303	7394	.	+	0	ID=CDS-XYL2;ID_orig=XYL2;Parent=mRNA-XYL2
+pINT03-XYL123.gb	Genbank	gene	7695	8526	.	+	0	ID=gene-FBA1p;ID_orig=FBA1p;
+pINT03-XYL123.gb	Genbank	mRNA	7695	8526	.	+	0	ID=mRNA-FBA1p;ID_orig=FBA1p;Parent=gene-FBA1p
+pINT03-XYL123.gb	Genbank	exon	7695	8526	.	+	0	ID=exon-FBA1p;ID_orig=FBA1p;Parent=mRNA-FBA1p
+pINT03-XYL123.gb	Genbank	CDS	7695	8526	.	+	0	ID=CDS-FBA1p;ID_orig=FBA1p;Parent=mRNA-FBA1p
+pINT03-XYL123.gb	Genbank	gene	8527	10398	.	+	0	ID=gene-XYL3;ID_orig=XYL3;
+pINT03-XYL123.gb	Genbank	mRNA	8527	10398	.	+	0	ID=mRNA-XYL3;ID_orig=XYL3;Parent=gene-XYL3
+pINT03-XYL123.gb	Genbank	exon	8527	10398	.	+	0	ID=exon-XYL3;ID_orig=XYL3;Parent=mRNA-XYL3
+pINT03-XYL123.gb	Genbank	CDS	8527	10398	.	+	0	ID=CDS-XYL3;ID_orig=XYL3;Parent=mRNA-XYL3
+pINT03-XYL123.gb	Genbank	gene	10399	10698	.	+	0	ID=gene-FBA1t;ID_orig=FBA1t;
+pINT03-XYL123.gb	Genbank	mRNA	10399	10698	.	+	0	ID=mRNA-FBA1t;ID_orig=FBA1t;Parent=gene-FBA1t
+pINT03-XYL123.gb	Genbank	exon	10399	10698	.	+	0	ID=exon-FBA1t;ID_orig=FBA1t;Parent=mRNA-FBA1t
+pINT03-XYL123.gb	Genbank	CDS	10399	10698	.	+	0	ID=CDS-FBA1t;ID_orig=FBA1t;Parent=mRNA-FBA1t
