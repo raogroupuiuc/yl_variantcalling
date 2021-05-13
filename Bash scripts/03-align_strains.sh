@@ -22,12 +22,12 @@ echo "Alignment - start"
 bwa mem -v 1 genome/PO1f \
         raw_data/${line}_L001_R1_001.fastq \
         raw_data/${line}_L001_R2_001.fastq \
-         > results/bwa_align/${line}_aligned.sam
+         > results/gatk/${line}_aligned.sam
 
 echo "Alignment - end"
 echo " "
 
-cd /home/a-m/deewan2/2021_yl_dnaseq_jin/results/bwa_align
+cd /home/a-m/deewan2/2021_yl_dnaseq_jin/results/gatk
 
 echo "start bam"
 

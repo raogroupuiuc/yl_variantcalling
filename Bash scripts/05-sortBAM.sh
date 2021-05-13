@@ -17,7 +17,7 @@ line=$(sed -n -e "$SLURM_ARRAY_TASK_ID p" raw_data/shortnames.txt)
 module purge 
 module load GATK/4.1.4.0-Java-1.8.0_152
 
-cd results/bwa_align/ 
+cd results/gatk/ 
 
 echo "gatk - Sort"
 

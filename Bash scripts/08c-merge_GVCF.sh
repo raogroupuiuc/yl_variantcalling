@@ -14,7 +14,7 @@ cd ../
 module purge 
 module load GATK/4.1.4.0-Java-1.8.0_152
 
-cd results/bwa_align/
+cd results/gatk/
 
 gatk CombineGVCFs \
 	-R ../../genome/PO1f_plasmid.fna \

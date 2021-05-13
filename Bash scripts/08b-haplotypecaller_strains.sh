@@ -18,9 +18,9 @@ module purge
 module load GATK/4.1.4.0-Java-1.8.0_152
 
 echo "gatk - remove dups start  "
-cd results/bwa_align/ 
+cd results/gatk
 
-# gatk BuildBamIndex -I ${line}_aligned.marked_dup.sort.RG.bam #
+gatk BuildBamIndex -I ${line}_aligned.marked_dup.sort.RG.bam
 gatk HaplotypeCaller -I ${line}_aligned.marked_dup.sort.RG.bam -O ${line}.GVCF.vcf -R ../../genome/GCA_009372015.1_YarliW29_genomic.fna -ERC GVCF -ploidy 1
 
 echo "end"

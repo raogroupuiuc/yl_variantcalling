@@ -17,8 +17,9 @@ line=$(sed -n -e "$SLURM_ARRAY_TASK_ID p" raw_data/shortnames.txt)
 module purge 
 module load GATK/4.1.4.0-Java-1.8.0_152
 
-echo "gatk - remove dups start  "
-cd results/bwa_align/ 
+echo "gatk - validate sam  "
+
+cd results/gatk/ 
 
 gatk ValidateSamFile -I ${line}_aligned.marked_dup.sort.RG.bam -M SUMMARY 
 

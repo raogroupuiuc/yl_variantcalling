@@ -18,7 +18,7 @@ module purge
 module load GATK/4.1.4.0-Java-1.8.0_152
 
 echo "gatk - remove dups start  "
-cd results/bwa_align/ 
+cd results/gatk/
 
 gatk MarkDuplicates -I ${line}_aligned.sorted.bam -M ${line}_dup_metrics.txt -O ${line}_aligned.marked_dup.bam -AS
 
