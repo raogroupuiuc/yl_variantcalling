@@ -26,12 +26,10 @@ Bash script			Explanation
 05-sortBAM.sh			All samples
 06-addreadgroups.sh		All samples
 07-validateSAM.sh		All samples
-08a-haplotypecaller_plasmid.sh	3 samples (without GVCF)
-08a-haplotypecaller_strains.sh	5 samples (without GVCF)
 08b-haplotypecaller_plasmid.sh	3 samples (with GVCF)
 08b-haplotypecaller_strains.sh	5 samples (with GVCF)
 08c-merge_GVCF.sh		merge GVCF in 2 files - strains.vcf and plasmid.vcf
-09a-hardfilter_plasmid.sh	filter on individual vcf files - 3
-09a-hardfilter_strains.sh	filter on individual vcf files - 5
 09b-hardfilter.sh*		filter on combined vcf files from GVCF
-
+10-samecoverage.sh		Read depth on plasmid 
+12-CNVkit.sh			CNV analysis using CNVkit pipeline
+13-samcoverage_allchr.sh	Read depth for all chromosomes 
